@@ -1,0 +1,47 @@
+deeplab_main.py do_log: False
+Log file name: log_24_09-53-52_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='deeplab_vein_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_resource_calc_ready': False, 'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 2, 'eval_batch_size': 6, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': False, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': 256, 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='deeplab_vein_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+Model parameters: {'in_channels': 5, 'out_channels': 2, 'assp_out_channels': 256, 'is_resource_calc_ready': False}
+type(model_parameters['out_channels'])=<class 'int'>
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 150
+val dataloader num of batches: 5
+test dataloader num of batches: 2
+Traceback (most recent call last):
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/deeplab_main.py", line 568, in <module>
+    model_wrapper = ModelWrapper(DeepLabv3, model_parameters, dataloader_dict, model_wrapper_params, training_wrapper_params, INPUT_EXAMPLE, save_path, device)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py", line 158, in __init__
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py", line 113, in __init__
+    self.model = self.model_class(**model_parameters)
+TypeError: __init__() got an unexpected keyword argument 'is_resource_calc_ready'

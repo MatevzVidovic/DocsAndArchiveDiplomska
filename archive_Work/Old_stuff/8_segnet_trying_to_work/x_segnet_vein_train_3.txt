@@ -1,0 +1,60 @@
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py:111: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.model = torch.load(self.prev_model_path, map_location=torch.device(device))
+segnet_main.py do_log: False
+Log file name: log_21_12-46-09_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='segnet_vein_train', mti=1, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_segnet/segnet_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 20, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 3, 'eval_batch_size': 12, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': False, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='segnet_vein_train', mti=1, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_segnet/segnet_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 7
+val dataloader num of batches: 3
+test dataloader num of batches: 1
+Loaded model path:  ./segnet_vein_train/saved_model_wrapper/models/SegNet_1_.pth
+per-ex loss: 0.952583  [    3/   20]
+per-ex loss: 0.956283  [    6/   20]
+per-ex loss: 0.977617  [    9/   20]
+per-ex loss: 0.977529  [   12/   20]
+per-ex loss: 0.962335  [   15/   20]
+per-ex loss: 0.955540  [   18/   20]
+per-ex loss: 0.950133  [   20/   20]
+Train Error: Avg loss: 0.96171709
+validation Error: 
+ Avg loss: 0.95776453 
+ F1: 0.084157 
+ Precision: 0.043931 
+ Recall: 0.998099
+ IoU: 0.043927
+
+test Error: 
+ Avg loss: 0.96246099 
+ F1: 0.085137 
+ Precision: 0.044464 
+ Recall: 0.998509
+ IoU: 0.044461
+
+We have finished training iteration 2
+Max training iterations reached: 1. Train_iter: 2, Initial_train_iter: 1

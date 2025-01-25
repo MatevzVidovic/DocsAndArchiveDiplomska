@@ -1,0 +1,51 @@
+deeplab_main.py do_log: False
+Log file name: log_24_20-09-59_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='deeplab_vein_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_resource_calc_ready': False, 'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 8, 'eval_batch_size': 20, 'learning_rate': 0.001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': False, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': 256, 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='deeplab_vein_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+Model parameters: {'in_channels': 5, 'out_channels': 2, 'assp_out_channels': 256}
+type(model_parameters['out_channels'])=<class 'int'>
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 38
+val dataloader num of batches: 2
+test dataloader num of batches: 1
+Created new model instance.
+0 trainings have been done without error stopping.
+                        Best k models are kept. (possibly (k+1) models are kept if one of the worse models is the last model we have).
+                        Enter bst to do a batch_size_train and re-ask for input.
+                        Enter bse to do a batch_size_eval and re-ask for input.
+                        Enter sp to do a save_preds from the data_path/save_preds directory, and re-ask for input.
+                        Enter da to do a data augmentation showcase and re-ask for input.
+                        Enter ts to do a test showcase of the model and re-ask for input.
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.

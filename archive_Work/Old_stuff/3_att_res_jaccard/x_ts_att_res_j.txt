@@ -1,0 +1,67 @@
+sd_name: unet_att_res_j_train
+unet_att_main_just_train.py do_log: False
+Log file name: log_15_11-09-08_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='unet_att_res_j_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_att_res_j.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'path_to_data': './Data/vein_and_sclera_data', 'batch_size': 1, 'learning_rate': 1e-05, 'num_of_dataloader_workers': 7, 'train_epoch_size_limit': 400, 'num_epochs_per_training_iteration': 1, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'JACCARD', 'alphas': [], 'dataset_option': 'aug_tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model_type': 'res_att', 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(sd='unet_att_res_j_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_att_res_j.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset_aug_tf.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 88
+val dataloader num of batches: 27
+test dataloader num of batches: 12
+Loaded model path:  ./unet_att_res_j_train/saved_model_wrapper/models/UNet_61_.pth
+0 trainings have been done without error stopping.
+                        Best k models are kept. (possibly (k+1) models are kept if one of the worse models is the last model we have).
+                        Enter ts to do a test showcase of the model and re-ask for input.
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+Enter 'all' to go through all imgs without reasking for input. Enter anything else to stop. Press Enter to continue...scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+scleras.shape: torch.Size([1, 1, 1024, 2048])
+
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.

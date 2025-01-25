@@ -1,0 +1,348 @@
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py:111: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.model = torch.load(self.prev_model_path, map_location=torch.device(device))
+unet_original_main.py do_log: True
+Log file name: log_08_13-47-35_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(ptd='./Data/vein_and_sclera_data', sd='unet_bwzo_train', mti=20, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_original_bwzo.yaml', ntibp=None, ptp=None, map=None)
+YAML: {'batch_size': 2, 'learning_rate': 1e-05, 'num_of_dataloader_workers': 7, 'train_epoch_size_limit': 400, 'num_epochs_per_training_iteration': 1, 'cleanup_k': 3, 'dataset_option': 'aug_bcosfire', 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'alphas': [], 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 4, 'output_channels': 2, 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(ptd='./Data/vein_and_sclera_data', sd='unet_bwzo_train', mti=20, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_original_bwzo.yaml', ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset_aug_bcosfire.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 89
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 89
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 45
+val dataloader num of batches: 14
+test dataloader num of batches: 6
+Loaded model path:  ./unet_bwzo_train/saved_model_wrapper/models/UNet_473_.pth
+per-ex loss: 0.470726  [    2/   89]
+per-ex loss: 0.444919  [    4/   89]
+per-ex loss: 0.436573  [    6/   89]
+per-ex loss: 0.445428  [    8/   89]
+per-ex loss: 0.509506  [   10/   89]
+per-ex loss: 0.445258  [   12/   89]
+per-ex loss: 0.341092  [   14/   89]
+per-ex loss: 0.367077  [   16/   89]
+per-ex loss: 0.413680  [   18/   89]
+per-ex loss: 0.401607  [   20/   89]
+per-ex loss: 0.543069  [   22/   89]
+per-ex loss: 0.529197  [   24/   89]
+per-ex loss: 0.359642  [   26/   89]
+per-ex loss: 0.365867  [   28/   89]
+per-ex loss: 0.419971  [   30/   89]
+per-ex loss: 0.443238  [   32/   89]
+per-ex loss: 0.482115  [   34/   89]
+per-ex loss: 0.458713  [   36/   89]
+per-ex loss: 0.598512  [   38/   89]
+per-ex loss: 0.428967  [   40/   89]
+per-ex loss: 0.410444  [   42/   89]
+per-ex loss: 0.398998  [   44/   89]
+per-ex loss: 0.435021  [   46/   89]
+per-ex loss: 0.531822  [   48/   89]
+per-ex loss: 0.498691  [   50/   89]
+per-ex loss: 0.400113  [   52/   89]
+per-ex loss: 0.347423  [   54/   89]
+per-ex loss: 0.348085  [   56/   89]
+per-ex loss: 0.337598  [   58/   89]
+per-ex loss: 0.362067  [   60/   89]
+per-ex loss: 0.365151  [   62/   89]
+per-ex loss: 0.432684  [   64/   89]
+per-ex loss: 0.440089  [   66/   89]
+per-ex loss: 0.384510  [   68/   89]
+per-ex loss: 0.585363  [   70/   89]
+per-ex loss: 0.482069  [   72/   89]
+per-ex loss: 0.342210  [   74/   89]
+per-ex loss: 0.579117  [   76/   89]
+per-ex loss: 0.368537  [   78/   89]
+per-ex loss: 0.586101  [   80/   89]
+per-ex loss: 0.434341  [   82/   89]
+per-ex loss: 0.369308  [   84/   89]
+per-ex loss: 0.643658  [   86/   89]
+per-ex loss: 0.349403  [   88/   89]
+per-ex loss: 0.543890  [   89/   89]
+Train Error: Avg loss: 0.44181889
+validation Error: 
+ Avg loss: 0.52862414 
+ F1: 0.497668 
+ Precision: 0.464096 
+ Recall: 0.536474
+ IoU: 0.331263
+
+test Error: 
+ Avg loss: 0.49541948 
+ F1: 0.538129 
+ Precision: 0.488783 
+ Recall: 0.598557
+ IoU: 0.368110
+
+We have finished training iteration 474
+Deleting model ./unet_bwzo_train/saved_model_wrapper/models/UNet_472_.pth
+per-ex loss: 0.445035  [    2/   89]
+per-ex loss: 0.565001  [    4/   89]
+per-ex loss: 0.356936  [    6/   89]
+per-ex loss: 0.398599  [    8/   89]
+per-ex loss: 0.399630  [   10/   89]
+per-ex loss: 0.472674  [   12/   89]
+per-ex loss: 0.413058  [   14/   89]
+per-ex loss: 0.543397  [   16/   89]
+per-ex loss: 0.349393  [   18/   89]
+per-ex loss: 0.368207  [   20/   89]
+per-ex loss: 0.395015  [   22/   89]
+per-ex loss: 0.562950  [   24/   89]
+per-ex loss: 0.421266  [   26/   89]
+per-ex loss: 0.574674  [   28/   89]
+per-ex loss: 0.504239  [   30/   89]
+per-ex loss: 0.328177  [   32/   89]
+per-ex loss: 0.410579  [   34/   89]
+per-ex loss: 0.455611  [   36/   89]
+per-ex loss: 0.503613  [   38/   89]
+per-ex loss: 0.390363  [   40/   89]
+per-ex loss: 0.427019  [   42/   89]
+per-ex loss: 0.349920  [   44/   89]
+per-ex loss: 0.397621  [   46/   89]
+per-ex loss: 0.380367  [   48/   89]
+per-ex loss: 0.385487  [   50/   89]
+per-ex loss: 0.532820  [   52/   89]
+per-ex loss: 0.484558  [   54/   89]
+per-ex loss: 0.469169  [   56/   89]
+per-ex loss: 0.330170  [   58/   89]
+per-ex loss: 0.440429  [   60/   89]
+per-ex loss: 0.422645  [   62/   89]
+per-ex loss: 0.558048  [   64/   89]
+per-ex loss: 0.360228  [   66/   89]
+per-ex loss: 0.406911  [   68/   89]
+per-ex loss: 0.615572  [   70/   89]
+per-ex loss: 0.395562  [   72/   89]
+per-ex loss: 0.392368  [   74/   89]
+per-ex loss: 0.481788  [   76/   89]
+per-ex loss: 0.451985  [   78/   89]
+per-ex loss: 0.581983  [   80/   89]
+per-ex loss: 0.462616  [   82/   89]
+per-ex loss: 0.437761  [   84/   89]
+per-ex loss: 0.368054  [   86/   89]
+per-ex loss: 0.414801  [   88/   89]
+per-ex loss: 0.331563  [   89/   89]
+Train Error: Avg loss: 0.43861916
+validation Error: 
+ Avg loss: 0.51751282 
+ F1: 0.516075 
+ Precision: 0.530897 
+ Recall: 0.502057
+ IoU: 0.347777
+
+test Error: 
+ Avg loss: 0.47644269 
+ F1: 0.553175 
+ Precision: 0.568001 
+ Recall: 0.539102
+ IoU: 0.382337
+
+We have finished training iteration 475
+Deleting model ./unet_bwzo_train/saved_model_wrapper/models/UNet_473_.pth
+per-ex loss: 0.531526  [    2/   89]
+per-ex loss: 0.544816  [    4/   89]
+per-ex loss: 0.409521  [    6/   89]
+per-ex loss: 0.547264  [    8/   89]
+per-ex loss: 0.432094  [   10/   89]
+per-ex loss: 0.661287  [   12/   89]
+per-ex loss: 0.558439  [   14/   89]
+per-ex loss: 0.444219  [   16/   89]
+per-ex loss: 0.386266  [   18/   89]
+per-ex loss: 0.523188  [   20/   89]
+per-ex loss: 0.426761  [   22/   89]
+per-ex loss: 0.327195  [   24/   89]
+per-ex loss: 0.440181  [   26/   89]
+per-ex loss: 0.484487  [   28/   89]
+per-ex loss: 0.427634  [   30/   89]
+per-ex loss: 0.378805  [   32/   89]
+per-ex loss: 0.593457  [   34/   89]
+per-ex loss: 0.416055  [   36/   89]
+per-ex loss: 0.447516  [   38/   89]
+per-ex loss: 0.476892  [   40/   89]
+per-ex loss: 0.494867  [   42/   89]
+per-ex loss: 0.356806  [   44/   89]
+per-ex loss: 0.402613  [   46/   89]
+per-ex loss: 0.421195  [   48/   89]
+per-ex loss: 0.387250  [   50/   89]
+per-ex loss: 0.464740  [   52/   89]
+per-ex loss: 0.393672  [   54/   89]
+per-ex loss: 0.612016  [   56/   89]
+per-ex loss: 0.498102  [   58/   89]
+per-ex loss: 0.451008  [   60/   89]
+per-ex loss: 0.339430  [   62/   89]
+per-ex loss: 0.366749  [   64/   89]
+per-ex loss: 0.353288  [   66/   89]
+per-ex loss: 0.360473  [   68/   89]
+per-ex loss: 0.345873  [   70/   89]
+per-ex loss: 0.359880  [   72/   89]
+per-ex loss: 0.427002  [   74/   89]
+per-ex loss: 0.316741  [   76/   89]
+per-ex loss: 0.604088  [   78/   89]
+per-ex loss: 0.354971  [   80/   89]
+per-ex loss: 0.454954  [   82/   89]
+per-ex loss: 0.370831  [   84/   89]
+per-ex loss: 0.377917  [   86/   89]
+per-ex loss: 0.470676  [   88/   89]
+per-ex loss: 0.649536  [   89/   89]
+Train Error: Avg loss: 0.44649512
+validation Error: 
+ Avg loss: 0.49879436 
+ F1: 0.527088 
+ Precision: 0.545963 
+ Recall: 0.509474
+ IoU: 0.357854
+
+test Error: 
+ Avg loss: 0.45446492 
+ F1: 0.577870 
+ Precision: 0.595345 
+ Recall: 0.561392
+ IoU: 0.406341
+
+We have finished training iteration 476
+Deleting model ./unet_bwzo_train/saved_model_wrapper/models/UNet_438_.pth
+per-ex loss: 0.378870  [    2/   89]
+per-ex loss: 0.331640  [    4/   89]
+per-ex loss: 0.395330  [    6/   89]
+per-ex loss: 0.383605  [    8/   89]
+per-ex loss: 0.296890  [   10/   89]
+per-ex loss: 0.465981  [   12/   89]
+per-ex loss: 0.321599  [   14/   89]
+per-ex loss: 0.458898  [   16/   89]
+per-ex loss: 0.404197  [   18/   89]
+per-ex loss: 0.378453  [   20/   89]
+per-ex loss: 0.395379  [   22/   89]
+per-ex loss: 0.337133  [   24/   89]
+per-ex loss: 0.400373  [   26/   89]
+per-ex loss: 0.343428  [   28/   89]
+per-ex loss: 0.439581  [   30/   89]
+per-ex loss: 0.408186  [   32/   89]
+per-ex loss: 0.665948  [   34/   89]
+per-ex loss: 0.425633  [   36/   89]
+per-ex loss: 0.395193  [   38/   89]
+per-ex loss: 0.444335  [   40/   89]
+per-ex loss: 0.342136  [   42/   89]
+per-ex loss: 0.374521  [   44/   89]
+per-ex loss: 0.557297  [   46/   89]
+per-ex loss: 0.520379  [   48/   89]
+per-ex loss: 0.491555  [   50/   89]
+per-ex loss: 0.444857  [   52/   89]
+per-ex loss: 0.540920  [   54/   89]
+per-ex loss: 0.581964  [   56/   89]
+per-ex loss: 0.447250  [   58/   89]
+per-ex loss: 0.387950  [   60/   89]
+per-ex loss: 0.574731  [   62/   89]
+per-ex loss: 0.489264  [   64/   89]
+per-ex loss: 0.451219  [   66/   89]
+per-ex loss: 0.323292  [   68/   89]
+per-ex loss: 0.419399  [   70/   89]
+per-ex loss: 0.445580  [   72/   89]
+per-ex loss: 0.511694  [   74/   89]
+per-ex loss: 0.438453  [   76/   89]
+per-ex loss: 0.346483  [   78/   89]
+per-ex loss: 0.398128  [   80/   89]
+per-ex loss: 0.345052  [   82/   89]
+per-ex loss: 0.645271  [   84/   89]
+per-ex loss: 0.501520  [   86/   89]
+per-ex loss: 0.616148  [   88/   89]
+per-ex loss: 0.344219  [   89/   89]
+Train Error: Avg loss: 0.43577634
+validation Error: 
+ Avg loss: 0.51296688 
+ F1: 0.505406 
+ Precision: 0.513561 
+ Recall: 0.497505
+ IoU: 0.338156
+
+test Error: 
+ Avg loss: 0.48667088 
+ F1: 0.546195 
+ Precision: 0.533313 
+ Recall: 0.559715
+ IoU: 0.375701
+
+We have finished training iteration 477
+Deleting model ./unet_bwzo_train/saved_model_wrapper/models/UNet_450_.pth
+Error in cropping the image to the non-zero values in the fourth channel. Returned the original image.
+per-ex loss: 0.496757  [    2/   89]
+per-ex loss: 0.499285  [    4/   89]
+per-ex loss: 0.549685  [    6/   89]
+per-ex loss: 0.482141  [    8/   89]
+per-ex loss: 0.410306  [   10/   89]
+per-ex loss: 0.383974  [   12/   89]
+per-ex loss: 0.378069  [   14/   89]
+per-ex loss: 0.352064  [   16/   89]
+per-ex loss: 0.499505  [   18/   89]
+per-ex loss: 0.356968  [   20/   89]
+per-ex loss: 0.539639  [   22/   89]
+per-ex loss: 0.369003  [   24/   89]
+per-ex loss: 0.375953  [   26/   89]
+per-ex loss: 0.515350  [   28/   89]
+per-ex loss: 0.477458  [   30/   89]
+per-ex loss: 0.362278  [   32/   89]
+per-ex loss: 0.403741  [   34/   89]
+per-ex loss: 0.380378  [   36/   89]
+per-ex loss: 0.409278  [   38/   89]
+per-ex loss: 0.469834  [   40/   89]
+per-ex loss: 0.444093  [   42/   89]
+per-ex loss: 0.720984  [   44/   89]
+per-ex loss: 0.426938  [   46/   89]
+per-ex loss: 0.476473  [   48/   89]
+per-ex loss: 0.445493  [   50/   89]
+per-ex loss: 0.424916  [   52/   89]
+per-ex loss: 0.406726  [   54/   89]
+per-ex loss: 0.322772  [   56/   89]
+per-ex loss: 0.322234  [   58/   89]
+per-ex loss: 0.614056  [   60/   89]
+per-ex loss: 0.482701  [   62/   89]
+per-ex loss: 0.441964  [   64/   89]
+per-ex loss: 0.317246  [   66/   89]
+per-ex loss: 0.330456  [   68/   89]
+per-ex loss: 0.414950  [   70/   89]
+per-ex loss: 0.373322  [   72/   89]
+per-ex loss: 0.397101  [   74/   89]
+per-ex loss: 0.496219  [   76/   89]
+per-ex loss: 0.352417  [   78/   89]
+per-ex loss: 0.349393  [   80/   89]
+per-ex loss: 0.430808  [   82/   89]
+per-ex loss: 0.523919  [   84/   89]
+per-ex loss: 0.466531  [   86/   89]
+per-ex loss: 0.498268  [   88/   89]
+per-ex loss: 0.320978  [   89/   89]
+Train Error: Avg loss: 0.43361392
+validation Error: 
+ Avg loss: 0.50316830 
+ F1: 0.514751 
+ Precision: 0.531667 
+ Recall: 0.498879
+ IoU: 0.346576
+
+test Error: 
+ Avg loss: 0.47096280 
+ F1: 0.560087 
+ Precision: 0.583352 
+ Recall: 0.538607
+ IoU: 0.388973
+
+We have finished training iteration 478
+Deleting model ./unet_bwzo_train/saved_model_wrapper/models/UNet_474_.pth
+slurmstepd: error: *** STEP 16599.0 ON aga1 CANCELLED AT 2025-01-08T13:51:42 ***

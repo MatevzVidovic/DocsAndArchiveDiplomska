@@ -1,0 +1,55 @@
+sd_name: unet_sclera2_train
+unet_main.py do_log: False
+Log file name: log_20_10-56-28_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='unet_sclera2_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_sclera2.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_pruning_ready': False, 'path_to_data': './Data/sclera_data', 'target': 'scleras', 'train_epoch_size': 500, 'val_epoch_size': 20, 'test_epoch_size': 20, 'train_batch_size': 2, 'eval_batch_size': 4, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 64, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': False, 'loss_fn_name': 'Tversky', 'loss_params': {'fp_imp': 0.05, 'fn_imp': 0.95, 'equalize': True}, 'dataset_type': 'simple', 'aug_type': 'pass', 'zero_out_non_sclera': False, 'add_sclera_to_img': False, 'add_bcosfire_to_img': False, 'add_coye_to_img': False, 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 3, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(sd='unet_sclera2_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_sclera2.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset_simple.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/sclera_data
+summary for train
+valid images: 1288
+summary for val
+valid images: 344
+summary for test
+valid images: 208
+train dataset len: 1288
+val dataset len: 344
+test dataset len: 208
+train dataloader num of batches: 250
+val dataloader num of batches: 5
+test dataloader num of batches: 5
+Loaded model path:  ./unet_sclera2_train/saved_model_wrapper/models/UNet_131_.pth
+0 trainings have been done without error stopping.
+                        Best k models are kept. (possibly (k+1) models are kept if one of the worse models is the last model we have).
+                        Enter ts to do a test showcase of the model and re-ask for input.
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.
+Enter 'all' to go through all imgs without reasking for input. Enter anything else to stop. Press Enter to continue...
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.

@@ -1,0 +1,207 @@
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+deeplab_main.py do_log: False
+Log file name: log_24_09-54-41_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='deeplab_vein_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_resource_calc_ready': False, 'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 2, 'eval_batch_size': 6, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': False, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': 256, 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='deeplab_vein_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+Model parameters: {'in_channels': 5, 'out_channels': 2, 'assp_out_channels': 256}
+type(model_parameters['out_channels'])=<class 'int'>
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 150
+val dataloader num of batches: 5
+test dataloader num of batches: 2
+Created new model instance.
+per-ex loss: 0.960775  [    2/  300]
+per-ex loss: 0.947788  [    4/  300]
+per-ex loss: 0.746637  [    6/  300]
+per-ex loss: 0.861777  [    8/  300]
+per-ex loss: 0.937032  [   10/  300]
+per-ex loss: 0.932679  [   12/  300]
+per-ex loss: 0.895555  [   14/  300]
+per-ex loss: 0.921062  [   16/  300]
+per-ex loss: 0.890797  [   18/  300]
+per-ex loss: 0.927553  [   20/  300]
+per-ex loss: 0.916953  [   22/  300]
+per-ex loss: 0.809046  [   24/  300]
+per-ex loss: 0.815179  [   26/  300]
+per-ex loss: 0.851170  [   28/  300]
+per-ex loss: 0.900310  [   30/  300]
+per-ex loss: 0.787642  [   32/  300]
+per-ex loss: 0.753987  [   34/  300]
+per-ex loss: 0.887125  [   36/  300]
+per-ex loss: 0.835038  [   38/  300]
+per-ex loss: 0.924731  [   40/  300]
+per-ex loss: 0.762185  [   42/  300]
+per-ex loss: 0.900662  [   44/  300]
+per-ex loss: 0.881185  [   46/  300]
+per-ex loss: 0.878185  [   48/  300]
+per-ex loss: 0.890118  [   50/  300]
+per-ex loss: 0.919658  [   52/  300]
+per-ex loss: 0.884881  [   54/  300]
+per-ex loss: 0.950362  [   56/  300]
+per-ex loss: 0.704458  [   58/  300]
+per-ex loss: 0.890592  [   60/  300]
+per-ex loss: 0.802723  [   62/  300]
+per-ex loss: 0.714082  [   64/  300]
+per-ex loss: 0.766303  [   66/  300]
+per-ex loss: 0.878964  [   68/  300]
+per-ex loss: 0.891934  [   70/  300]
+per-ex loss: 0.718082  [   72/  300]
+per-ex loss: 0.910682  [   74/  300]
+per-ex loss: 0.807731  [   76/  300]
+per-ex loss: 0.875668  [   78/  300]
+per-ex loss: 0.934802  [   80/  300]
+per-ex loss: 0.964501  [   82/  300]
+per-ex loss: 0.845183  [   84/  300]
+per-ex loss: 0.788526  [   86/  300]
+per-ex loss: 0.618127  [   88/  300]
+per-ex loss: 0.845951  [   90/  300]
+per-ex loss: 0.755817  [   92/  300]
+per-ex loss: 0.855192  [   94/  300]
+per-ex loss: 0.791096  [   96/  300]
+per-ex loss: 0.830702  [   98/  300]
+per-ex loss: 0.707134  [  100/  300]
+per-ex loss: 0.642959  [  102/  300]
+per-ex loss: 0.881108  [  104/  300]
+per-ex loss: 0.935983  [  106/  300]
+per-ex loss: 0.851493  [  108/  300]
+per-ex loss: 0.779625  [  110/  300]
+per-ex loss: 0.648924  [  112/  300]
+per-ex loss: 0.690859  [  114/  300]
+per-ex loss: 0.709208  [  116/  300]
+per-ex loss: 0.806758  [  118/  300]
+per-ex loss: 0.640128  [  120/  300]
+per-ex loss: 0.792104  [  122/  300]
+per-ex loss: 0.859182  [  124/  300]
+per-ex loss: 0.792612  [  126/  300]
+per-ex loss: 0.815528  [  128/  300]
+per-ex loss: 0.669967  [  130/  300]
+per-ex loss: 0.868573  [  132/  300]
+per-ex loss: 0.808687  [  134/  300]
+per-ex loss: 0.816021  [  136/  300]
+per-ex loss: 0.718836  [  138/  300]
+per-ex loss: 0.892545  [  140/  300]
+per-ex loss: 0.838518  [  142/  300]
+per-ex loss: 0.798416  [  144/  300]
+per-ex loss: 0.780843  [  146/  300]
+per-ex loss: 0.677259  [  148/  300]
+per-ex loss: 0.838844  [  150/  300]
+per-ex loss: 0.762470  [  152/  300]
+per-ex loss: 0.760672  [  154/  300]
+per-ex loss: 0.870596  [  156/  300]
+per-ex loss: 0.812689  [  158/  300]
+per-ex loss: 0.807852  [  160/  300]
+per-ex loss: 0.739114  [  162/  300]
+per-ex loss: 0.735553  [  164/  300]
+per-ex loss: 0.884605  [  166/  300]
+per-ex loss: 0.610798  [  168/  300]
+per-ex loss: 0.797126  [  170/  300]
+per-ex loss: 0.775325  [  172/  300]
+per-ex loss: 0.913301  [  174/  300]
+per-ex loss: 0.867117  [  176/  300]
+per-ex loss: 0.544381  [  178/  300]
+per-ex loss: 0.720607  [  180/  300]
+per-ex loss: 0.771740  [  182/  300]
+per-ex loss: 0.852044  [  184/  300]
+per-ex loss: 0.612319  [  186/  300]
+per-ex loss: 0.719168  [  188/  300]
+per-ex loss: 0.857229  [  190/  300]
+per-ex loss: 0.701300  [  192/  300]
+per-ex loss: 0.597633  [  194/  300]
+per-ex loss: 0.875065  [  196/  300]
+per-ex loss: 0.886962  [  198/  300]
+per-ex loss: 0.798723  [  200/  300]
+per-ex loss: 0.769196  [  202/  300]
+per-ex loss: 0.783895  [  204/  300]
+per-ex loss: 0.666350  [  206/  300]
+per-ex loss: 0.781873  [  208/  300]
+per-ex loss: 0.612015  [  210/  300]
+per-ex loss: 0.887056  [  212/  300]
+per-ex loss: 0.724687  [  214/  300]
+per-ex loss: 0.791355  [  216/  300]
+per-ex loss: 0.994902  [  218/  300]
+per-ex loss: 0.711425  [  220/  300]
+per-ex loss: 0.826457  [  222/  300]
+per-ex loss: 0.911891  [  224/  300]
+per-ex loss: 0.899763  [  226/  300]
+per-ex loss: 0.764442  [  228/  300]
+per-ex loss: 0.784343  [  230/  300]
+per-ex loss: 0.762734  [  232/  300]
+per-ex loss: 0.868729  [  234/  300]
+per-ex loss: 0.651378  [  236/  300]
+per-ex loss: 0.843712  [  238/  300]
+per-ex loss: 0.787514  [  240/  300]
+per-ex loss: 0.826946  [  242/  300]
+per-ex loss: 0.830135  [  244/  300]
+per-ex loss: 0.738457  [  246/  300]
+per-ex loss: 0.714618  [  248/  300]
+per-ex loss: 0.783388  [  250/  300]
+per-ex loss: 0.735505  [  252/  300]
+per-ex loss: 0.823393  [  254/  300]
+per-ex loss: 0.976150  [  256/  300]
+per-ex loss: 0.866489  [  258/  300]
+per-ex loss: 0.623039  [  260/  300]
+per-ex loss: 0.723635  [  262/  300]
+per-ex loss: 0.843479  [  264/  300]
+per-ex loss: 0.656383  [  266/  300]
+per-ex loss: 0.875450  [  268/  300]
+per-ex loss: 0.637968  [  270/  300]
+per-ex loss: 0.675144  [  272/  300]
+per-ex loss: 0.791520  [  274/  300]
+per-ex loss: 0.758443  [  276/  300]
+per-ex loss: 0.748365  [  278/  300]
+per-ex loss: 0.674012  [  280/  300]
+per-ex loss: 0.738287  [  282/  300]
+per-ex loss: 0.563240  [  284/  300]
+per-ex loss: 0.784172  [  286/  300]
+per-ex loss: 0.856967  [  288/  300]
+per-ex loss: 0.735177  [  290/  300]
+per-ex loss: 0.865830  [  292/  300]
+per-ex loss: 0.676439  [  294/  300]
+per-ex loss: 0.845863  [  296/  300]
+per-ex loss: 0.660337  [  298/  300]
+per-ex loss: 0.700941  [  300/  300]
+Train Error: Avg loss: 0.79900788
+validation Error: 
+ Avg loss: 0.67886715 
+ F1: 0.319972 
+ Precision: 0.218477 
+ Recall: 0.597589
+ IoU: 0.190457
+
+test Error: 
+ Avg loss: 0.69972315 
+ F1: 0.330600 
+ Precision: 0.232326 
+ Recall: 0.572964
+ IoU: 0.198035
+
+We have finished training iteration 1
+slurmstepd: error: *** STEP 18154.0 ON aga2 CANCELLED AT 2025-01-24T09:58:50 ***

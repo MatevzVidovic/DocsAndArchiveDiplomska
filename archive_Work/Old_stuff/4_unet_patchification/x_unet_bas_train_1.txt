@@ -1,0 +1,158 @@
+unet_main.py do_log: False
+Log file name: log_18_12-33-58_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='unet_bas_train', mti=250, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_bas.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_pruning_ready': True, 'path_to_data': './Data/vein_and_sclera_data', 'train_batch_size': 5, 'test_batch_size': 8, 'learning_rate': 1e-05, 'num_of_dataloader_workers': 7, 'train_epoch_size_limit': 400, 'num_epochs_per_training_iteration': 1, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'alphas': [], 'dataset_option': 'aug_old', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': True, 'patchification_params': {'patch_x': 256, 'patch_y': 128, 'stride_percent_of_patch_x': 0.5, 'stride_percent_of_patch_y': 0.5, 'input_size_limit': 4194304, 'num_of_patches_from_img': 50, 'prob_zero_patch_resample': 0.8}, 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(sd='unet_bas_train', mti=250, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_bas.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset_aug_old.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 18
+val dataloader num of batches: 4
+test dataloader num of batches: 2
+Created new model instance.
+[((((0,), 0), 0), 1), ((((0,), 0), 0), 4), ((((((0,), 1), 0), 1), 0), 1), ((((((0,), 1), 0), 1), 0), 4), ((((((0,), 1), 1), 1), 0), 1), ((((((0,), 1), 1), 1), 0), 4), ((((((0,), 1), 2), 1), 0), 1), ((((((0,), 1), 2), 1), 0), 4), ((((((0,), 1), 3), 1), 0), 1), ((((((0,), 1), 3), 1), 0), 4), ((((((0,), 1), 4), 1), 0), 1), ((((((0,), 1), 4), 1), 0), 4), ((((((0,), 1), 5), 1), 0), 1), ((((((0,), 1), 5), 1), 0), 4), ((((((0,), 2), 0), 1), 0), 1), ((((((0,), 2), 0), 1), 0), 4), ((((((0,), 2), 1), 1), 0), 1), ((((((0,), 2), 1), 1), 0), 4), ((((((0,), 2), 2), 1), 0), 1), ((((((0,), 2), 2), 1), 0), 4), ((((((0,), 2), 3), 1), 0), 1), ((((((0,), 2), 3), 1), 0), 4), ((((((0,), 2), 4), 1), 0), 1), ((((((0,), 2), 4), 1), 0), 4), ((((((0,), 2), 5), 1), 0), 1), ((((((0,), 2), 5), 1), 0), 4), ((((0,), 2), 0), 0), ((((0,), 2), 1), 0), ((((0,), 2), 2), 0), ((((0,), 2), 3), 0), ((((0,), 2), 4), 0), ((((0,), 2), 5), 0)]
+per-ex loss: 0.866219  [  250/ 4400]
+per-ex loss: 0.850052  [  500/ 4400]
+per-ex loss: 0.853701  [  750/ 4400]
+per-ex loss: 0.812085  [ 1000/ 4400]
+per-ex loss: 0.893521  [ 1250/ 4400]
+per-ex loss: 0.803177  [ 1500/ 4400]
+per-ex loss: 0.845012  [ 1750/ 4400]
+per-ex loss: 0.865901  [ 2000/ 4400]
+per-ex loss: 0.800800  [ 2250/ 4400]
+per-ex loss: 0.829749  [ 2500/ 4400]
+per-ex loss: 0.813004  [ 2750/ 4400]
+per-ex loss: 0.818798  [ 3000/ 4400]
+per-ex loss: 0.805747  [ 3250/ 4400]
+per-ex loss: 0.787918  [ 3500/ 4400]
+per-ex loss: 0.781044  [ 3750/ 4400]
+per-ex loss: 0.831277  [ 4000/ 4400]
+per-ex loss: 0.865094  [ 4250/ 4400]
+per-ex loss: 0.747720  [ 4400/ 4400]
+Train Error: Avg loss: 0.82615663
+validation Error: 
+ Avg loss: 0.88730063 
+ F1: 0.250868 
+ Precision: 0.327015 
+ Recall: 0.203485
+ IoU: 0.143424
+
+test Error: 
+ Avg loss: 0.89941165 
+ F1: 0.252492 
+ Precision: 0.286753 
+ Recall: 0.225545
+ IoU: 0.144487
+
+We have finished training iteration 1
+per-ex loss: 0.808111  [  250/ 4400]
+per-ex loss: 0.808252  [  500/ 4400]
+per-ex loss: 0.766529  [  750/ 4400]
+per-ex loss: 0.759733  [ 1000/ 4400]
+per-ex loss: 0.774381  [ 1250/ 4400]
+per-ex loss: 0.833174  [ 1500/ 4400]
+per-ex loss: 0.776040  [ 1750/ 4400]
+per-ex loss: 0.800528  [ 2000/ 4400]
+per-ex loss: 0.837062  [ 2250/ 4400]
+per-ex loss: 0.750262  [ 2500/ 4400]
+per-ex loss: 0.799658  [ 2750/ 4400]
+per-ex loss: 0.830171  [ 3000/ 4400]
+per-ex loss: 0.771135  [ 3250/ 4400]
+per-ex loss: 0.792916  [ 3500/ 4400]
+per-ex loss: 0.725874  [ 3750/ 4400]
+per-ex loss: 0.787403  [ 4000/ 4400]
+per-ex loss: 0.836192  [ 4250/ 4400]
+per-ex loss: 0.825721  [ 4400/ 4400]
+Train Error: Avg loss: 0.79350790
+validation Error: 
+ Avg loss: 0.86529730 
+ F1: 0.306261 
+ Precision: 0.373126 
+ Recall: 0.259718
+ IoU: 0.180819
+
+test Error: 
+ Avg loss: 0.88350067 
+ F1: 0.328128 
+ Precision: 0.335795 
+ Recall: 0.320803
+ IoU: 0.196264
+
+We have finished training iteration 2
+per-ex loss: 0.853559  [  250/ 4400]
+per-ex loss: 0.741052  [  500/ 4400]
+per-ex loss: 0.792022  [  750/ 4400]
+per-ex loss: 0.697489  [ 1000/ 4400]
+per-ex loss: 0.782989  [ 1250/ 4400]
+per-ex loss: 0.841081  [ 1500/ 4400]
+per-ex loss: 0.788832  [ 1750/ 4400]
+per-ex loss: 0.771332  [ 2000/ 4400]
+per-ex loss: 0.819742  [ 2250/ 4400]
+per-ex loss: 0.771472  [ 2500/ 4400]
+per-ex loss: 0.663139  [ 2750/ 4400]
+per-ex loss: 0.781867  [ 3000/ 4400]
+per-ex loss: 0.828527  [ 3250/ 4400]
+per-ex loss: 0.798333  [ 3500/ 4400]
+per-ex loss: 0.780490  [ 3750/ 4400]
+per-ex loss: 0.766660  [ 4000/ 4400]
+per-ex loss: 0.666844  [ 4250/ 4400]
+per-ex loss: 0.746744  [ 4400/ 4400]
+Train Error: Avg loss: 0.77178743
+validation Error: 
+ Avg loss: 0.80876216 
+ F1: 0.313300 
+ Precision: 0.616146 
+ Recall: 0.210055
+ IoU: 0.185747
+
+test Error: 
+ Avg loss: 0.83390185 
+ F1: 0.337138 
+ Precision: 0.555948 
+ Recall: 0.241923
+ IoU: 0.202746
+
+We have finished training iteration 3
+Error in cropping the image to the non-zero values in the fourth channel. Returned the original image.
+per-ex loss: 0.755092  [  250/ 4400]
+per-ex loss: 0.807135  [  500/ 4400]
+per-ex loss: 0.814817  [  750/ 4400]
+per-ex loss: 0.743933  [ 1000/ 4400]
+per-ex loss: 0.826400  [ 1250/ 4400]
+per-ex loss: 0.726426  [ 1500/ 4400]
+per-ex loss: 0.704980  [ 1750/ 4400]
+per-ex loss: 0.745797  [ 2000/ 4400]
+per-ex loss: 0.785165  [ 2250/ 4400]
+per-ex loss: 0.696600  [ 2500/ 4400]
+per-ex loss: 0.643120  [ 2750/ 4400]
+per-ex loss: 0.692871  [ 3000/ 4400]
+per-ex loss: 0.703921  [ 3250/ 4400]
+per-ex loss: 0.678490  [ 3500/ 4400]
+per-ex loss: 0.714510  [ 3750/ 4400]
+per-ex loss: 0.697321  [ 4000/ 4400]
+per-ex loss: 0.653097  [ 4250/ 4400]
+per-ex loss: 0.819989  [ 4400/ 4400]
+Train Error: Avg loss: 0.73387017
+slurmstepd: error: *** STEP 17247.0 ON ana CANCELLED AT 2025-01-18T12:49:06 ***

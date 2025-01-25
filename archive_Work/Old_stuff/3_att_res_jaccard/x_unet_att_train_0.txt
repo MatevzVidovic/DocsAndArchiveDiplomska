@@ -1,0 +1,89 @@
+unet_att_main_just_train.py do_log: False
+Log file name: log_14_13-44-53_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='unet_att_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_att.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'path_to_data': './Data/vein_and_sclera_data', 'batch_size': 2, 'learning_rate': 1e-05, 'num_of_dataloader_workers': 7, 'train_epoch_size_limit': 400, 'num_epochs_per_training_iteration': 1, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'alphas': [], 'dataset_option': 'aug_tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model_type': 'att', 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(sd='unet_att_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_att.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset_aug_tf.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 44
+val dataloader num of batches: 14
+test dataloader num of batches: 6
+Created new model instance.
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py:1457: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  curr_str += f"[{attr_name}(): {curr_attr()}] "
+per-ex loss: 0.825435  [    2/   88]
+Traceback (most recent call last):
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/unet_att_main_just_train.py", line 547, in <module>
+    train_automatically(model_wrapper, main_save_path, val_stop_fn=validation_stop, max_training_iters=max_train_iters, max_total_training_iters=max_total_train_iters, 
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_support.py", line 733, in train_automatically
+    model_wrapper.train(num_of_epochs_per_training)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py", line 216, in train
+    self.training_wrapper.train()
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_wrapper.py", line 566, in train
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_wrapper.py", line 517, in train
+    pred = self.model(X)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/unet_att.py", line 123, in forward
+    x = up(x, past_xs[-2-i])
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/unet_att.py", line 219, in forward
+    return self.conv(x)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/unet_att.py", line 147, in forward
+    return self.double_conv(x)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/functional.py", line 2812, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1024.00 MiB. GPU 0 has a total capacity of 39.50 GiB of which 156.12 MiB is free. Including non-PyTorch memory, this process has 39.33 GiB memory in use. Of the allocated memory 35.98 GiB is allocated by PyTorch, and 2.87 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

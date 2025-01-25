@@ -1,0 +1,436 @@
+unet_main.py do_log: False
+Log file name: log_21_11-53-32_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='unet_vein_small_no_add_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_vein_small_no_add.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 32, 'eval_batch_size': 64, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': False, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': False, 'add_coye_to_img': False, 'model': '4_2_4', 'input_width': 2048, 'input_height': 1024, 'input_channels': 3, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(sd='unet_vein_small_no_add_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_vein_small_no_add.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 10
+val dataloader num of batches: 1
+test dataloader num of batches: 1
+Created new model instance.
+per-ex loss: 0.983677  [   32/  300]
+per-ex loss: 0.981361  [   64/  300]
+per-ex loss: 0.983638  [   96/  300]
+per-ex loss: 0.985086  [  128/  300]
+per-ex loss: 0.982728  [  160/  300]
+per-ex loss: 0.980565  [  192/  300]
+per-ex loss: 0.980551  [  224/  300]
+per-ex loss: 0.981833  [  256/  300]
+per-ex loss: 0.981704  [  288/  300]
+per-ex loss: 0.986339  [  300/  300]
+Train Error: Avg loss: 0.98274801
+validation Error: 
+ Avg loss: 0.98299581 
+ F1: 0.016603 
+ Precision: 0.008371 
+ Recall: 1.000000
+ IoU: 0.008371
+
+test Error: 
+ Avg loss: 0.98156947 
+ F1: 0.018014 
+ Precision: 0.009089 
+ Recall: 1.000000
+ IoU: 0.009089
+
+We have finished training iteration 1
+per-ex loss: 0.981116  [   32/  300]
+per-ex loss: 0.980401  [   64/  300]
+per-ex loss: 0.983724  [   96/  300]
+per-ex loss: 0.982584  [  128/  300]
+per-ex loss: 0.980556  [  160/  300]
+per-ex loss: 0.983740  [  192/  300]
+per-ex loss: 0.981673  [  224/  300]
+per-ex loss: 0.978707  [  256/  300]
+per-ex loss: 0.984880  [  288/  300]
+per-ex loss: 0.984288  [  300/  300]
+Train Error: Avg loss: 0.98216692
+validation Error: 
+ Avg loss: 0.98201990 
+ F1: 0.016603 
+ Precision: 0.008371 
+ Recall: 1.000000
+ IoU: 0.008371
+
+test Error: 
+ Avg loss: 0.98052967 
+ F1: 0.018014 
+ Precision: 0.009089 
+ Recall: 1.000000
+ IoU: 0.009089
+
+We have finished training iteration 2
+per-ex loss: 0.980570  [   32/  300]
+per-ex loss: 0.982523  [   64/  300]
+per-ex loss: 0.981350  [   96/  300]
+per-ex loss: 0.984173  [  128/  300]
+per-ex loss: 0.978490  [  160/  300]
+per-ex loss: 0.981155  [  192/  300]
+per-ex loss: 0.979818  [  224/  300]
+per-ex loss: 0.983425  [  256/  300]
+per-ex loss: 0.979327  [  288/  300]
+per-ex loss: 0.978506  [  300/  300]
+Train Error: Avg loss: 0.98093362
+validation Error: 
+ Avg loss: 0.98117602 
+ F1: 0.016613 
+ Precision: 0.008376 
+ Recall: 0.999880
+ IoU: 0.008376
+
+test Error: 
+ Avg loss: 0.97962993 
+ F1: 0.018025 
+ Precision: 0.009095 
+ Recall: 0.999969
+ IoU: 0.009095
+
+We have finished training iteration 3
+per-ex loss: 0.979437  [   32/  300]
+per-ex loss: 0.979706  [   64/  300]
+per-ex loss: 0.986410  [   96/  300]
+per-ex loss: 0.978539  [  128/  300]
+per-ex loss: 0.979333  [  160/  300]
+per-ex loss: 0.984265  [  192/  300]
+per-ex loss: 0.978326  [  224/  300]
+per-ex loss: 0.979789  [  256/  300]
+per-ex loss: 0.978816  [  288/  300]
+per-ex loss: 0.981426  [  300/  300]
+Train Error: Avg loss: 0.98060441
+validation Error: 
+ Avg loss: 0.98095536 
+ F1: 0.016666 
+ Precision: 0.008403 
+ Recall: 0.999530
+ IoU: 0.008403
+
+test Error: 
+ Avg loss: 0.97939432 
+ F1: 0.018083 
+ Precision: 0.009124 
+ Recall: 0.999672
+ IoU: 0.009124
+
+We have finished training iteration 4
+per-ex loss: 0.980733  [   32/  300]
+per-ex loss: 0.978601  [   64/  300]
+per-ex loss: 0.980478  [   96/  300]
+per-ex loss: 0.978233  [  128/  300]
+per-ex loss: 0.981251  [  160/  300]
+per-ex loss: 0.978978  [  192/  300]
+per-ex loss: 0.985217  [  224/  300]
+per-ex loss: 0.979621  [  256/  300]
+per-ex loss: 0.981878  [  288/  300]
+per-ex loss: 0.980980  [  300/  300]
+Train Error: Avg loss: 0.98059717
+validation Error: 
+ Avg loss: 0.98077178 
+ F1: 0.016672 
+ Precision: 0.008406 
+ Recall: 0.999245
+ IoU: 0.008406
+
+test Error: 
+ Avg loss: 0.97922337 
+ F1: 0.018092 
+ Precision: 0.009128 
+ Recall: 0.999440
+ IoU: 0.009128
+
+We have finished training iteration 5
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_1_.pth
+per-ex loss: 0.981679  [   32/  300]
+per-ex loss: 0.978692  [   64/  300]
+per-ex loss: 0.980319  [   96/  300]
+per-ex loss: 0.979102  [  128/  300]
+per-ex loss: 0.980704  [  160/  300]
+per-ex loss: 0.980511  [  192/  300]
+per-ex loss: 0.976513  [  224/  300]
+per-ex loss: 0.980522  [  256/  300]
+per-ex loss: 0.982602  [  288/  300]
+per-ex loss: 0.977942  [  300/  300]
+Train Error: Avg loss: 0.97985865
+validation Error: 
+ Avg loss: 0.98154444 
+ F1: 0.016677 
+ Precision: 0.008409 
+ Recall: 0.999114
+ IoU: 0.008408
+
+test Error: 
+ Avg loss: 0.98004597 
+ F1: 0.018098 
+ Precision: 0.009132 
+ Recall: 0.999331
+ IoU: 0.009132
+
+We have finished training iteration 6
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_2_.pth
+per-ex loss: 0.976337  [   32/  300]
+per-ex loss: 0.983525  [   64/  300]
+per-ex loss: 0.978204  [   96/  300]
+per-ex loss: 0.978761  [  128/  300]
+per-ex loss: 0.980848  [  160/  300]
+per-ex loss: 0.975066  [  192/  300]
+per-ex loss: 0.979359  [  224/  300]
+per-ex loss: 0.977920  [  256/  300]
+per-ex loss: 0.981798  [  288/  300]
+per-ex loss: 0.974914  [  300/  300]
+Train Error: Avg loss: 0.97867317
+validation Error: 
+ Avg loss: 0.98233163 
+ F1: 0.016698 
+ Precision: 0.008420 
+ Recall: 0.999167
+ IoU: 0.008419
+
+test Error: 
+ Avg loss: 0.98087472 
+ F1: 0.018121 
+ Precision: 0.009143 
+ Recall: 0.999340
+ IoU: 0.009143
+
+We have finished training iteration 7
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_3_.pth
+per-ex loss: 0.981215  [   32/  300]
+per-ex loss: 0.976952  [   64/  300]
+per-ex loss: 0.983416  [   96/  300]
+per-ex loss: 0.979772  [  128/  300]
+per-ex loss: 0.977707  [  160/  300]
+per-ex loss: 0.975923  [  192/  300]
+per-ex loss: 0.978822  [  224/  300]
+per-ex loss: 0.974896  [  256/  300]
+per-ex loss: 0.978931  [  288/  300]
+per-ex loss: 0.968517  [  300/  300]
+Train Error: Avg loss: 0.97761514
+validation Error: 
+ Avg loss: 0.97769397 
+ F1: 0.031955 
+ Precision: 0.016237 
+ Recall: 0.999160
+ IoU: 0.016237
+
+test Error: 
+ Avg loss: 0.97592950 
+ F1: 0.034157 
+ Precision: 0.017375 
+ Recall: 0.999091
+ IoU: 0.017375
+
+We have finished training iteration 8
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_6_.pth
+per-ex loss: 0.980198  [   32/  300]
+per-ex loss: 0.972102  [   64/  300]
+per-ex loss: 0.978231  [   96/  300]
+per-ex loss: 0.981761  [  128/  300]
+per-ex loss: 0.976712  [  160/  300]
+per-ex loss: 0.979736  [  192/  300]
+per-ex loss: 0.976405  [  224/  300]
+per-ex loss: 0.975529  [  256/  300]
+per-ex loss: 0.980637  [  288/  300]
+per-ex loss: 0.979485  [  300/  300]
+Train Error: Avg loss: 0.97807950
+validation Error: 
+ Avg loss: 0.97682685 
+ F1: 0.033824 
+ Precision: 0.017203 
+ Recall: 0.999293
+ IoU: 0.017203
+
+test Error: 
+ Avg loss: 0.97499532 
+ F1: 0.036074 
+ Precision: 0.018369 
+ Recall: 0.999091
+ IoU: 0.018368
+
+We have finished training iteration 9
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_7_.pth
+per-ex loss: 0.978063  [   32/  300]
+per-ex loss: 0.976741  [   64/  300]
+per-ex loss: 0.975662  [   96/  300]
+per-ex loss: 0.974176  [  128/  300]
+per-ex loss: 0.974434  [  160/  300]
+per-ex loss: 0.980704  [  192/  300]
+per-ex loss: 0.979103  [  224/  300]
+per-ex loss: 0.971080  [  256/  300]
+per-ex loss: 0.977430  [  288/  300]
+per-ex loss: 0.978265  [  300/  300]
+Train Error: Avg loss: 0.97656580
+validation Error: 
+ Avg loss: 0.97620142 
+ F1: 0.034043 
+ Precision: 0.017316 
+ Recall: 0.999416
+ IoU: 0.017316
+
+test Error: 
+ Avg loss: 0.97429746 
+ F1: 0.036244 
+ Precision: 0.018457 
+ Recall: 0.999182
+ IoU: 0.018457
+
+We have finished training iteration 10
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_4_.pth
+per-ex loss: 0.976094  [   32/  300]
+per-ex loss: 0.977381  [   64/  300]
+per-ex loss: 0.968246  [   96/  300]
+per-ex loss: 0.973990  [  128/  300]
+per-ex loss: 0.978079  [  160/  300]
+per-ex loss: 0.975953  [  192/  300]
+per-ex loss: 0.965478  [  224/  300]
+per-ex loss: 0.983012  [  256/  300]
+per-ex loss: 0.975892  [  288/  300]
+per-ex loss: 0.979340  [  300/  300]
+Train Error: Avg loss: 0.97534651
+validation Error: 
+ Avg loss: 0.98050886 
+ F1: 0.018734 
+ Precision: 0.009456 
+ Recall: 0.999468
+ IoU: 0.009456
+
+test Error: 
+ Avg loss: 0.97872823 
+ F1: 0.020329 
+ Precision: 0.010269 
+ Recall: 0.999537
+ IoU: 0.010269
+
+We have finished training iteration 11
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_5_.pth
+per-ex loss: 0.976136  [   32/  300]
+per-ex loss: 0.978256  [   64/  300]
+per-ex loss: 0.980064  [   96/  300]
+per-ex loss: 0.974938  [  128/  300]
+per-ex loss: 0.969076  [  160/  300]
+per-ex loss: 0.980325  [  192/  300]
+per-ex loss: 0.977297  [  224/  300]
+per-ex loss: 0.973546  [  256/  300]
+per-ex loss: 0.974136  [  288/  300]
+per-ex loss: 0.976302  [  300/  300]
+Train Error: Avg loss: 0.97600768
+validation Error: 
+ Avg loss: 0.98077375 
+ F1: 0.018230 
+ Precision: 0.009199 
+ Recall: 0.999485
+ IoU: 0.009199
+
+test Error: 
+ Avg loss: 0.97905260 
+ F1: 0.019782 
+ Precision: 0.009990 
+ Recall: 0.999576
+ IoU: 0.009990
+
+We have finished training iteration 12
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_8_.pth
+per-ex loss: 0.977548  [   32/  300]
+per-ex loss: 0.974434  [   64/  300]
+per-ex loss: 0.973225  [   96/  300]
+per-ex loss: 0.973949  [  128/  300]
+per-ex loss: 0.972993  [  160/  300]
+per-ex loss: 0.972970  [  192/  300]
+per-ex loss: 0.973120  [  224/  300]
+per-ex loss: 0.975676  [  256/  300]
+per-ex loss: 0.978351  [  288/  300]
+per-ex loss: 0.974943  [  300/  300]
+Train Error: Avg loss: 0.97472084
+validation Error: 
+ Avg loss: 0.97516644 
+ F1: 0.033752 
+ Precision: 0.017166 
+ Recall: 0.999654
+ IoU: 0.017166
+
+test Error: 
+ Avg loss: 0.97325093 
+ F1: 0.035971 
+ Precision: 0.018315 
+ Recall: 0.999388
+ IoU: 0.018315
+
+We have finished training iteration 13
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_11_.pth
+per-ex loss: 0.978269  [   32/  300]
+per-ex loss: 0.969871  [   64/  300]
+per-ex loss: 0.978558  [   96/  300]
+per-ex loss: 0.970744  [  128/  300]
+per-ex loss: 0.971895  [  160/  300]
+per-ex loss: 0.976115  [  192/  300]
+per-ex loss: 0.975190  [  224/  300]
+per-ex loss: 0.973843  [  256/  300]
+per-ex loss: 0.973167  [  288/  300]
+per-ex loss: 0.976135  [  300/  300]
+Train Error: Avg loss: 0.97437879
+validation Error: 
+ Avg loss: 0.98016691 
+ F1: 0.018446 
+ Precision: 0.009309 
+ Recall: 0.999610
+ IoU: 0.009309
+
+test Error: 
+ Avg loss: 0.97850615 
+ F1: 0.020041 
+ Precision: 0.010122 
+ Recall: 0.999663
+ IoU: 0.010122
+
+We have finished training iteration 14
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_12_.pth
+per-ex loss: 0.979451  [   32/  300]
+per-ex loss: 0.971408  [   64/  300]
+per-ex loss: 0.973977  [   96/  300]
+per-ex loss: 0.966540  [  128/  300]
+per-ex loss: 0.977855  [  160/  300]
+per-ex loss: 0.979696  [  192/  300]
+per-ex loss: 0.977832  [  224/  300]
+per-ex loss: 0.972557  [  256/  300]
+per-ex loss: 0.972239  [  288/  300]
+per-ex loss: 0.964885  [  300/  300]
+Train Error: Avg loss: 0.97364419
+validation Error: 
+ Avg loss: 0.97995383 
+ F1: 0.019036 
+ Precision: 0.009609 
+ Recall: 0.999363
+ IoU: 0.009609
+
+test Error: 
+ Avg loss: 0.97818714 
+ F1: 0.020714 
+ Precision: 0.010465 
+ Recall: 0.999375
+ IoU: 0.010465
+
+We have finished training iteration 15
+Deleting model ./unet_vein_small_no_add_train/saved_model_wrapper/models/UNet_9_.pth
+slurmstepd: error: *** STEP 17762.0 ON aga2 CANCELLED AT 2025-01-21T13:05:27 ***

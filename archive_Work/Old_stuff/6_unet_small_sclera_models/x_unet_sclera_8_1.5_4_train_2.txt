@@ -1,0 +1,20 @@
+unet_main.py do_log: False
+Log file name: log_20_12-25-26_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='unet_sclera_8_1.5_4_train', mti=150, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_sclera_8_1.5_4.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Traceback (most recent call last):
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/unet_main.py", line 137, in <module>
+    yaml_dict = yh.read_yaml(yaml_path)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/helper_yaml_handler.py", line 6, in read_yaml
+    with open(file_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'z_pipeline_unet/unet_sclera_8_1.5_4.yaml'

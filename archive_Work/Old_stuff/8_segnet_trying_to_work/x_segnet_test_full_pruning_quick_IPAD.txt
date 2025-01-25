@@ -1,0 +1,499 @@
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 32 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+segnet_main.py do_log: False
+Log file name: log_23_09-05-34_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='test_full_pruning_quick_IPAD', mti=1000000000.0, mtti=1000000000.0, pruning_phase=True, ifn='IPAD_eq', ips=1000000000.0, tras=2, tp=False, yaml='z_pipeline_segnet/segnet_vein.yaml', yo=['z_pipeline_segnet/overriding_yamls/small.yaml'], ntibp=1, ptp=None, map=None)
+YAML: {'is_pruning_ready': True, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 3, 'eval_batch_size': 12, 'learning_rate': 1e-05, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': False, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': '4_1', 'input_width': 256, 'input_height': 256, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: True
+Namespace(sd='test_full_pruning_quick_IPAD', mti=1000000000.0, mtti=1000000000.0, pruning_phase=True, ifn='IPAD_eq', ips=1000000000.0, tras=2, tp=False, yaml='z_pipeline_segnet/segnet_vein.yaml', yo=['z_pipeline_segnet/overriding_yamls/small.yaml'], ntibp=1, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 2
+val dataset len: 2
+test dataset len: 2
+train dataloader num of batches: 1
+val dataloader num of batches: 1
+test dataloader num of batches: 1
+Created new model instance.
+Goal resource value: 48976773.12
+disallowed_directly: {((0,), 58)}
+disallowed_tree_ixs: {((0,), 58)}
+----------
+sortable_list[:5]: [(((0,), 24), 1, 0.021373173221945763), (((0,), 56), 3, 0.023111186921596527), (((0,), 32), 3, 0.025070523843169212), (((0,), 17), 1, 0.026012621819972992), (((0,), 37), 0, 0.0269013624638319)]
+Pruned ((0,), 24), real_kernel_ix: 1, initial_kernel_ix: 1
+Pruned ((0,), 26), real_input_slice_ix: 1, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 25), real kernel ix (in code real_input_slice_ix): 1, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 56), real_kernel_ix: 3, initial_kernel_ix: 3
+Pruned ((0,), 58), real_input_slice_ix: 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 57), real kernel ix (in code real_input_slice_ix): 3, initial_input_slice_ix: 3
+----------
+Current resource value: 45914112
+per-ex loss: 0.983837  [    2/    2]
+Train Error: Avg loss: 0.98383701
+validation Error: 
+ Avg loss: 0.98812085 
+ F1: 0.011130 
+ Precision: 0.005660 
+ Recall: 0.332910
+ IoU: 0.005596
+
+test Error: 
+ Avg loss: 0.97303742 
+ F1: 0.027323 
+ Precision: 0.014198 
+ Recall: 0.361433
+ IoU: 0.013850
+
+We have finished training iteration 1
+Goal resource value: 45513768.96
+disallowed_directly: {((0,), 58)}
+disallowed_tree_ixs: {((0,), 58)}
+----------
+sortable_list[:5]: [(((0,), 17), 1, 0.02473948337137699), (((0,), 32), 3, 0.026311548426747322), (((0,), 28), 3, 0.026782361790537834), (((0,), 37), 0, 0.02690063789486885), (((0,), 12), 0, 0.02695595473051071)]
+Pruned ((0,), 17), real_kernel_ix: 1, initial_kernel_ix: 1
+Pruned ((0,), 19), real_input_slice_ix: 1, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 18), real kernel ix (in code real_input_slice_ix): 1, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 32), real_kernel_ix: 3, initial_kernel_ix: 3
+Pruned ((0,), 34), real_input_slice_ix: 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 33), real kernel ix (in code real_input_slice_ix): 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 28), real_kernel_ix: 3, initial_kernel_ix: 3
+Pruned ((0,), 30), real_input_slice_ix: 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 29), real kernel ix (in code real_input_slice_ix): 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 37), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 39), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 38), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 12), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 14), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 13), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Current resource value: 45434880
+per-ex loss: 0.975800  [    2/    2]
+Train Error: Avg loss: 0.97580034
+validation Error: 
+ Avg loss: 0.98812038 
+ F1: 0.011304 
+ Precision: 0.005750 
+ Recall: 0.331639
+ IoU: 0.005684
+
+test Error: 
+ Avg loss: 0.97301716 
+ F1: 0.028123 
+ Precision: 0.014627 
+ Recall: 0.363636
+ IoU: 0.014262
+
+We have finished training iteration 2
+Goal resource value: 45019054.08
+disallowed_directly: {((0,), 58)}
+disallowed_tree_ixs: {((0,), 58)}
+----------
+sortable_list[:5]: [(((0,), 21), 0, 0.024770446121692657), (((0,), 32), 2, 0.02615255117416382), (((0,), 19), 2, 0.027493249624967575), (((0,), 30), 1, 0.028562026098370552), (((0,), 21), 1, 0.028956562280654907)]
+Pruned ((0,), 21), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 24), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 22), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 34), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 37), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 35), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 32), real_kernel_ix: 2, initial_kernel_ix: 2
+Pruned ((0,), 34), real_input_slice_ix: 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 33), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 19), real_kernel_ix: 2, initial_kernel_ix: 2
+Pruned ((0,), 21), real_input_slice_ix: 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 20), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 30), real_kernel_ix: 1, initial_kernel_ix: 1
+Pruned ((0,), 32), real_input_slice_ix: 1, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 31), real kernel ix (in code real_input_slice_ix): 1, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 21), real_kernel_ix: 0, initial_kernel_ix: 1
+Pruned ((0,), 24), real_input_slice_ix: 0, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 22), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 34), real_kernel_ix: 0, initial_kernel_ix: 1
+Pruned ((0,), 37), real_input_slice_ix: 0, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 35), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 19), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 21), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 20), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 28), real_kernel_ix: 2, initial_kernel_ix: 2
+Pruned ((0,), 30), real_input_slice_ix: 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 29), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 37), real_kernel_ix: 2, initial_kernel_ix: 3
+Pruned ((0,), 39), real_input_slice_ix: 2, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 38), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 24), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 26), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 25), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 30), real_kernel_ix: 2, initial_kernel_ix: 3
+Pruned ((0,), 32), real_input_slice_ix: 2, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 31), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 44), real_kernel_ix: 2, initial_kernel_ix: 2
+Pruned ((0,), 46), real_input_slice_ix: 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 45), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 2
+----------
+Current resource value: 44771328
+per-ex loss: 0.975783  [    2/    2]
+Train Error: Avg loss: 0.97578347
+validation Error: 
+ Avg loss: 0.98812658 
+ F1: 0.012205 
+ Precision: 0.006210 
+ Recall: 0.351970
+ IoU: 0.006140
+
+test Error: 
+ Avg loss: 0.97297907 
+ F1: 0.028949 
+ Precision: 0.015067 
+ Recall: 0.368044
+ IoU: 0.014687
+
+We have finished training iteration 3
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_1_after_pruning.pth
+Goal resource value: 44524339.2
+disallowed_directly: {((0,), 58)}
+disallowed_tree_ixs: {((0,), 58)}
+----------
+sortable_list[:5]: [(((0,), 26), 3, 0.025143861770629883), (((0,), 28), 0, 0.029390821233391762), (((0,), 28), 1, 0.029390821233391762), (((0,), 26), 2, 0.03154858201742172), (((0,), 56), 0, 0.03362507373094559)]
+Pruned ((0,), 26), real_kernel_ix: 3, initial_kernel_ix: 3
+Pruned ((0,), 28), real_input_slice_ix: 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 27), real kernel ix (in code real_input_slice_ix): 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 28), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 30), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 29), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 26), real_kernel_ix: 2, initial_kernel_ix: 2
+Pruned ((0,), 28), real_input_slice_ix: 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 27), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 56), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 58), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 57), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Current resource value: 41204736
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_1_.pth
+per-ex loss: 0.975923  [    2/    2]
+Train Error: Avg loss: 0.97592324
+validation Error: 
+ Avg loss: 0.98812270 
+ F1: 0.011250 
+ Precision: 0.005713 
+ Recall: 0.363405
+ IoU: 0.005657
+
+test Error: 
+ Avg loss: 0.97296023 
+ F1: 0.028074 
+ Precision: 0.014546 
+ Recall: 0.401102
+ IoU: 0.014237
+
+We have finished training iteration 4
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_3_.pth
+Goal resource value: 41061335.04
+disallowed_directly: {((0,), 28), ((0,), 30), ((0,), 58)}
+disallowed_tree_ixs: {((0,), 28), ((0,), 30), ((0,), 58)}
+----------
+sortable_list[:5]: [(((0,), 44), 2, 0.03465602919459343), (((0,), 51), 0, 0.03789415955543518), (((0,), 46), 2, 0.038672588765621185), (((0,), 46), 3, 0.03886296972632408), (((0,), 44), 1, 0.0391928032040596)]
+Pruned ((0,), 44), real_kernel_ix: 2, initial_kernel_ix: 3
+Pruned ((0,), 46), real_input_slice_ix: 2, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 45), real kernel ix (in code real_input_slice_ix): 2, initial_input_slice_ix: 3
+----------
+Current resource value: 40909824
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_3_after_pruning.pth
+per-ex loss: 0.975679  [    2/    2]
+Train Error: Avg loss: 0.97567874
+validation Error: 
+ Avg loss: 0.98812431 
+ F1: 0.010996 
+ Precision: 0.005582 
+ Recall: 0.365947
+ IoU: 0.005529
+
+test Error: 
+ Avg loss: 0.97295809 
+ F1: 0.027815 
+ Precision: 0.014397 
+ Recall: 0.408815
+ IoU: 0.014104
+
+We have finished training iteration 5
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_4_.pth
+Goal resource value: 40566620.160000004
+disallowed_directly: {((0,), 28), ((0,), 30), ((0,), 58)}
+disallowed_tree_ixs: {((0,), 28), ((0,), 30), ((0,), 58)}
+----------
+sortable_list[:5]: [(((0,), 37), 1, 0.03516132012009621), (((0,), 37), 0, 0.035161323845386505), (((0,), 46), 3, 0.03622327372431755), (((0,), 51), 0, 0.03929249942302704), (((0,), 44), 0, 0.042183805257081985)]
+Pruned ((0,), 37), real_kernel_ix: 1, initial_kernel_ix: 2
+Pruned ((0,), 39), real_input_slice_ix: 1, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 38), real kernel ix (in code real_input_slice_ix): 1, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 46), real_kernel_ix: 3, initial_kernel_ix: 3
+Pruned ((0,), 48), real_input_slice_ix: 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 47), real kernel ix (in code real_input_slice_ix): 3, initial_input_slice_ix: 3
+----------
+Pruned ((0,), 51), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 53), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 52), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Current resource value: 39453696
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_4_after_pruning.pth
+per-ex loss: 0.982225  [    2/    2]
+Train Error: Avg loss: 0.98222530
+validation Error: 
+ Avg loss: 0.98811281 
+ F1: 0.011255 
+ Precision: 0.005710 
+ Recall: 0.387548
+ IoU: 0.005659
+
+test Error: 
+ Avg loss: 0.97293025 
+ F1: 0.028773 
+ Precision: 0.014874 
+ Recall: 0.438567
+ IoU: 0.014596
+
+We have finished training iteration 6
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_5_.pth
+Goal resource value: 39082475.52
+disallowed_directly: {((0,), 28), ((0,), 30), ((0,), 58), ((0,), 37)}
+disallowed_tree_ixs: {((0,), 58), ((0,), 28), ((0,), 30), ((0,), 37)}
+----------
+sortable_list[:5]: [(((0,), 51), 1, 0.04139561951160431), (((0,), 51), 0, 0.04264000058174133), (((0,), 44), 0, 0.043363142758607864), (((0,), 44), 1, 0.043363142758607864), (((0,), 46), 2, 0.050609588623046875)]
+Pruned ((0,), 51), real_kernel_ix: 1, initial_kernel_ix: 2
+Pruned ((0,), 53), real_input_slice_ix: 1, initial_input_slice_ix: 2
+----------
+Pruned ((0,), 52), real kernel ix (in code real_input_slice_ix): 1, initial_input_slice_ix: 2
+----------
+Current resource value: 38274048
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_5_after_pruning.pth
+per-ex loss: 0.977306  [    2/    2]
+Train Error: Avg loss: 0.97730643
+validation Error: 
+ Avg loss: 0.98808956 
+ F1: 0.012279 
+ Precision: 0.006233 
+ Recall: 0.409149
+ IoU: 0.006177
+
+test Error: 
+ Avg loss: 0.97295713 
+ F1: 0.028494 
+ Precision: 0.014750 
+ Recall: 0.417631
+ IoU: 0.014453
+
+We have finished training iteration 7
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_2_after_pruning.pth
+Goal resource value: 38093045.76
+disallowed_directly: {((0,), 28), ((0,), 30), ((0,), 58), ((0,), 37)}
+disallowed_tree_ixs: {((0,), 58), ((0,), 28), ((0,), 30), ((0,), 37)}
+----------
+sortable_list[:5]: [(((0,), 44), 0, 0.056617483496665955), (((0,), 44), 1, 0.056617483496665955), (((0,), 0), 3, 0.057754043489694595), (((0,), 0), 2, 0.05888199806213379), (((0,), 39), 1, 0.06633057445287704)]
+Pruned ((0,), 44), real_kernel_ix: 0, initial_kernel_ix: 0
+Pruned ((0,), 46), real_input_slice_ix: 0, initial_input_slice_ix: 0
+----------
+Pruned ((0,), 45), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 0
+----------
+Current resource value: 38016000
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_2_.pth
+per-ex loss: 0.975203  [    2/    2]
+Train Error: Avg loss: 0.97520274
+validation Error: 
+ Avg loss: 0.98809266 
+ F1: 0.013013 
+ Precision: 0.006608 
+ Recall: 0.424396
+ IoU: 0.006549
+
+test Error: 
+ Avg loss: 0.97290003 
+ F1: 0.029184 
+ Precision: 0.015121 
+ Recall: 0.417080
+ IoU: 0.014808
+
+We have finished training iteration 8
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_6_after_pruning.pth
+Goal resource value: 37598330.88
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py:1457: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  curr_str += f"[{attr_name}(): {curr_attr()}] "
+disallowed_directly: {((0,), 37), ((0,), 46), ((0,), 30), ((0,), 58), ((0,), 28)}
+disallowed_tree_ixs: {((0,), 37), ((0,), 46), ((0,), 30), ((0,), 58), ((0,), 28)}
+----------
+sortable_list[:5]: [(((0,), 44), 0, 0.0), (((0,), 0), 3, 0.0577729158103466), (((0,), 0), 2, 0.05984615534543991), (((0,), 0), 0, 0.06487610936164856), (((0,), 0), 1, 0.07378976047039032)]
+Pruned ((0,), 44), real_kernel_ix: 0, initial_kernel_ix: 1
+Pruned ((0,), 46), real_input_slice_ix: 0, initial_input_slice_ix: 1
+----------
+Pruned ((0,), 45), real kernel ix (in code real_input_slice_ix): 0, initial_input_slice_ix: 1
+----------
+Traceback (most recent call last):
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/segnet_main.py", line 1248, in <module>
+    train_automatically(model_wrapper, main_save_path, val_stop_fn=validation_stop, max_training_iters=max_train_iters, max_total_training_iters=max_total_train_iters, 
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_support.py", line 714, in train_automatically
+    curr_pickleable_conv_res_calc, are_there_more_to_prune_in_the_future = model_wrapper.prune(**pruning_kwargs_dict)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py", line 318, in prune
+    are_there_more_to_prune_in_the_future = self._prune_n_kernels(prune_n_kernels_at_once, resource_limitation_dict) # this already does resource_calc.calculate_resources(self.input_example) 
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py", line 238, in _prune_n_kernels
+    are_there_more_to_prune_in_the_future = self.pruner_instance.prune(n, importance_dict, self.resource_calc, self.training_wrapper, resource_limitation_dict)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper_off.py", line 58, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/pruner.py", line 541, in prune
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/pruner.py", line 524, in prune
+    succeeded = self.prune_one_layer_recursive(curr_to_prune_elem, curr_conv_resource_calc, wrapper_model)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper_off.py", line 58, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/pruner.py", line 693, in prune_one_layer_recursive
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/pruner.py", line 685, in prune_one_layer_recursive
+    curr_conv_resource_calc.calculate_resources(self.input_example)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/conv_resource_calc.py", line 324, in calculate_resources
+    y = self.wrapper_model.model.forward(input_example)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/segnet.py", line 182, in forward
+    x = F.relu(self.BNDe33(self.ConvDe33(x)))
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/conv_resource_calc.py", line 230, in lambda_forward
+    return self.calculate_layer(m, curr_tree_ix, x, *args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/conv_resource_calc.py", line 126, in calculate_layer
+    y = layer.old_forward(x, *args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: Given groups=1, expected weight to be at least 1 at dimension 0, but got weight of size [0, 4, 3, 3] instead
+Error: The number of parameters is not correct. Expected 2, given 1. Given params: test_full_pruning_quick_IPAD
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/utils/data/dataloader.py:617: UserWarning: This DataLoader will create 32 worker processes in total. Our suggested max number of worker in current system is 8, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py:111: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.model = torch.load(self.prev_model_path, map_location=torch.device(device))
+segnet_main.py do_log: False
+Log file name: log_23_09-09-56_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='test_full_pruning_quick_IPAD', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_segnet/segnet_vein.yaml', yo=['z_pipeline_segnet/overriding_yamls/small.yaml'], ntibp=None, ptp=None, map=None)
+YAML: {'is_pruning_ready': True, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 3, 'eval_batch_size': 12, 'learning_rate': 1e-05, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': False, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': '4_1', 'input_width': 256, 'input_height': 256, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='test_full_pruning_quick_IPAD', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_segnet/segnet_vein.yaml', yo=['z_pipeline_segnet/overriding_yamls/small.yaml'], ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 100
+val dataloader num of batches: 3
+test dataloader num of batches: 1
+Loaded model path:  ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_8_.pth
+0 trainings have been done without error stopping.
+                        Best k models are kept. (possibly (k+1) models are kept if one of the worse models is the last model we have).
+                        Enter sp to do a save_preds from the data_path/save_preds directory, and re-ask for input.
+                        Enter da to do a data augmentation showcase and re-ask for input.
+                        Enter ts to do a test showcase of the model and re-ask for input.
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.
+Deleting model ./test_full_pruning_quick_IPAD/saved_model_wrapper/models/SegNet_6_.pth
+
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.

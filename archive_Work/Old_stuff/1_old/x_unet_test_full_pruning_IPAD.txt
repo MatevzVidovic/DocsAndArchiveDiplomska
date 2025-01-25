@@ -1,0 +1,1743 @@
+unet_original_main.py do_log: True
+Log file name: log_04_10-23-54_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: True
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(ptd='./vein_sclera_data', sd='test_full_pruning_IPAD', mti=1000000000.0, mtti=1000000000.0, pruning_phase=True, ifn='IPAD_eq', ips=1000000000.0, tras=2, tp=False, yaml='z_pipeline_unet/unet_original_0.yaml', ntibp=1, ptp=None, map=None)
+YAML: {'batch_size': 2, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 7, 'train_epoch_size_limit': 400, 'num_epochs_per_training_iteration': 1, 'cleanup_k': 3, 'cleaning_error_ix': 0, 'dataset_option': 'augment', 'optimizer_used': 'Adam', 'loss_fn_name': 'MCDL', 'alphas': [], 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 3, 'output_channels': 2, 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: True
+Namespace(ptd='./vein_sclera_data', sd='test_full_pruning_IPAD', mti=1000000000.0, mtti=1000000000.0, pruning_phase=True, ifn='IPAD_eq', ips=1000000000.0, tras=2, tp=False, yaml='z_pipeline_unet/unet_original_0.yaml', ntibp=1, ptp=None, map=None)
+Device: cuda
+dataset_aug.py do_log: True
+img_augments.py do_log: False
+path to file: ./vein_sclera_data
+summary for train
+valid images: 89
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 2
+val dataset len: 2
+test dataset len: 2
+train dataloader num of batches: 1
+val dataloader num of batches: 1
+test dataloader num of batches: 1
+Created new model instance.
+[48, 55, 62, 69, 76, 83]
+curr ((((0,), 2), 0), 0)
+curr ((((0,), 2), 1), 0)
+curr ((((0,), 2), 2), 0)
+curr ((((0,), 2), 3), 0)
+curr ((((0,), 2), 4), 0)
+curr ((((0,), 2), 5), 0)
+other_zeroth_dim_ixs [((((0,), 0), 0), 1), ((((0,), 0), 0), 4), ((((((0,), 1), 0), 1), 0), 1), ((((((0,), 1), 0), 1), 0), 4), ((((((0,), 1), 1), 1), 0), 1), ((((((0,), 1), 1), 1), 0), 4), ((((((0,), 1), 2), 1), 0), 1), ((((((0,), 1), 2), 1), 0), 4), ((((((0,), 1), 3), 1), 0), 1), ((((((0,), 1), 3), 1), 0), 4), ((((((0,), 1), 4), 1), 0), 1), ((((((0,), 1), 4), 1), 0), 4), ((((((0,), 1), 5), 1), 0), 1), ((((((0,), 1), 5), 1), 0), 4), ((((((0,), 2), 0), 1), 0), 1), ((((((0,), 2), 0), 1), 0), 4), ((((((0,), 2), 1), 1), 0), 1), ((((((0,), 2), 1), 1), 0), 4), ((((((0,), 2), 2), 1), 0), 1), ((((((0,), 2), 2), 1), 0), 4), ((((((0,), 2), 3), 1), 0), 1), ((((((0,), 2), 3), 1), 0), 4), ((((((0,), 2), 4), 1), 0), 1), ((((((0,), 2), 4), 1), 0), 4), ((((((0,), 2), 5), 1), 0), 1), ((((((0,), 2), 5), 1), 0), 4), ((((0,), 2), 0), 0), ((((0,), 2), 1), 0), ((((0,), 2), 2), 0), ((((0,), 2), 3), 0), ((((0,), 2), 4), 0), ((((0,), 2), 5), 0)]
+[((((0,), 0), 0), 1), ((((0,), 0), 0), 4), ((((((0,), 1), 0), 1), 0), 1), ((((((0,), 1), 0), 1), 0), 4), ((((((0,), 1), 1), 1), 0), 1), ((((((0,), 1), 1), 1), 0), 4), ((((((0,), 1), 2), 1), 0), 1), ((((((0,), 1), 2), 1), 0), 4), ((((((0,), 1), 3), 1), 0), 1), ((((((0,), 1), 3), 1), 0), 4), ((((((0,), 1), 4), 1), 0), 1), ((((((0,), 1), 4), 1), 0), 4), ((((((0,), 1), 5), 1), 0), 1), ((((((0,), 1), 5), 1), 0), 4), ((((((0,), 2), 0), 1), 0), 1), ((((((0,), 2), 0), 1), 0), 4), ((((((0,), 2), 1), 1), 0), 1), ((((((0,), 2), 1), 1), 0), 4), ((((((0,), 2), 2), 1), 0), 1), ((((((0,), 2), 2), 1), 0), 4), ((((((0,), 2), 3), 1), 0), 1), ((((((0,), 2), 3), 1), 0), 4), ((((((0,), 2), 4), 1), 0), 1), ((((((0,), 2), 4), 1), 0), 4), ((((((0,), 2), 5), 1), 0), 1), ((((((0,), 2), 5), 1), 0), 4), ((((0,), 2), 0), 0), ((((0,), 2), 1), 0), ((((0,), 2), 2), 0), ((((0,), 2), 3), 0), ((((0,), 2), 4), 0), ((((0,), 2), 5), 0)]
+Goal resource value: 2146870272983.0398
+disallowed_directly: {(((0,), 3), 0)}
+disallowed_tree_ixs: {(((0,), 3), 0)}
+----------
+sortable_list[:5]: [(((((((0,), 1), 5), 1), 0), 3), 1744, 0.0009659857023507357), (((((((0,), 2), 0), 1), 0), 0), 758, 0.001004407531581819), (((((((0,), 2), 0), 1), 0), 0), 1400, 0.0010047074174508452), (((((((0,), 2), 0), 1), 0), 0), 1999, 0.0010104407556355), (((((((0,), 1), 5), 1), 0), 3), 4083, 0.001084467163309455)]
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1744, initial_kernel_ix: 1744
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1744, initial_input_slice_ix: 1744
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1744, initial_kernel_ix: 1744
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 758, initial_kernel_ix: 758
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 758, initial_input_slice_ix: 758
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 758, initial_input_slice_ix: 758
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1399, initial_kernel_ix: 1400
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1399, initial_input_slice_ix: 1400
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1399, initial_input_slice_ix: 1400
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1997, initial_kernel_ix: 1999
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1997, initial_input_slice_ix: 1999
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1997, initial_input_slice_ix: 1999
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 4082, initial_kernel_ix: 4083
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 4082, initial_input_slice_ix: 4083
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 4082, initial_kernel_ix: 4083
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 951, initial_kernel_ix: 952
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 951, initial_input_slice_ix: 952
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 951, initial_input_slice_ix: 952
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3339, initial_kernel_ix: 3340
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3339, initial_input_slice_ix: 3340
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3339, initial_kernel_ix: 3340
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1421, initial_kernel_ix: 1421
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1421, initial_input_slice_ix: 1421
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1421, initial_kernel_ix: 1421
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 403, initial_kernel_ix: 403
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 403, initial_input_slice_ix: 403
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 403, initial_input_slice_ix: 403
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1585, initial_kernel_ix: 1589
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1585, initial_input_slice_ix: 1589
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1585, initial_input_slice_ix: 1589
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 395, initial_kernel_ix: 395
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 395, initial_input_slice_ix: 395
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 395, initial_kernel_ix: 395
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 69, initial_kernel_ix: 69
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 69, initial_input_slice_ix: 69
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 69, initial_input_slice_ix: 69
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1570, initial_kernel_ix: 1575
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1570, initial_input_slice_ix: 1575
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1570, initial_input_slice_ix: 1575
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3627, initial_kernel_ix: 3627
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3627, initial_input_slice_ix: 3627
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3627, initial_input_slice_ix: 3627
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1495, initial_kernel_ix: 1495
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1495, initial_input_slice_ix: 1495
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1495, initial_input_slice_ix: 1495
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1599, initial_kernel_ix: 1606
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1599, initial_input_slice_ix: 1606
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1599, initial_input_slice_ix: 1606
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 450, initial_kernel_ix: 450
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 450, initial_input_slice_ix: 450
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 450, initial_kernel_ix: 450
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 549, initial_kernel_ix: 550
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 549, initial_input_slice_ix: 550
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 549, initial_kernel_ix: 550
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 517, initial_kernel_ix: 518
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 517, initial_input_slice_ix: 518
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 517, initial_kernel_ix: 518
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2785, initial_kernel_ix: 2786
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2785, initial_input_slice_ix: 2786
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2785, initial_input_slice_ix: 2786
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3653, initial_kernel_ix: 3657
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3653, initial_input_slice_ix: 3657
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3653, initial_kernel_ix: 3657
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 485, initial_kernel_ix: 486
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 485, initial_input_slice_ix: 486
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 485, initial_kernel_ix: 486
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3799, initial_kernel_ix: 3802
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3799, initial_input_slice_ix: 3802
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3799, initial_input_slice_ix: 3802
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3678, initial_kernel_ix: 3681
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3678, initial_input_slice_ix: 3681
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3678, initial_input_slice_ix: 3681
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 775, initial_kernel_ix: 776
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 775, initial_input_slice_ix: 776
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 775, initial_kernel_ix: 776
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3636, initial_kernel_ix: 3639
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3636, initial_input_slice_ix: 3639
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3636, initial_input_slice_ix: 3639
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2024, initial_kernel_ix: 2028
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2024, initial_input_slice_ix: 2028
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2024, initial_kernel_ix: 2028
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 554, initial_kernel_ix: 556
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 554, initial_input_slice_ix: 556
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 554, initial_input_slice_ix: 556
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2046, initial_kernel_ix: 2047
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2046, initial_input_slice_ix: 2047
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2046, initial_input_slice_ix: 2047
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1086, initial_kernel_ix: 1090
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1086, initial_input_slice_ix: 1090
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1086, initial_kernel_ix: 1090
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1456, initial_kernel_ix: 1461
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1456, initial_input_slice_ix: 1461
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1456, initial_kernel_ix: 1461
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 996, initial_kernel_ix: 998
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 996, initial_input_slice_ix: 998
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 996, initial_kernel_ix: 998
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 686, initial_kernel_ix: 690
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 686, initial_input_slice_ix: 690
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 686, initial_kernel_ix: 690
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 145, initial_kernel_ix: 145
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 145, initial_input_slice_ix: 145
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 145, initial_kernel_ix: 145
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1669, initial_kernel_ix: 1677
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1669, initial_input_slice_ix: 1677
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1669, initial_kernel_ix: 1677
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3848, initial_kernel_ix: 3856
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3848, initial_input_slice_ix: 3856
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3848, initial_kernel_ix: 3856
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 475, initial_kernel_ix: 475
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 475, initial_input_slice_ix: 475
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 475, initial_input_slice_ix: 475
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 963, initial_kernel_ix: 965
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 963, initial_input_slice_ix: 965
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 963, initial_kernel_ix: 965
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 119, initial_kernel_ix: 119
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 119, initial_input_slice_ix: 119
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 119, initial_kernel_ix: 119
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1866, initial_kernel_ix: 1875
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1866, initial_input_slice_ix: 1875
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1866, initial_input_slice_ix: 1875
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 85, initial_kernel_ix: 85
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 85, initial_input_slice_ix: 85
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 85, initial_kernel_ix: 85
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3375, initial_kernel_ix: 3383
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3375, initial_input_slice_ix: 3383
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3375, initial_kernel_ix: 3383
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 1560, initial_kernel_ix: 1560
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 1560, initial_input_slice_ix: 1560
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 3608, initial_input_slice_ix: 3608
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1560, initial_input_slice_ix: 1560
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3198, initial_kernel_ix: 3201
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3198, initial_input_slice_ix: 3201
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3198, initial_input_slice_ix: 3201
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3815, initial_kernel_ix: 3825
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3815, initial_input_slice_ix: 3825
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3815, initial_kernel_ix: 3825
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 181, initial_kernel_ix: 182
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 181, initial_input_slice_ix: 182
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 181, initial_input_slice_ix: 182
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 174, initial_kernel_ix: 177
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 174, initial_input_slice_ix: 177
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 174, initial_kernel_ix: 177
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 532, initial_kernel_ix: 535
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 532, initial_input_slice_ix: 535
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 532, initial_input_slice_ix: 535
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 71, initial_kernel_ix: 71
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 71, initial_input_slice_ix: 71
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 71, initial_input_slice_ix: 71
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 676, initial_kernel_ix: 677
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 676, initial_input_slice_ix: 677
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 676, initial_kernel_ix: 677
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3311, initial_kernel_ix: 3315
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3311, initial_input_slice_ix: 3315
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3311, initial_input_slice_ix: 3315
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 206, initial_kernel_ix: 210
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 206, initial_input_slice_ix: 210
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 206, initial_kernel_ix: 210
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 662, initial_kernel_ix: 662
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 662, initial_input_slice_ix: 662
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 662, initial_input_slice_ix: 662
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 734, initial_kernel_ix: 735
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 734, initial_input_slice_ix: 735
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 734, initial_input_slice_ix: 735
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1731, initial_kernel_ix: 1744
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1731, initial_input_slice_ix: 1744
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1731, initial_kernel_ix: 1744
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1602, initial_kernel_ix: 1614
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1602, initial_input_slice_ix: 1614
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1602, initial_kernel_ix: 1614
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3217, initial_kernel_ix: 3223
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3217, initial_input_slice_ix: 3223
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3217, initial_input_slice_ix: 3223
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 583, initial_kernel_ix: 592
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 583, initial_input_slice_ix: 592
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 583, initial_kernel_ix: 592
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 260, initial_kernel_ix: 261
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 260, initial_input_slice_ix: 261
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 260, initial_input_slice_ix: 261
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 625, initial_kernel_ix: 625
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 625, initial_input_slice_ix: 625
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2673, initial_input_slice_ix: 2673
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 625, initial_input_slice_ix: 625
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 913, initial_kernel_ix: 914
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 913, initial_input_slice_ix: 914
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2961, initial_input_slice_ix: 2962
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 913, initial_input_slice_ix: 914
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 585, initial_kernel_ix: 590
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 585, initial_input_slice_ix: 590
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 585, initial_input_slice_ix: 590
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1722, initial_kernel_ix: 1737
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1722, initial_input_slice_ix: 1737
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1722, initial_kernel_ix: 1737
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1071, initial_kernel_ix: 1082
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1071, initial_input_slice_ix: 1082
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1071, initial_kernel_ix: 1082
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1521, initial_kernel_ix: 1530
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1521, initial_input_slice_ix: 1530
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1521, initial_input_slice_ix: 1530
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 178, initial_kernel_ix: 179
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 178, initial_input_slice_ix: 179
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 178, initial_input_slice_ix: 179
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1658, initial_kernel_ix: 1661
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1658, initial_input_slice_ix: 1661
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1658, initial_input_slice_ix: 1661
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1272, initial_kernel_ix: 1281
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1272, initial_input_slice_ix: 1281
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1272, initial_input_slice_ix: 1281
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 719, initial_kernel_ix: 730
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 719, initial_input_slice_ix: 730
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 719, initial_kernel_ix: 730
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 409, initial_kernel_ix: 414
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 409, initial_input_slice_ix: 414
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 409, initial_kernel_ix: 414
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1111, initial_kernel_ix: 1126
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1111, initial_input_slice_ix: 1126
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1111, initial_kernel_ix: 1126
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 991, initial_kernel_ix: 993
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 991, initial_input_slice_ix: 993
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 3039, initial_input_slice_ix: 3041
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 991, initial_input_slice_ix: 993
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1970, initial_kernel_ix: 1991
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1970, initial_input_slice_ix: 1991
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1970, initial_kernel_ix: 1991
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1923, initial_kernel_ix: 1927
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1923, initial_input_slice_ix: 1927
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1923, initial_input_slice_ix: 1927
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1135, initial_kernel_ix: 1144
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1135, initial_input_slice_ix: 1144
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1135, initial_input_slice_ix: 1144
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1863, initial_kernel_ix: 1880
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1863, initial_input_slice_ix: 1880
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1863, initial_input_slice_ix: 1880
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1179, initial_kernel_ix: 1195
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1179, initial_input_slice_ix: 1195
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1179, initial_kernel_ix: 1195
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1989, initial_kernel_ix: 1994
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1989, initial_input_slice_ix: 1994
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1989, initial_input_slice_ix: 1994
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1871, initial_kernel_ix: 1875
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1871, initial_input_slice_ix: 1875
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1871, initial_input_slice_ix: 1875
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 280, initial_kernel_ix: 285
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 280, initial_input_slice_ix: 285
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 280, initial_kernel_ix: 285
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 707, initial_kernel_ix: 709
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 707, initial_input_slice_ix: 709
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 707, initial_kernel_ix: 709
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1611, initial_kernel_ix: 1631
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1611, initial_input_slice_ix: 1631
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1611, initial_kernel_ix: 1631
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2874, initial_kernel_ix: 2883
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2874, initial_input_slice_ix: 2883
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2874, initial_input_slice_ix: 2883
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 739, initial_kernel_ix: 742
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 739, initial_input_slice_ix: 742
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 739, initial_input_slice_ix: 742
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1199, initial_kernel_ix: 1217
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1199, initial_input_slice_ix: 1217
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1199, initial_kernel_ix: 1217
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 93, initial_kernel_ix: 93
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 93, initial_input_slice_ix: 93
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2141, initial_input_slice_ix: 2141
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 93, initial_input_slice_ix: 93
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1746, initial_kernel_ix: 1771
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1746, initial_input_slice_ix: 1771
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1746, initial_kernel_ix: 1771
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1582, initial_kernel_ix: 1602
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1582, initial_input_slice_ix: 1602
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1582, initial_kernel_ix: 1602
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 655, initial_kernel_ix: 655
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 655, initial_input_slice_ix: 655
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 655, initial_input_slice_ix: 655
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 256, initial_kernel_ix: 259
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 256, initial_input_slice_ix: 259
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 256, initial_input_slice_ix: 259
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 687, initial_kernel_ix: 700
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 687, initial_input_slice_ix: 700
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 687, initial_kernel_ix: 700
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1104, initial_kernel_ix: 1114
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1104, initial_input_slice_ix: 1114
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1104, initial_input_slice_ix: 1114
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1709, initial_kernel_ix: 1727
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1709, initial_input_slice_ix: 1727
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1709, initial_input_slice_ix: 1727
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3653, initial_kernel_ix: 3669
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3653, initial_input_slice_ix: 3669
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3653, initial_input_slice_ix: 3669
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 525, initial_kernel_ix: 530
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 525, initial_input_slice_ix: 530
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 525, initial_input_slice_ix: 530
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1823, initial_kernel_ix: 1843
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1823, initial_input_slice_ix: 1843
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1823, initial_input_slice_ix: 1843
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 760, initial_kernel_ix: 775
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 760, initial_input_slice_ix: 775
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 760, initial_kernel_ix: 775
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 326, initial_kernel_ix: 332
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 326, initial_input_slice_ix: 332
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 326, initial_kernel_ix: 332
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 760, initial_kernel_ix: 777
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 760, initial_input_slice_ix: 777
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 760, initial_kernel_ix: 777
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1256, initial_kernel_ix: 1259
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1256, initial_input_slice_ix: 1259
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1256, initial_input_slice_ix: 1259
+----------
+Current resource value: 2162420998144
+disallowed_directly: {(((0,), 3), 0)}
+disallowed_tree_ixs: {(((0,), 3), 0)}
+----------
+sortable_list[:5]: [(((((((0,), 1), 5), 1), 0), 3), 2869, 0.0010968795977532864), (((((((0,), 1), 5), 1), 0), 3), 2604, 0.0011390610598027706), (((((((0,), 1), 5), 1), 0), 3), 3351, 0.0011401574593037367), (((((((0,), 1), 5), 1), 0), 3), 163, 0.001201626262627542), (((((((0,), 1), 5), 1), 0), 3), 842, 0.0012150043621659279)]
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2869, initial_kernel_ix: 2878
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2869, initial_input_slice_ix: 2878
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2869, initial_kernel_ix: 2878
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2604, initial_kernel_ix: 2613
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2604, initial_input_slice_ix: 2613
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2604, initial_kernel_ix: 2613
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3349, initial_kernel_ix: 3361
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3349, initial_input_slice_ix: 3361
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3349, initial_kernel_ix: 3361
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 163, initial_kernel_ix: 163
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 163, initial_input_slice_ix: 163
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 163, initial_kernel_ix: 163
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 841, initial_kernel_ix: 846
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 841, initial_input_slice_ix: 846
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 841, initial_kernel_ix: 846
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 927, initial_kernel_ix: 945
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 927, initial_input_slice_ix: 945
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 927, initial_kernel_ix: 945
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1562, initial_kernel_ix: 1587
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1562, initial_input_slice_ix: 1587
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1562, initial_kernel_ix: 1587
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1081, initial_kernel_ix: 1092
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1081, initial_input_slice_ix: 1092
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1081, initial_input_slice_ix: 1092
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1324, initial_kernel_ix: 1332
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1324, initial_input_slice_ix: 1332
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1324, initial_kernel_ix: 1332
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 914, initial_kernel_ix: 924
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 914, initial_input_slice_ix: 924
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 914, initial_input_slice_ix: 924
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3401, initial_kernel_ix: 3416
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3401, initial_input_slice_ix: 3416
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3401, initial_input_slice_ix: 3416
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1991, initial_kernel_ix: 2002
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1991, initial_input_slice_ix: 2002
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1991, initial_kernel_ix: 2002
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1226, initial_kernel_ix: 1234
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1226, initial_input_slice_ix: 1234
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1226, initial_kernel_ix: 1234
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 249, initial_kernel_ix: 254
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 249, initial_input_slice_ix: 254
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 249, initial_kernel_ix: 254
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1789, initial_kernel_ix: 1795
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1789, initial_input_slice_ix: 1795
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1789, initial_input_slice_ix: 1795
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2265, initial_kernel_ix: 2279
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2265, initial_input_slice_ix: 2279
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2265, initial_kernel_ix: 2279
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 662, initial_kernel_ix: 671
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 662, initial_input_slice_ix: 671
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 662, initial_input_slice_ix: 671
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 252, initial_kernel_ix: 255
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 252, initial_input_slice_ix: 255
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 252, initial_input_slice_ix: 255
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3644, initial_kernel_ix: 3663
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3644, initial_input_slice_ix: 3663
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3644, initial_input_slice_ix: 3663
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1306, initial_kernel_ix: 1324
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1306, initial_input_slice_ix: 1324
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1306, initial_input_slice_ix: 1324
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 852, initial_kernel_ix: 864
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 852, initial_input_slice_ix: 864
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 852, initial_input_slice_ix: 864
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 483, initial_kernel_ix: 489
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 483, initial_input_slice_ix: 489
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 483, initial_input_slice_ix: 489
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1970, initial_kernel_ix: 2005
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1970, initial_input_slice_ix: 2005
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1970, initial_kernel_ix: 2005
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 450, initial_kernel_ix: 460
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 450, initial_input_slice_ix: 460
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 450, initial_kernel_ix: 460
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1150, initial_kernel_ix: 1174
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1150, initial_input_slice_ix: 1174
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1150, initial_kernel_ix: 1174
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 689, initial_kernel_ix: 706
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 689, initial_input_slice_ix: 706
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 689, initial_kernel_ix: 706
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2402, initial_kernel_ix: 2417
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2402, initial_input_slice_ix: 2417
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2402, initial_kernel_ix: 2417
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3736, initial_kernel_ix: 3758
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3736, initial_input_slice_ix: 3758
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3736, initial_kernel_ix: 3758
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1758, initial_kernel_ix: 1795
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1758, initial_input_slice_ix: 1795
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1758, initial_kernel_ix: 1795
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 45, initial_kernel_ix: 45
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 45, initial_input_slice_ix: 45
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 45, initial_kernel_ix: 45
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2346, initial_kernel_ix: 2357
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2346, initial_input_slice_ix: 2357
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2346, initial_input_slice_ix: 2357
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3383, initial_kernel_ix: 3404
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3383, initial_input_slice_ix: 3404
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3383, initial_kernel_ix: 3404
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 514, initial_kernel_ix: 528
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 514, initial_input_slice_ix: 528
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 514, initial_kernel_ix: 528
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 670, initial_kernel_ix: 687
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 670, initial_input_slice_ix: 687
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 670, initial_kernel_ix: 687
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 23, initial_kernel_ix: 23
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 23, initial_input_slice_ix: 23
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 23, initial_input_slice_ix: 23
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3726, initial_kernel_ix: 3749
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3726, initial_input_slice_ix: 3749
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3726, initial_input_slice_ix: 3749
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 675, initial_kernel_ix: 677
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 675, initial_input_slice_ix: 677
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 675, initial_input_slice_ix: 677
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 350, initial_kernel_ix: 359
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 350, initial_input_slice_ix: 359
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 350, initial_kernel_ix: 359
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 397, initial_kernel_ix: 399
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 397, initial_input_slice_ix: 399
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 397, initial_kernel_ix: 399
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1586, initial_kernel_ix: 1612
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1586, initial_input_slice_ix: 1612
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1586, initial_input_slice_ix: 1612
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 252, initial_kernel_ix: 253
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 252, initial_input_slice_ix: 253
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2300, initial_input_slice_ix: 2301
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 252, initial_input_slice_ix: 253
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 472, initial_kernel_ix: 485
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 472, initial_input_slice_ix: 485
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 472, initial_kernel_ix: 485
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2176, initial_kernel_ix: 2191
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2176, initial_input_slice_ix: 2191
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2176, initial_kernel_ix: 2191
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 55, initial_kernel_ix: 56
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 55, initial_input_slice_ix: 56
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 55, initial_input_slice_ix: 56
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3559, initial_kernel_ix: 3578
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3559, initial_input_slice_ix: 3578
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3559, initial_input_slice_ix: 3578
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 597, initial_kernel_ix: 616
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 597, initial_input_slice_ix: 616
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 597, initial_kernel_ix: 616
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 757, initial_kernel_ix: 761
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 757, initial_input_slice_ix: 761
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 757, initial_input_slice_ix: 761
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1184, initial_kernel_ix: 1218
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1184, initial_input_slice_ix: 1218
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1184, initial_kernel_ix: 1218
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1948, initial_kernel_ix: 1994
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1948, initial_input_slice_ix: 1994
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1948, initial_kernel_ix: 1994
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1715, initial_kernel_ix: 1758
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1715, initial_input_slice_ix: 1758
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1715, initial_kernel_ix: 1758
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 411, initial_kernel_ix: 413
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 411, initial_input_slice_ix: 413
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2459, initial_input_slice_ix: 2461
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 411, initial_input_slice_ix: 413
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 809, initial_kernel_ix: 822
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 809, initial_input_slice_ix: 822
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 809, initial_input_slice_ix: 822
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1915, initial_kernel_ix: 1961
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1915, initial_input_slice_ix: 1961
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1915, initial_kernel_ix: 1961
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2645, initial_kernel_ix: 2664
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2645, initial_input_slice_ix: 2664
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2645, initial_kernel_ix: 2664
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1207, initial_kernel_ix: 1227
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1207, initial_input_slice_ix: 1227
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1207, initial_input_slice_ix: 1227
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 414, initial_kernel_ix: 425
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 414, initial_input_slice_ix: 425
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 414, initial_kernel_ix: 425
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2549, initial_kernel_ix: 2563
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2549, initial_input_slice_ix: 2563
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2549, initial_input_slice_ix: 2563
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1762, initial_kernel_ix: 1792
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1762, initial_input_slice_ix: 1792
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1762, initial_input_slice_ix: 1792
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1642, initial_kernel_ix: 1671
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1642, initial_input_slice_ix: 1671
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1642, initial_input_slice_ix: 1671
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 54, initial_kernel_ix: 54
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 54, initial_input_slice_ix: 54
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2102, initial_input_slice_ix: 2102
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 54, initial_input_slice_ix: 54
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1387, initial_kernel_ix: 1393
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1387, initial_input_slice_ix: 1393
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1387, initial_input_slice_ix: 1393
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 157, initial_kernel_ix: 161
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 157, initial_input_slice_ix: 161
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 157, initial_kernel_ix: 161
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1140, initial_kernel_ix: 1160
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1140, initial_input_slice_ix: 1160
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1140, initial_input_slice_ix: 1160
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1090, initial_kernel_ix: 1095
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1090, initial_input_slice_ix: 1095
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1090, initial_input_slice_ix: 1095
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 904, initial_kernel_ix: 910
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 904, initial_input_slice_ix: 910
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 904, initial_input_slice_ix: 910
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1057, initial_kernel_ix: 1074
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1057, initial_input_slice_ix: 1074
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1057, initial_input_slice_ix: 1074
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1314, initial_kernel_ix: 1339
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1314, initial_input_slice_ix: 1339
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1314, initial_input_slice_ix: 1339
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 11, initial_kernel_ix: 11
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 11, initial_input_slice_ix: 11
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2059, initial_input_slice_ix: 2059
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 11, initial_input_slice_ix: 11
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 946, initial_kernel_ix: 953
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 946, initial_input_slice_ix: 953
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2994, initial_input_slice_ix: 3001
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 946, initial_input_slice_ix: 953
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2991, initial_kernel_ix: 3012
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2991, initial_input_slice_ix: 3012
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2991, initial_kernel_ix: 3012
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 772, initial_kernel_ix: 801
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 772, initial_input_slice_ix: 801
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 772, initial_kernel_ix: 801
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 46, initial_kernel_ix: 47
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 46, initial_input_slice_ix: 47
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 46, initial_kernel_ix: 47
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1676, initial_kernel_ix: 1709
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1676, initial_input_slice_ix: 1709
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1676, initial_input_slice_ix: 1709
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 887, initial_kernel_ix: 918
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 887, initial_input_slice_ix: 918
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 887, initial_kernel_ix: 918
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1939, initial_kernel_ix: 1992
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1939, initial_input_slice_ix: 1992
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1939, initial_kernel_ix: 1992
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1666, initial_kernel_ix: 1712
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1666, initial_input_slice_ix: 1712
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1666, initial_kernel_ix: 1712
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 441, initial_kernel_ix: 456
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 441, initial_input_slice_ix: 456
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 441, initial_kernel_ix: 456
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1174, initial_kernel_ix: 1196
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1174, initial_input_slice_ix: 1196
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1174, initial_input_slice_ix: 1196
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2909, initial_kernel_ix: 2930
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2909, initial_input_slice_ix: 2930
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2909, initial_kernel_ix: 2930
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1817, initial_kernel_ix: 1870
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1817, initial_input_slice_ix: 1870
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1817, initial_kernel_ix: 1870
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 777, initial_kernel_ix: 809
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 777, initial_input_slice_ix: 809
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 777, initial_kernel_ix: 809
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1114, initial_kernel_ix: 1134
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1114, initial_input_slice_ix: 1134
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1114, initial_input_slice_ix: 1134
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1952, initial_kernel_ix: 2012
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1952, initial_input_slice_ix: 2012
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1952, initial_kernel_ix: 2012
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 85, initial_kernel_ix: 86
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 85, initial_input_slice_ix: 86
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 85, initial_input_slice_ix: 86
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1930, initial_kernel_ix: 1986
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1930, initial_input_slice_ix: 1986
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1930, initial_kernel_ix: 1986
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 662, initial_kernel_ix: 686
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 662, initial_input_slice_ix: 686
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 662, initial_kernel_ix: 686
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1317, initial_kernel_ix: 1360
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1317, initial_input_slice_ix: 1360
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1317, initial_kernel_ix: 1360
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 957, initial_kernel_ix: 975
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 957, initial_input_slice_ix: 975
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 957, initial_input_slice_ix: 975
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 928, initial_kernel_ix: 964
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 928, initial_input_slice_ix: 964
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 928, initial_kernel_ix: 964
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2868, initial_kernel_ix: 2887
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2868, initial_input_slice_ix: 2887
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2868, initial_input_slice_ix: 2887
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1243, initial_kernel_ix: 1287
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1243, initial_input_slice_ix: 1287
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1243, initial_kernel_ix: 1287
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1356, initial_kernel_ix: 1386
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1356, initial_input_slice_ix: 1386
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1356, initial_input_slice_ix: 1386
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1173, initial_kernel_ix: 1215
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1173, initial_input_slice_ix: 1215
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1173, initial_kernel_ix: 1215
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 196, initial_kernel_ix: 200
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 196, initial_input_slice_ix: 200
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 196, initial_input_slice_ix: 200
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1602, initial_kernel_ix: 1654
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1602, initial_input_slice_ix: 1654
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1602, initial_kernel_ix: 1654
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 130, initial_kernel_ix: 132
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 130, initial_input_slice_ix: 132
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 130, initial_input_slice_ix: 132
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 590, initial_kernel_ix: 613
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 590, initial_input_slice_ix: 613
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 590, initial_kernel_ix: 613
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 1675, initial_kernel_ix: 1685
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 1675, initial_input_slice_ix: 1685
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 3723, initial_input_slice_ix: 3733
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1675, initial_input_slice_ix: 1685
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 187, initial_kernel_ix: 192
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 187, initial_input_slice_ix: 192
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 187, initial_input_slice_ix: 192
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 1460, initial_kernel_ix: 1469
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 1460, initial_input_slice_ix: 1469
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 3508, initial_input_slice_ix: 3517
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1460, initial_input_slice_ix: 1469
+----------
+Current resource value: 2156365643776
+disallowed_directly: {(((0,), 3), 0)}
+disallowed_tree_ixs: {(((0,), 3), 0)}
+----------
+sortable_list[:5]: [(((((((0,), 1), 5), 1), 0), 3), 2978, 0.001105948002077639), (((((((0,), 1), 5), 1), 0), 3), 3403, 0.001149091636762023), (((((((0,), 2), 0), 1), 0), 3), 924, 0.0012357666855677962), (((((((0,), 2), 0), 1), 0), 3), 159, 0.0012443322921171784), (((((((0,), 1), 5), 1), 0), 3), 320, 0.0012498300056904554)]
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2978, initial_kernel_ix: 3000
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2978, initial_input_slice_ix: 3000
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2978, initial_kernel_ix: 3000
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3402, initial_kernel_ix: 3430
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3402, initial_input_slice_ix: 3430
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3402, initial_kernel_ix: 3430
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 924, initial_kernel_ix: 961
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 924, initial_input_slice_ix: 961
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 924, initial_kernel_ix: 961
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 159, initial_kernel_ix: 165
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 159, initial_input_slice_ix: 165
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 159, initial_kernel_ix: 165
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 320, initial_kernel_ix: 321
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 320, initial_input_slice_ix: 321
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 320, initial_kernel_ix: 321
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1145, initial_kernel_ix: 1155
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1145, initial_input_slice_ix: 1155
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1145, initial_kernel_ix: 1155
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 946, initial_kernel_ix: 986
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 946, initial_input_slice_ix: 986
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 946, initial_kernel_ix: 986
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 526, initial_kernel_ix: 548
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 526, initial_input_slice_ix: 548
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 526, initial_kernel_ix: 548
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3154, initial_kernel_ix: 3180
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3154, initial_input_slice_ix: 3180
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3154, initial_kernel_ix: 3180
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1585, initial_kernel_ix: 1599
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1585, initial_input_slice_ix: 1599
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1585, initial_kernel_ix: 1599
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 796, initial_kernel_ix: 833
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 796, initial_input_slice_ix: 833
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 796, initial_kernel_ix: 833
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1044, initial_kernel_ix: 1088
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1044, initial_input_slice_ix: 1088
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1044, initial_kernel_ix: 1088
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2134, initial_kernel_ix: 2152
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2134, initial_input_slice_ix: 2152
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2134, initial_kernel_ix: 2152
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 363, initial_kernel_ix: 376
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 363, initial_input_slice_ix: 376
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 363, initial_kernel_ix: 376
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 918, initial_kernel_ix: 926
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 918, initial_input_slice_ix: 926
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 918, initial_kernel_ix: 926
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1182, initial_kernel_ix: 1194
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1182, initial_input_slice_ix: 1194
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1182, initial_kernel_ix: 1194
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1884, initial_kernel_ix: 1953
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1884, initial_input_slice_ix: 1953
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1884, initial_kernel_ix: 1953
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1746, initial_kernel_ix: 1764
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1746, initial_input_slice_ix: 1764
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1746, initial_kernel_ix: 1764
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 582, initial_kernel_ix: 608
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 582, initial_input_slice_ix: 608
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 582, initial_kernel_ix: 608
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1330, initial_kernel_ix: 1363
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1330, initial_input_slice_ix: 1363
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1330, initial_input_slice_ix: 1363
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1487, initial_kernel_ix: 1523
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1487, initial_input_slice_ix: 1523
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1487, initial_input_slice_ix: 1523
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1079, initial_kernel_ix: 1084
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1079, initial_input_slice_ix: 1084
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1079, initial_input_slice_ix: 1084
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 829, initial_kernel_ix: 869
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 829, initial_input_slice_ix: 869
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 829, initial_kernel_ix: 869
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 1561, initial_kernel_ix: 1577
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1561, initial_input_slice_ix: 1577
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 1561, initial_kernel_ix: 1577
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1486, initial_kernel_ix: 1544
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1486, initial_input_slice_ix: 1544
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1486, initial_kernel_ix: 1544
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 51, initial_kernel_ix: 53
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 51, initial_input_slice_ix: 53
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 51, initial_kernel_ix: 53
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1989, initial_kernel_ix: 2039
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1989, initial_input_slice_ix: 2039
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1989, initial_input_slice_ix: 2039
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 293, initial_kernel_ix: 305
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 293, initial_input_slice_ix: 305
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 293, initial_kernel_ix: 305
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 372, initial_kernel_ix: 374
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 372, initial_input_slice_ix: 374
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 372, initial_kernel_ix: 374
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 784, initial_kernel_ix: 825
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 784, initial_input_slice_ix: 825
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 784, initial_kernel_ix: 825
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 422, initial_kernel_ix: 432
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 422, initial_input_slice_ix: 432
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 422, initial_input_slice_ix: 432
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 329, initial_kernel_ix: 343
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 329, initial_input_slice_ix: 343
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 329, initial_kernel_ix: 343
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1197, initial_kernel_ix: 1256
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1197, initial_input_slice_ix: 1256
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1197, initial_kernel_ix: 1256
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1043, initial_kernel_ix: 1096
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1043, initial_input_slice_ix: 1096
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1043, initial_kernel_ix: 1096
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1621, initial_kernel_ix: 1692
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1621, initial_input_slice_ix: 1692
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1621, initial_kernel_ix: 1692
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1600, initial_kernel_ix: 1610
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1600, initial_input_slice_ix: 1610
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1600, initial_input_slice_ix: 1610
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 918, initial_kernel_ix: 967
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 918, initial_input_slice_ix: 967
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 918, initial_kernel_ix: 967
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1371, initial_kernel_ix: 1435
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1371, initial_input_slice_ix: 1435
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1371, initial_kernel_ix: 1435
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1828, initial_kernel_ix: 1909
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1828, initial_input_slice_ix: 1909
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1828, initial_kernel_ix: 1909
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2084, initial_kernel_ix: 2101
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2084, initial_input_slice_ix: 2101
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2084, initial_input_slice_ix: 2101
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1275, initial_kernel_ix: 1338
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1275, initial_input_slice_ix: 1338
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1275, initial_kernel_ix: 1338
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 97, initial_kernel_ix: 101
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 97, initial_input_slice_ix: 101
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 97, initial_kernel_ix: 101
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 45, initial_kernel_ix: 45
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 45, initial_input_slice_ix: 45
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 45, initial_input_slice_ix: 45
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3736, initial_kernel_ix: 3770
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3736, initial_input_slice_ix: 3770
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3736, initial_input_slice_ix: 3770
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1560, initial_kernel_ix: 1633
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1560, initial_input_slice_ix: 1633
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1560, initial_kernel_ix: 1633
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 99, initial_kernel_ix: 104
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 99, initial_input_slice_ix: 104
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 99, initial_kernel_ix: 104
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 470, initial_kernel_ix: 482
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 470, initial_input_slice_ix: 482
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 470, initial_input_slice_ix: 482
+----------
+Pruned ((((((0,), 1), 3), 1), 0), 3), real_kernel_ix: 856, initial_kernel_ix: 856
+Pruned ((((((0,), 1), 4), 1), 0), 0), real_input_slice_ix: 856, initial_input_slice_ix: 856
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_input_slice_ix: 1880, initial_input_slice_ix: 1880
+----------
+Pruned ((((((0,), 1), 3), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 856, initial_input_slice_ix: 856
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 94, initial_kernel_ix: 98
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 94, initial_input_slice_ix: 98
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 94, initial_kernel_ix: 98
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 207, initial_kernel_ix: 215
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 207, initial_input_slice_ix: 215
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 207, initial_input_slice_ix: 215
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1242, initial_kernel_ix: 1308
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1242, initial_input_slice_ix: 1308
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1242, initial_kernel_ix: 1308
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 56, initial_kernel_ix: 59
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 56, initial_input_slice_ix: 59
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 56, initial_kernel_ix: 59
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 16, initial_kernel_ix: 16
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 16, initial_input_slice_ix: 16
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 16, initial_input_slice_ix: 16
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1791, initial_kernel_ix: 1841
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1791, initial_input_slice_ix: 1841
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1791, initial_input_slice_ix: 1841
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 762, initial_kernel_ix: 807
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 762, initial_input_slice_ix: 807
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 762, initial_kernel_ix: 807
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 551, initial_kernel_ix: 552
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 551, initial_input_slice_ix: 552
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 551, initial_input_slice_ix: 552
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 176, initial_kernel_ix: 189
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 176, initial_input_slice_ix: 189
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 176, initial_kernel_ix: 189
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2002, initial_kernel_ix: 2020
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2002, initial_input_slice_ix: 2020
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2002, initial_input_slice_ix: 2020
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 1126, initial_kernel_ix: 1135
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 1126, initial_input_slice_ix: 1135
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1126, initial_input_slice_ix: 1135
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 482, initial_kernel_ix: 487
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 482, initial_input_slice_ix: 487
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 482, initial_kernel_ix: 487
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 109, initial_kernel_ix: 117
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 109, initial_input_slice_ix: 117
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 109, initial_kernel_ix: 117
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 942, initial_kernel_ix: 1000
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 942, initial_input_slice_ix: 1000
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 942, initial_kernel_ix: 1000
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 604, initial_kernel_ix: 642
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 604, initial_input_slice_ix: 642
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 604, initial_kernel_ix: 642
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 331, initial_kernel_ix: 335
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 331, initial_input_slice_ix: 335
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2379, initial_input_slice_ix: 2383
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 331, initial_input_slice_ix: 335
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1085, initial_kernel_ix: 1150
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1085, initial_input_slice_ix: 1150
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1085, initial_kernel_ix: 1150
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 25, initial_kernel_ix: 25
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 25, initial_input_slice_ix: 25
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 25, initial_input_slice_ix: 25
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 65, initial_kernel_ix: 67
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 65, initial_input_slice_ix: 67
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 65, initial_input_slice_ix: 67
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 303, initial_kernel_ix: 322
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 303, initial_input_slice_ix: 322
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 303, initial_kernel_ix: 322
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1533, initial_kernel_ix: 1616
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1533, initial_input_slice_ix: 1616
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1533, initial_kernel_ix: 1616
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 486, initial_kernel_ix: 517
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 486, initial_input_slice_ix: 517
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 486, initial_kernel_ix: 517
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 1869, initial_kernel_ix: 1882
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 1869, initial_input_slice_ix: 1882
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 3917, initial_input_slice_ix: 3930
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1869, initial_input_slice_ix: 1882
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 24, initial_kernel_ix: 25
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 24, initial_input_slice_ix: 25
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 24, initial_input_slice_ix: 25
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 1415, initial_kernel_ix: 1457
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 1415, initial_input_slice_ix: 1457
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 1415, initial_input_slice_ix: 1457
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3539, initial_kernel_ix: 3571
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3539, initial_input_slice_ix: 3571
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3539, initial_input_slice_ix: 3571
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 1298, initial_kernel_ix: 1308
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 1298, initial_input_slice_ix: 1308
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 3346, initial_input_slice_ix: 3356
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1298, initial_input_slice_ix: 1308
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 2932, initial_kernel_ix: 2960
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 2932, initial_input_slice_ix: 2960
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 2932, initial_input_slice_ix: 2960
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_kernel_ix: 237, initial_kernel_ix: 248
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_input_slice_ix: 237, initial_input_slice_ix: 248
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 237, initial_input_slice_ix: 248
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1884, initial_kernel_ix: 1984
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1884, initial_input_slice_ix: 1984
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1884, initial_kernel_ix: 1984
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1571, initial_kernel_ix: 1659
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1571, initial_input_slice_ix: 1659
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1571, initial_kernel_ix: 1659
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1900, initial_kernel_ix: 2007
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1900, initial_input_slice_ix: 2007
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1900, initial_kernel_ix: 2007
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1437, initial_kernel_ix: 1517
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1437, initial_input_slice_ix: 1517
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1437, initial_kernel_ix: 1517
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 712, initial_kernel_ix: 759
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 712, initial_input_slice_ix: 759
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 712, initial_kernel_ix: 759
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 893, initial_kernel_ix: 901
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 893, initial_input_slice_ix: 901
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 893, initial_input_slice_ix: 901
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 240, initial_kernel_ix: 242
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 240, initial_input_slice_ix: 242
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 240, initial_input_slice_ix: 242
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 0), real_kernel_ix: 684, initial_kernel_ix: 684
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_input_slice_ix: 684, initial_input_slice_ix: 684
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 684, initial_input_slice_ix: 684
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 162, initial_kernel_ix: 175
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 162, initial_input_slice_ix: 175
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 162, initial_kernel_ix: 175
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 590, initial_kernel_ix: 596
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 590, initial_input_slice_ix: 596
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2638, initial_input_slice_ix: 2644
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 590, initial_input_slice_ix: 596
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_kernel_ix: 228, initial_kernel_ix: 228
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 228, initial_input_slice_ix: 228
+----------
+Pruned upconv ((((0,), 2), 2), 0), input slice ix (in code real_kernel_ix): 228, initial_kernel_ix: 228
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 3740, initial_kernel_ix: 3784
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 3740, initial_input_slice_ix: 3784
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 3740, initial_input_slice_ix: 3784
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 2404, initial_kernel_ix: 2432
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 2404, initial_input_slice_ix: 2432
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 2404, initial_kernel_ix: 2432
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 75, initial_kernel_ix: 77
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 75, initial_input_slice_ix: 77
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 75, initial_input_slice_ix: 77
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 3), real_kernel_ix: 286, initial_kernel_ix: 290
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_input_slice_ix: 286, initial_input_slice_ix: 290
+Pruned ((((((0,), 2), 0), 1), 0), 0), real_input_slice_ix: 2334, initial_input_slice_ix: 2338
+----------
+Pruned ((((((0,), 1), 4), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 286, initial_input_slice_ix: 290
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 484, initial_kernel_ix: 516
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 484, initial_input_slice_ix: 516
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 484, initial_kernel_ix: 516
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 722, initial_kernel_ix: 772
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 722, initial_input_slice_ix: 772
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 722, initial_kernel_ix: 772
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1759, initial_kernel_ix: 1861
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1759, initial_input_slice_ix: 1861
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1759, initial_kernel_ix: 1861
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3210, initial_kernel_ix: 3246
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3210, initial_input_slice_ix: 3246
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3210, initial_kernel_ix: 3246
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 0), real_kernel_ix: 928, initial_kernel_ix: 935
+Pruned ((((((0,), 2), 1), 1), 0), 3), real_input_slice_ix: 928, initial_input_slice_ix: 935
+----------
+Pruned ((((((0,), 2), 1), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 928, initial_input_slice_ix: 935
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_kernel_ix: 3573, initial_kernel_ix: 3615
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 3573, initial_input_slice_ix: 3615
+----------
+Pruned upconv ((((0,), 2), 0), 0), input slice ix (in code real_kernel_ix): 3573, initial_kernel_ix: 3615
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 3), real_kernel_ix: 1525, initial_kernel_ix: 1613
+----------
+Pruned ((((((0,), 2), 0), 1), 0), 4), real kernel ix (in code real_input_slice_ix): 1525, initial_input_slice_ix: 1613
+----------
+Pruned upconv ((((0,), 2), 1), 0), input slice ix (in code real_kernel_ix): 1525, initial_kernel_ix: 1613
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 0), real_kernel_ix: 71, initial_kernel_ix: 73
+Pruned ((((((0,), 1), 5), 1), 0), 3), real_input_slice_ix: 71, initial_input_slice_ix: 73
+----------
+Pruned ((((((0,), 1), 5), 1), 0), 1), real kernel ix (in code real_input_slice_ix): 71, initial_input_slice_ix: 73
+----------
+Current resource value: 2151543132160
+slurmstepd: error: *** JOB 15991 ON aga1 CANCELLED AT 2025-01-04T10:24:53 ***

@@ -1,0 +1,264 @@
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+deeplab_main.py do_log: False
+Log file name: log_24_20-54-50_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='deeplab_vein_batch_size_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_resource_calc_ready': False, 'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 8, 'eval_batch_size': 20, 'learning_rate': 0.001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': False, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': 256, 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='deeplab_vein_batch_size_train', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+Model parameters: {'in_channels': 5, 'out_channels': 2, 'assp_out_channels': 256}
+type(model_parameters['out_channels'])=<class 'int'>
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 38
+val dataloader num of batches: 2
+test dataloader num of batches: 1
+Created new model instance.
+0 trainings have been done without error stopping.
+                        Best k models are kept. (possibly (k+1) models are kept if one of the worse models is the last model we have).
+                        Enter bst to do a batch_size_train and re-ask for input.
+                        Enter bse to do a batch_size_eval and re-ask for input.
+                        Enter sp to do a save_preds from the data_path/save_preds directory, and re-ask for input.
+                        Enter da to do a data augmentation showcase and re-ask for input.
+                        Enter ts to do a test showcase of the model and re-ask for input.
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py:1457: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+  curr_str += f"[{attr_name}(): {curr_attr()}] "
+Train batch size that still worked: 2
+Train batch size that still worked: 3
+Train batch size that still worked: 4
+Train batch size that still worked: 5
+Train batch size that still worked: 6
+Train batch size that still worked: 7
+Train batch size that still worked: 8
+Train batch size that still worked: 9
+Train batch size that still worked: 10
+Traceback (most recent call last):
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/deeplab_main.py", line 750, in <module>
+    train_automatically(model_wrapper, main_save_path, val_stop_fn=validation_stop, max_training_iters=max_train_iters, max_total_training_iters=max_total_train_iters, 
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_support.py", line 489, in train_automatically
+    model_wrapper.training_wrapper.batch_size_train()
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_wrapper.py", line 1148, in batch_size_train
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_wrapper.py", line 1131, in batch_size_train
+    pred = self.model(X)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/deeplab.py", line 31, in forward
+    x = F.interpolate(x, size=(h, w), mode='bilinear') #scale_factor = 16, mode='bilinear')
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/functional.py", line 4580, in interpolate
+    return torch._C._nn.upsample_bilinear2d(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 176.00 MiB. GPU 0 has a total capacity of 39.50 GiB of which 77.38 MiB is free. Including non-PyTorch memory, this process has 39.41 GiB memory in use. Of the allocated memory 36.98 GiB is allocated by PyTorch, and 1.95 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+deeplab_main.py do_log: False
+Log file name: log_24_20-57-19_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(sd='deeplab_vein_batch_size_eval', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+YAML: {'is_resource_calc_ready': False, 'is_pruning_ready': False, 'path_to_data': './Data/vein_and_sclera_data', 'target': 'veins', 'train_epoch_size': 300, 'val_epoch_size': 100, 'test_epoch_size': 100, 'train_batch_size': 8, 'eval_batch_size': 20, 'learning_rate': 0.001, 'num_of_dataloader_workers': 32, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': True, 'loss_fn_name': 'MCDL', 'loss_params': None, 'dataset_type': 'vasd', 'aug_type': 'tf', 'zero_out_non_sclera': False, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': 256, 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'have_patchification': False, 'patchification_params': 'None', 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq', 'conv2d_prune_limit': 0.2}
+Validation phase: False
+Namespace(sd='deeplab_vein_batch_size_eval', mti=1000000000.0, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=0, tras=-1, tp=False, yaml='z_pipeline_deeplab/deeplab_vein.yaml', yo=None, ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset.py do_log: False
+img_augments.py do_log: False
+Model parameters: {'in_channels': 5, 'out_channels': 2, 'assp_out_channels': 256}
+type(model_parameters['out_channels'])=<class 'int'>
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 38
+val dataloader num of batches: 2
+test dataloader num of batches: 1
+Created new model instance.
+0 trainings have been done without error stopping.
+                        Best k models are kept. (possibly (k+1) models are kept if one of the worse models is the last model we have).
+                        Enter bst to do a batch_size_train and re-ask for input.
+                        Enter bse to do a batch_size_eval and re-ask for input.
+                        Enter sp to do a save_preds from the data_path/save_preds directory, and re-ask for input.
+                        Enter da to do a data augmentation showcase and re-ask for input.
+                        Enter ts to do a test showcase of the model and re-ask for input.
+                        Enter "resource_graph" to trigger resource_graph() and re-ask for input.
+                        Enter s to save the model and re-ask for input.
+                        Enter g to show the graph of the model and re-ask for input.
+                        Enter r to trigger show_results() and re-ask for input.
+                        Enter a number to reset in how many trainings we ask you this again, and re-ask for input.
+                        Enter p to prune anyways (in production code, that is commented out, so the program will simply stop).
+                        Press Enter to continue training.
+                        Enter any other key to stop.
+Eval batch size that still worked: 1
+Eval batch size that still worked: 2
+Eval batch size that still worked: 3
+Eval batch size that still worked: 4
+Eval batch size that still worked: 5
+Eval batch size that still worked: 6
+Eval batch size that still worked: 7
+Eval batch size that still worked: 8
+Eval batch size that still worked: 9
+Eval batch size that still worked: 10
+Eval batch size that still worked: 11
+Eval batch size that still worked: 12
+Eval batch size that still worked: 13
+Eval batch size that still worked: 14
+Eval batch size that still worked: 15
+Eval batch size that still worked: 16
+Eval batch size that still worked: 17
+Eval batch size that still worked: 18
+Eval batch size that still worked: 19
+Eval batch size that still worked: 20
+Eval batch size that still worked: 21
+Eval batch size that still worked: 22
+Eval batch size that still worked: 23
+Eval batch size that still worked: 24
+Eval batch size that still worked: 25
+Eval batch size that still worked: 26
+Eval batch size that still worked: 27
+Eval batch size that still worked: 28
+Eval batch size that still worked: 29
+Eval batch size that still worked: 30
+Eval batch size that still worked: 31
+Eval batch size that still worked: 32
+Eval batch size that still worked: 33
+Eval batch size that still worked: 34
+Eval batch size that still worked: 35
+Eval batch size that still worked: 36
+Eval batch size that still worked: 37
+Eval batch size that still worked: 38
+Eval batch size that still worked: 39
+Eval batch size that still worked: 40
+Eval batch size that still worked: 41
+Eval batch size that still worked: 42
+Eval batch size that still worked: 43
+Eval batch size that still worked: 44
+Eval batch size that still worked: 45
+Eval batch size that still worked: 46
+Eval batch size that still worked: 47
+Eval batch size that still worked: 48
+Eval batch size that still worked: 49
+Eval batch size that still worked: 50
+Eval batch size that still worked: 51
+Eval batch size that still worked: 52
+Eval batch size that still worked: 53
+Eval batch size that still worked: 54
+Eval batch size that still worked: 55
+Eval batch size that still worked: 56
+Eval batch size that still worked: 57
+Eval batch size that still worked: 58
+Eval batch size that still worked: 59
+Eval batch size that still worked: 60
+Eval batch size that still worked: 61
+Eval batch size that still worked: 62
+Eval batch size that still worked: 63
+Eval batch size that still worked: 64
+Eval batch size that still worked: 65
+Eval batch size that still worked: 66
+Eval batch size that still worked: 67
+Eval batch size that still worked: 68
+Eval batch size that still worked: 69
+Traceback (most recent call last):
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/deeplab_main.py", line 750, in <module>
+    train_automatically(model_wrapper, main_save_path, val_stop_fn=validation_stop, max_training_iters=max_train_iters, max_total_training_iters=max_total_train_iters, 
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1900, in wrapper
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/python_logger/log_helper.py", line 1867, in wrapper
+    result = func(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_support.py", line 507, in train_automatically
+    model_wrapper.training_wrapper.batch_size_eval()
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_wrapper.py", line 1199, in batch_size_eval
+    raise e
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/training_wrapper.py", line 1191, in batch_size_eval
+    pred = self.model(X)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/deeplab.py", line 28, in forward
+    x = self.resnet(x)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/deeplab.py", line 49, in forward
+    x = self.resnet_50.layer1(x)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torchvision/models/resnet.py", line 158, in forward
+    identity = self.downsample(x)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+  File "/shared/home/matevz.vidovic/miniforge3/envs/ipad/lib/python3.9/site-packages/torch/nn/functional.py", line 2812, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 8.75 GiB. GPU 0 has a total capacity of 39.50 GiB of which 4.47 GiB is free. Including non-PyTorch memory, this process has 35.01 GiB memory in use. Of the allocated memory 26.36 GiB is allocated by PyTorch, and 8.17 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

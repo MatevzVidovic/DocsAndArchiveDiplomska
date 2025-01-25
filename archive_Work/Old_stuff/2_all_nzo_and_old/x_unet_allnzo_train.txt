@@ -1,0 +1,5649 @@
+/shared/home/matevz.vidovic/Diplomska/Prototip/Delo/model_wrapper.py:111: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.model = torch.load(self.prev_model_path, map_location=torch.device(device))
+unet_original_main.py do_log: True
+Log file name: log_09_17-40-58_01-2025.log.
+            Add print_log_file_name=False to file_handler_setup() to disable this printout.
+min_resource_percentage.py do_log: False
+model_wrapper.py do_log: True
+training_wrapper.py do_log: True
+helper_img_and_fig_tools.py do_log: False
+conv_resource_calc.py do_log: False
+pruner.py do_log: False
+helper_model_vizualization.py do_log: False
+training_support.py do_log: True
+helper_model_eval_graphs.py do_log: False
+losses.py do_log: False
+Args: Namespace(ptd='./Data/vein_and_sclera_data', sd='unet_allnzo_train', mti=200, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_original_allnzo.yaml', ntibp=None, ptp=None, map=None)
+YAML: {'batch_size': 2, 'learning_rate': 0.0001, 'num_of_dataloader_workers': 7, 'train_epoch_size_limit': 400, 'num_epochs_per_training_iteration': 1, 'cleanup_k': 3, 'optimizer_used': 'Adam', 'zero_out_non_sclera_on_predictions': False, 'loss_fn_name': 'MCDL', 'alphas': [], 'dataset_option': 'aug_tf', 'zero_out_non_sclera': True, 'add_sclera_to_img': False, 'add_bcosfire_to_img': True, 'add_coye_to_img': True, 'model': '64_2_6', 'input_width': 2048, 'input_height': 1024, 'input_channels': 5, 'output_channels': 2, 'num_train_iters_between_prunings': 10, 'max_auto_prunings': 70, 'proportion_to_prune': 0.01, 'prune_by_original_percent': True, 'num_filters_to_prune': -1, 'prune_n_kernels_at_once': 100, 'resource_name_to_prune_by': 'flops_num', 'importance_func': 'IPAD_eq'}
+Validation phase: False
+Namespace(ptd='./Data/vein_and_sclera_data', sd='unet_allnzo_train', mti=200, mtti=1000000000.0, pruning_phase=False, ifn='IPAD_eq', ips=1000000000.0, tras=-1, tp=False, yaml='z_pipeline_unet/unet_original_allnzo.yaml', ntibp=None, ptp=None, map=None)
+Device: cuda
+dataset_aug_tf.py do_log: False
+img_augments.py do_log: False
+path to file: ./Data/vein_and_sclera_data
+summary for train
+valid images: 88
+summary for val
+valid images: 27
+summary for test
+valid images: 12
+train dataset len: 88
+val dataset len: 27
+test dataset len: 12
+train dataloader num of batches: 44
+val dataloader num of batches: 14
+test dataloader num of batches: 6
+Loaded model path:  ./unet_allnzo_train/saved_model_wrapper/models/UNet_64_.pth
+per-ex loss: 0.903004  [    2/   88]
+per-ex loss: 0.940199  [    4/   88]
+per-ex loss: 0.880619  [    6/   88]
+per-ex loss: 0.825997  [    8/   88]
+per-ex loss: 0.846523  [   10/   88]
+per-ex loss: 0.943547  [   12/   88]
+per-ex loss: 0.873502  [   14/   88]
+per-ex loss: 0.856852  [   16/   88]
+per-ex loss: 0.911725  [   18/   88]
+per-ex loss: 0.867253  [   20/   88]
+per-ex loss: 0.813735  [   22/   88]
+per-ex loss: 0.902971  [   24/   88]
+per-ex loss: 0.805219  [   26/   88]
+per-ex loss: 0.918938  [   28/   88]
+per-ex loss: 0.770143  [   30/   88]
+per-ex loss: 0.807901  [   32/   88]
+per-ex loss: 0.809637  [   34/   88]
+per-ex loss: 0.852905  [   36/   88]
+per-ex loss: 0.942567  [   38/   88]
+per-ex loss: 0.909203  [   40/   88]
+per-ex loss: 0.873041  [   42/   88]
+per-ex loss: 0.732628  [   44/   88]
+per-ex loss: 0.843831  [   46/   88]
+per-ex loss: 0.767850  [   48/   88]
+per-ex loss: 0.823784  [   50/   88]
+per-ex loss: 0.853277  [   52/   88]
+per-ex loss: 0.910551  [   54/   88]
+per-ex loss: 0.806622  [   56/   88]
+per-ex loss: 0.827170  [   58/   88]
+per-ex loss: 0.880690  [   60/   88]
+per-ex loss: 0.808720  [   62/   88]
+per-ex loss: 0.773300  [   64/   88]
+per-ex loss: 0.882392  [   66/   88]
+per-ex loss: 0.908127  [   68/   88]
+per-ex loss: 0.828302  [   70/   88]
+per-ex loss: 0.867938  [   72/   88]
+per-ex loss: 0.859139  [   74/   88]
+per-ex loss: 0.847818  [   76/   88]
+per-ex loss: 0.861513  [   78/   88]
+per-ex loss: 0.962019  [   80/   88]
+per-ex loss: 0.685325  [   82/   88]
+per-ex loss: 0.923063  [   84/   88]
+per-ex loss: 0.839341  [   86/   88]
+per-ex loss: 0.730687  [   88/   88]
+Train Error: Avg loss: 0.85180827
+validation Error: 
+ Avg loss: 0.85760791 
+ F1: 0.306790 
+ Precision: 0.882920 
+ Recall: 0.185649
+ IoU: 0.181188
+
+test Error: 
+ Avg loss: 0.84242397 
+ F1: 0.349028 
+ Precision: 0.887673 
+ Recall: 0.217218
+ IoU: 0.211407
+
+We have finished training iteration 65
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_63_.pth
+per-ex loss: 0.900017  [    2/   88]
+per-ex loss: 0.768965  [    4/   88]
+per-ex loss: 0.877303  [    6/   88]
+per-ex loss: 0.879197  [    8/   88]
+per-ex loss: 0.861425  [   10/   88]
+per-ex loss: 0.786179  [   12/   88]
+per-ex loss: 0.830645  [   14/   88]
+per-ex loss: 0.857401  [   16/   88]
+per-ex loss: 0.666741  [   18/   88]
+per-ex loss: 0.712945  [   20/   88]
+per-ex loss: 0.887310  [   22/   88]
+per-ex loss: 0.783504  [   24/   88]
+per-ex loss: 0.801710  [   26/   88]
+per-ex loss: 0.863840  [   28/   88]
+per-ex loss: 0.900228  [   30/   88]
+per-ex loss: 0.812158  [   32/   88]
+per-ex loss: 0.821775  [   34/   88]
+per-ex loss: 0.858204  [   36/   88]
+per-ex loss: 0.720480  [   38/   88]
+per-ex loss: 0.845709  [   40/   88]
+per-ex loss: 0.653997  [   42/   88]
+per-ex loss: 0.844935  [   44/   88]
+per-ex loss: 0.785926  [   46/   88]
+per-ex loss: 0.951807  [   48/   88]
+per-ex loss: 0.892860  [   50/   88]
+per-ex loss: 0.866851  [   52/   88]
+per-ex loss: 0.793546  [   54/   88]
+per-ex loss: 0.768324  [   56/   88]
+per-ex loss: 0.831650  [   58/   88]
+per-ex loss: 0.827271  [   60/   88]
+per-ex loss: 0.797247  [   62/   88]
+per-ex loss: 0.871131  [   64/   88]
+per-ex loss: 0.934721  [   66/   88]
+per-ex loss: 0.904602  [   68/   88]
+per-ex loss: 0.749545  [   70/   88]
+per-ex loss: 0.791639  [   72/   88]
+per-ex loss: 0.819079  [   74/   88]
+per-ex loss: 0.760599  [   76/   88]
+per-ex loss: 0.912573  [   78/   88]
+per-ex loss: 0.901366  [   80/   88]
+per-ex loss: 0.853994  [   82/   88]
+per-ex loss: 0.911431  [   84/   88]
+per-ex loss: 0.884072  [   86/   88]
+per-ex loss: 0.850004  [   88/   88]
+Train Error: Avg loss: 0.83170236
+validation Error: 
+ Avg loss: 0.83597484 
+ F1: 0.315517 
+ Precision: 0.861484 
+ Recall: 0.193124
+ IoU: 0.187308
+
+test Error: 
+ Avg loss: 0.82432368 
+ F1: 0.341136 
+ Precision: 0.875776 
+ Recall: 0.211823
+ IoU: 0.205644
+
+We have finished training iteration 66
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_62_.pth
+per-ex loss: 0.885223  [    2/   88]
+per-ex loss: 0.822559  [    4/   88]
+per-ex loss: 0.786859  [    6/   88]
+per-ex loss: 0.744182  [    8/   88]
+per-ex loss: 0.688466  [   10/   88]
+per-ex loss: 0.886205  [   12/   88]
+per-ex loss: 0.793768  [   14/   88]
+per-ex loss: 0.771318  [   16/   88]
+per-ex loss: 0.796585  [   18/   88]
+per-ex loss: 0.777065  [   20/   88]
+per-ex loss: 0.854382  [   22/   88]
+per-ex loss: 0.869909  [   24/   88]
+per-ex loss: 0.733939  [   26/   88]
+per-ex loss: 0.935774  [   28/   88]
+per-ex loss: 0.713710  [   30/   88]
+per-ex loss: 0.683910  [   32/   88]
+per-ex loss: 0.859735  [   34/   88]
+per-ex loss: 0.864804  [   36/   88]
+per-ex loss: 0.793473  [   38/   88]
+per-ex loss: 0.890595  [   40/   88]
+per-ex loss: 0.807329  [   42/   88]
+per-ex loss: 0.793225  [   44/   88]
+per-ex loss: 0.774566  [   46/   88]
+per-ex loss: 0.857193  [   48/   88]
+per-ex loss: 0.888527  [   50/   88]
+per-ex loss: 0.731335  [   52/   88]
+per-ex loss: 0.922608  [   54/   88]
+per-ex loss: 0.845186  [   56/   88]
+per-ex loss: 0.880480  [   58/   88]
+per-ex loss: 0.753220  [   60/   88]
+per-ex loss: 0.874615  [   62/   88]
+per-ex loss: 0.731385  [   64/   88]
+per-ex loss: 0.840297  [   66/   88]
+per-ex loss: 0.781199  [   68/   88]
+per-ex loss: 0.812525  [   70/   88]
+per-ex loss: 0.773834  [   72/   88]
+per-ex loss: 0.847975  [   74/   88]
+per-ex loss: 0.738218  [   76/   88]
+per-ex loss: 0.884856  [   78/   88]
+per-ex loss: 0.824594  [   80/   88]
+per-ex loss: 0.818464  [   82/   88]
+per-ex loss: 0.827652  [   84/   88]
+per-ex loss: 0.837114  [   86/   88]
+per-ex loss: 0.865989  [   88/   88]
+Train Error: Avg loss: 0.81511021
+validation Error: 
+ Avg loss: 0.81978283 
+ F1: 0.348899 
+ Precision: 0.840403 
+ Recall: 0.220148
+ IoU: 0.211313
+
+test Error: 
+ Avg loss: 0.80332963 
+ F1: 0.384300 
+ Precision: 0.869891 
+ Recall: 0.246628
+ IoU: 0.237854
+
+We have finished training iteration 67
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_58_.pth
+per-ex loss: 0.895949  [    2/   88]
+per-ex loss: 0.678473  [    4/   88]
+per-ex loss: 0.893524  [    6/   88]
+per-ex loss: 0.834219  [    8/   88]
+per-ex loss: 0.787254  [   10/   88]
+per-ex loss: 0.823317  [   12/   88]
+per-ex loss: 0.772078  [   14/   88]
+per-ex loss: 0.831265  [   16/   88]
+per-ex loss: 0.863867  [   18/   88]
+per-ex loss: 0.914601  [   20/   88]
+per-ex loss: 0.815636  [   22/   88]
+per-ex loss: 0.830419  [   24/   88]
+per-ex loss: 0.778770  [   26/   88]
+per-ex loss: 0.801175  [   28/   88]
+per-ex loss: 0.784011  [   30/   88]
+per-ex loss: 0.933145  [   32/   88]
+per-ex loss: 0.789927  [   34/   88]
+per-ex loss: 0.835832  [   36/   88]
+per-ex loss: 0.729595  [   38/   88]
+per-ex loss: 0.894310  [   40/   88]
+per-ex loss: 0.894516  [   42/   88]
+per-ex loss: 0.743305  [   44/   88]
+per-ex loss: 0.851810  [   46/   88]
+per-ex loss: 0.756063  [   48/   88]
+per-ex loss: 0.683001  [   50/   88]
+per-ex loss: 0.834702  [   52/   88]
+per-ex loss: 0.840976  [   54/   88]
+per-ex loss: 0.640616  [   56/   88]
+per-ex loss: 0.628540  [   58/   88]
+per-ex loss: 0.800036  [   60/   88]
+per-ex loss: 0.701500  [   62/   88]
+per-ex loss: 0.835853  [   64/   88]
+per-ex loss: 0.708649  [   66/   88]
+per-ex loss: 0.675714  [   68/   88]
+per-ex loss: 0.826728  [   70/   88]
+per-ex loss: 0.657643  [   72/   88]
+per-ex loss: 0.893406  [   74/   88]
+per-ex loss: 0.808552  [   76/   88]
+per-ex loss: 0.665701  [   78/   88]
+per-ex loss: 0.658383  [   80/   88]
+per-ex loss: 0.737283  [   82/   88]
+per-ex loss: 0.778727  [   84/   88]
+per-ex loss: 0.750613  [   86/   88]
+per-ex loss: 0.775782  [   88/   88]
+Train Error: Avg loss: 0.78716965
+validation Error: 
+ Avg loss: 0.79478433 
+ F1: 0.463486 
+ Precision: 0.616632 
+ Recall: 0.371277
+ IoU: 0.301648
+
+test Error: 
+ Avg loss: 0.77681751 
+ F1: 0.522444 
+ Precision: 0.652550 
+ Recall: 0.435595
+ IoU: 0.353587
+
+We have finished training iteration 68
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_65_.pth
+per-ex loss: 0.811297  [    2/   88]
+per-ex loss: 0.840098  [    4/   88]
+per-ex loss: 0.878196  [    6/   88]
+per-ex loss: 0.783280  [    8/   88]
+per-ex loss: 0.775851  [   10/   88]
+per-ex loss: 0.678596  [   12/   88]
+per-ex loss: 0.699446  [   14/   88]
+per-ex loss: 0.803389  [   16/   88]
+per-ex loss: 0.841231  [   18/   88]
+per-ex loss: 0.836151  [   20/   88]
+per-ex loss: 0.747325  [   22/   88]
+per-ex loss: 0.848535  [   24/   88]
+per-ex loss: 0.657891  [   26/   88]
+per-ex loss: 0.687680  [   28/   88]
+per-ex loss: 0.751884  [   30/   88]
+per-ex loss: 0.819148  [   32/   88]
+per-ex loss: 0.704188  [   34/   88]
+per-ex loss: 0.826282  [   36/   88]
+per-ex loss: 0.818220  [   38/   88]
+per-ex loss: 0.801468  [   40/   88]
+per-ex loss: 0.610688  [   42/   88]
+per-ex loss: 0.880568  [   44/   88]
+per-ex loss: 0.713605  [   46/   88]
+per-ex loss: 0.600996  [   48/   88]
+per-ex loss: 0.904878  [   50/   88]
+per-ex loss: 0.752259  [   52/   88]
+per-ex loss: 0.640937  [   54/   88]
+per-ex loss: 0.620440  [   56/   88]
+per-ex loss: 0.828283  [   58/   88]
+per-ex loss: 0.865139  [   60/   88]
+per-ex loss: 0.854585  [   62/   88]
+per-ex loss: 0.632811  [   64/   88]
+per-ex loss: 0.700208  [   66/   88]
+per-ex loss: 0.844227  [   68/   88]
+per-ex loss: 0.664233  [   70/   88]
+per-ex loss: 0.830893  [   72/   88]
+per-ex loss: 0.851436  [   74/   88]
+per-ex loss: 0.676623  [   76/   88]
+per-ex loss: 0.874646  [   78/   88]
+per-ex loss: 0.750055  [   80/   88]
+per-ex loss: 0.754049  [   82/   88]
+per-ex loss: 0.895829  [   84/   88]
+per-ex loss: 0.697498  [   86/   88]
+per-ex loss: 0.849432  [   88/   88]
+Train Error: Avg loss: 0.77055624
+validation Error: 
+ Avg loss: 0.84325895 
+ F1: 0.414891 
+ Precision: 0.393511 
+ Recall: 0.438728
+ IoU: 0.261743
+
+test Error: 
+ Avg loss: 0.79442919 
+ F1: 0.478788 
+ Precision: 0.482543 
+ Recall: 0.475091
+ IoU: 0.314741
+
+We have finished training iteration 69
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_64_.pth
+per-ex loss: 0.881548  [    2/   88]
+per-ex loss: 0.919925  [    4/   88]
+per-ex loss: 0.808595  [    6/   88]
+per-ex loss: 0.751713  [    8/   88]
+per-ex loss: 0.657923  [   10/   88]
+per-ex loss: 0.681308  [   12/   88]
+per-ex loss: 0.608864  [   14/   88]
+per-ex loss: 0.876655  [   16/   88]
+per-ex loss: 0.743815  [   18/   88]
+per-ex loss: 0.747427  [   20/   88]
+per-ex loss: 0.671235  [   22/   88]
+per-ex loss: 0.787305  [   24/   88]
+per-ex loss: 0.675972  [   26/   88]
+per-ex loss: 0.662664  [   28/   88]
+per-ex loss: 0.613559  [   30/   88]
+per-ex loss: 0.786891  [   32/   88]
+per-ex loss: 0.790557  [   34/   88]
+per-ex loss: 0.922430  [   36/   88]
+per-ex loss: 0.884861  [   38/   88]
+per-ex loss: 0.632226  [   40/   88]
+per-ex loss: 0.772665  [   42/   88]
+per-ex loss: 0.699180  [   44/   88]
+per-ex loss: 0.688959  [   46/   88]
+per-ex loss: 0.881128  [   48/   88]
+per-ex loss: 0.601888  [   50/   88]
+per-ex loss: 0.861531  [   52/   88]
+per-ex loss: 0.767797  [   54/   88]
+per-ex loss: 0.683696  [   56/   88]
+per-ex loss: 0.801310  [   58/   88]
+per-ex loss: 0.794505  [   60/   88]
+per-ex loss: 0.758204  [   62/   88]
+per-ex loss: 0.826888  [   64/   88]
+per-ex loss: 0.684352  [   66/   88]
+per-ex loss: 0.776727  [   68/   88]
+per-ex loss: 0.609447  [   70/   88]
+per-ex loss: 0.589553  [   72/   88]
+per-ex loss: 0.715170  [   74/   88]
+per-ex loss: 0.786259  [   76/   88]
+per-ex loss: 0.671662  [   78/   88]
+per-ex loss: 0.723399  [   80/   88]
+per-ex loss: 0.833917  [   82/   88]
+per-ex loss: 0.739442  [   84/   88]
+per-ex loss: 0.832767  [   86/   88]
+per-ex loss: 0.652203  [   88/   88]
+Train Error: Avg loss: 0.74677552
+validation Error: 
+ Avg loss: 0.76383454 
+ F1: 0.358184 
+ Precision: 0.828008 
+ Recall: 0.228519
+ IoU: 0.218163
+
+test Error: 
+ Avg loss: 0.73796745 
+ F1: 0.398996 
+ Precision: 0.873090 
+ Recall: 0.258584
+ IoU: 0.249216
+
+We have finished training iteration 70
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_66_.pth
+per-ex loss: 0.682678  [    2/   88]
+per-ex loss: 0.678335  [    4/   88]
+per-ex loss: 0.810597  [    6/   88]
+per-ex loss: 0.653738  [    8/   88]
+per-ex loss: 0.727318  [   10/   88]
+per-ex loss: 0.639258  [   12/   88]
+per-ex loss: 0.883989  [   14/   88]
+per-ex loss: 0.550806  [   16/   88]
+per-ex loss: 0.672381  [   18/   88]
+per-ex loss: 0.674647  [   20/   88]
+per-ex loss: 0.735166  [   22/   88]
+per-ex loss: 0.770633  [   24/   88]
+per-ex loss: 0.735273  [   26/   88]
+per-ex loss: 0.890511  [   28/   88]
+per-ex loss: 0.631750  [   30/   88]
+per-ex loss: 0.685367  [   32/   88]
+per-ex loss: 0.666116  [   34/   88]
+per-ex loss: 0.869949  [   36/   88]
+per-ex loss: 0.861031  [   38/   88]
+per-ex loss: 0.685699  [   40/   88]
+per-ex loss: 0.803316  [   42/   88]
+per-ex loss: 0.828522  [   44/   88]
+per-ex loss: 0.681134  [   46/   88]
+per-ex loss: 0.716774  [   48/   88]
+per-ex loss: 0.637674  [   50/   88]
+per-ex loss: 0.797394  [   52/   88]
+per-ex loss: 0.791390  [   54/   88]
+per-ex loss: 0.708851  [   56/   88]
+per-ex loss: 0.809698  [   58/   88]
+per-ex loss: 0.641488  [   60/   88]
+per-ex loss: 0.664440  [   62/   88]
+per-ex loss: 0.797117  [   64/   88]
+per-ex loss: 0.667280  [   66/   88]
+per-ex loss: 0.698395  [   68/   88]
+per-ex loss: 0.641777  [   70/   88]
+per-ex loss: 0.756359  [   72/   88]
+per-ex loss: 0.827425  [   74/   88]
+per-ex loss: 0.695372  [   76/   88]
+per-ex loss: 0.765877  [   78/   88]
+per-ex loss: 0.676723  [   80/   88]
+per-ex loss: 0.681104  [   82/   88]
+per-ex loss: 0.678582  [   84/   88]
+per-ex loss: 0.693869  [   86/   88]
+per-ex loss: 0.592017  [   88/   88]
+Train Error: Avg loss: 0.72176862
+validation Error: 
+ Avg loss: 0.75932004 
+ F1: 0.448232 
+ Precision: 0.450132 
+ Recall: 0.446348
+ IoU: 0.288853
+
+test Error: 
+ Avg loss: 0.70814363 
+ F1: 0.537340 
+ Precision: 0.571946 
+ Recall: 0.506683
+ IoU: 0.367372
+
+We have finished training iteration 71
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_69_.pth
+per-ex loss: 0.736792  [    2/   88]
+per-ex loss: 0.740390  [    4/   88]
+per-ex loss: 0.813383  [    6/   88]
+per-ex loss: 0.741818  [    8/   88]
+per-ex loss: 0.616311  [   10/   88]
+per-ex loss: 0.831447  [   12/   88]
+per-ex loss: 0.725900  [   14/   88]
+per-ex loss: 0.773964  [   16/   88]
+per-ex loss: 0.779927  [   18/   88]
+per-ex loss: 0.712469  [   20/   88]
+per-ex loss: 0.728099  [   22/   88]
+per-ex loss: 0.661040  [   24/   88]
+per-ex loss: 0.814514  [   26/   88]
+per-ex loss: 0.666718  [   28/   88]
+per-ex loss: 0.532048  [   30/   88]
+per-ex loss: 0.664447  [   32/   88]
+per-ex loss: 0.663899  [   34/   88]
+per-ex loss: 0.876553  [   36/   88]
+per-ex loss: 0.578459  [   38/   88]
+per-ex loss: 0.579349  [   40/   88]
+per-ex loss: 0.663767  [   42/   88]
+per-ex loss: 0.606669  [   44/   88]
+per-ex loss: 0.816465  [   46/   88]
+per-ex loss: 0.642385  [   48/   88]
+per-ex loss: 0.739334  [   50/   88]
+per-ex loss: 0.602090  [   52/   88]
+per-ex loss: 0.611847  [   54/   88]
+per-ex loss: 0.734586  [   56/   88]
+per-ex loss: 0.528721  [   58/   88]
+per-ex loss: 0.641935  [   60/   88]
+per-ex loss: 0.647947  [   62/   88]
+per-ex loss: 0.534493  [   64/   88]
+per-ex loss: 0.665485  [   66/   88]
+per-ex loss: 0.573964  [   68/   88]
+per-ex loss: 0.584721  [   70/   88]
+per-ex loss: 0.640627  [   72/   88]
+per-ex loss: 0.572346  [   74/   88]
+per-ex loss: 0.817336  [   76/   88]
+per-ex loss: 0.768440  [   78/   88]
+per-ex loss: 0.736964  [   80/   88]
+per-ex loss: 0.743299  [   82/   88]
+per-ex loss: 0.688096  [   84/   88]
+per-ex loss: 0.675394  [   86/   88]
+per-ex loss: 0.812866  [   88/   88]
+Train Error: Avg loss: 0.68834787
+validation Error: 
+ Avg loss: 0.71912798 
+ F1: 0.452554 
+ Precision: 0.642702 
+ Recall: 0.349231
+ IoU: 0.292452
+
+test Error: 
+ Avg loss: 0.67526943 
+ F1: 0.518773 
+ Precision: 0.729089 
+ Recall: 0.402629
+ IoU: 0.350232
+
+We have finished training iteration 72
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_67_.pth
+per-ex loss: 0.858467  [    2/   88]
+per-ex loss: 0.627445  [    4/   88]
+per-ex loss: 0.677636  [    6/   88]
+per-ex loss: 0.853091  [    8/   88]
+per-ex loss: 0.773003  [   10/   88]
+per-ex loss: 0.581061  [   12/   88]
+per-ex loss: 0.796385  [   14/   88]
+per-ex loss: 0.763171  [   16/   88]
+per-ex loss: 0.662661  [   18/   88]
+per-ex loss: 0.525460  [   20/   88]
+per-ex loss: 0.710014  [   22/   88]
+per-ex loss: 0.618110  [   24/   88]
+per-ex loss: 0.572072  [   26/   88]
+per-ex loss: 0.846793  [   28/   88]
+per-ex loss: 0.658260  [   30/   88]
+per-ex loss: 0.560727  [   32/   88]
+per-ex loss: 0.488972  [   34/   88]
+per-ex loss: 0.666857  [   36/   88]
+per-ex loss: 0.742927  [   38/   88]
+per-ex loss: 0.732827  [   40/   88]
+per-ex loss: 0.732853  [   42/   88]
+per-ex loss: 0.489036  [   44/   88]
+per-ex loss: 0.768169  [   46/   88]
+per-ex loss: 0.613051  [   48/   88]
+per-ex loss: 0.721198  [   50/   88]
+per-ex loss: 0.600407  [   52/   88]
+per-ex loss: 0.521679  [   54/   88]
+per-ex loss: 0.757383  [   56/   88]
+per-ex loss: 0.703466  [   58/   88]
+per-ex loss: 0.732437  [   60/   88]
+per-ex loss: 0.858700  [   62/   88]
+per-ex loss: 0.776633  [   64/   88]
+per-ex loss: 0.822065  [   66/   88]
+per-ex loss: 0.885051  [   68/   88]
+per-ex loss: 0.855306  [   70/   88]
+per-ex loss: 0.669452  [   72/   88]
+per-ex loss: 0.619310  [   74/   88]
+per-ex loss: 0.588242  [   76/   88]
+per-ex loss: 0.638016  [   78/   88]
+per-ex loss: 0.746583  [   80/   88]
+per-ex loss: 0.752405  [   82/   88]
+per-ex loss: 0.640287  [   84/   88]
+per-ex loss: 0.652727  [   86/   88]
+per-ex loss: 0.641877  [   88/   88]
+Train Error: Avg loss: 0.69323341
+validation Error: 
+ Avg loss: 0.75919337 
+ F1: 0.380108 
+ Precision: 0.341355 
+ Recall: 0.428788
+ IoU: 0.234651
+
+test Error: 
+ Avg loss: 0.69198347 
+ F1: 0.498084 
+ Precision: 0.455404 
+ Recall: 0.549592
+ IoU: 0.331633
+
+We have finished training iteration 73
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_68_.pth
+per-ex loss: 0.648603  [    2/   88]
+per-ex loss: 0.617154  [    4/   88]
+per-ex loss: 0.628194  [    6/   88]
+per-ex loss: 0.591018  [    8/   88]
+per-ex loss: 0.745955  [   10/   88]
+per-ex loss: 0.716786  [   12/   88]
+per-ex loss: 0.646839  [   14/   88]
+per-ex loss: 0.836567  [   16/   88]
+per-ex loss: 0.830646  [   18/   88]
+per-ex loss: 0.599093  [   20/   88]
+per-ex loss: 0.819523  [   22/   88]
+per-ex loss: 0.688228  [   24/   88]
+per-ex loss: 0.831596  [   26/   88]
+per-ex loss: 0.489599  [   28/   88]
+per-ex loss: 0.706471  [   30/   88]
+per-ex loss: 0.586954  [   32/   88]
+per-ex loss: 0.597097  [   34/   88]
+per-ex loss: 0.562973  [   36/   88]
+per-ex loss: 0.588361  [   38/   88]
+per-ex loss: 0.598295  [   40/   88]
+per-ex loss: 0.595191  [   42/   88]
+per-ex loss: 0.560261  [   44/   88]
+per-ex loss: 0.808141  [   46/   88]
+per-ex loss: 0.554491  [   48/   88]
+per-ex loss: 0.589626  [   50/   88]
+per-ex loss: 0.694696  [   52/   88]
+per-ex loss: 0.660748  [   54/   88]
+per-ex loss: 0.564609  [   56/   88]
+per-ex loss: 0.566548  [   58/   88]
+per-ex loss: 0.828928  [   60/   88]
+per-ex loss: 0.765159  [   62/   88]
+per-ex loss: 0.564949  [   64/   88]
+per-ex loss: 0.545936  [   66/   88]
+per-ex loss: 0.722284  [   68/   88]
+per-ex loss: 0.555983  [   70/   88]
+per-ex loss: 0.606663  [   72/   88]
+per-ex loss: 0.601948  [   74/   88]
+per-ex loss: 0.639187  [   76/   88]
+per-ex loss: 0.758805  [   78/   88]
+per-ex loss: 0.659418  [   80/   88]
+per-ex loss: 0.761700  [   82/   88]
+per-ex loss: 0.571518  [   84/   88]
+per-ex loss: 0.790011  [   86/   88]
+per-ex loss: 0.727999  [   88/   88]
+Train Error: Avg loss: 0.65965345
+validation Error: 
+ Avg loss: 0.69258512 
+ F1: 0.452563 
+ Precision: 0.448789 
+ Recall: 0.456402
+ IoU: 0.292460
+
+test Error: 
+ Avg loss: 0.63365021 
+ F1: 0.547542 
+ Precision: 0.562796 
+ Recall: 0.533094
+ IoU: 0.376976
+
+We have finished training iteration 74
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_70_.pth
+per-ex loss: 0.726516  [    2/   88]
+per-ex loss: 0.767827  [    4/   88]
+per-ex loss: 0.653445  [    6/   88]
+per-ex loss: 0.785009  [    8/   88]
+per-ex loss: 0.530303  [   10/   88]
+per-ex loss: 0.569416  [   12/   88]
+per-ex loss: 0.823768  [   14/   88]
+per-ex loss: 0.460946  [   16/   88]
+per-ex loss: 0.623170  [   18/   88]
+per-ex loss: 0.668633  [   20/   88]
+per-ex loss: 0.666156  [   22/   88]
+per-ex loss: 0.683440  [   24/   88]
+per-ex loss: 0.720905  [   26/   88]
+per-ex loss: 0.633260  [   28/   88]
+per-ex loss: 0.553872  [   30/   88]
+per-ex loss: 0.660099  [   32/   88]
+per-ex loss: 0.769754  [   34/   88]
+per-ex loss: 0.645403  [   36/   88]
+per-ex loss: 0.575265  [   38/   88]
+per-ex loss: 0.523473  [   40/   88]
+per-ex loss: 0.670504  [   42/   88]
+per-ex loss: 0.466800  [   44/   88]
+per-ex loss: 0.538009  [   46/   88]
+per-ex loss: 0.718633  [   48/   88]
+per-ex loss: 0.765888  [   50/   88]
+per-ex loss: 0.652170  [   52/   88]
+per-ex loss: 0.657311  [   54/   88]
+per-ex loss: 0.772292  [   56/   88]
+per-ex loss: 0.507060  [   58/   88]
+per-ex loss: 0.725102  [   60/   88]
+per-ex loss: 0.584009  [   62/   88]
+per-ex loss: 0.610134  [   64/   88]
+per-ex loss: 0.533654  [   66/   88]
+per-ex loss: 0.619285  [   68/   88]
+per-ex loss: 0.651701  [   70/   88]
+per-ex loss: 0.656778  [   72/   88]
+per-ex loss: 0.479722  [   74/   88]
+per-ex loss: 0.743602  [   76/   88]
+per-ex loss: 0.676582  [   78/   88]
+per-ex loss: 0.708082  [   80/   88]
+per-ex loss: 0.830404  [   82/   88]
+per-ex loss: 0.528128  [   84/   88]
+per-ex loss: 0.684460  [   86/   88]
+per-ex loss: 0.612976  [   88/   88]
+Train Error: Avg loss: 0.64622607
+validation Error: 
+ Avg loss: 0.67160835 
+ F1: 0.462510 
+ Precision: 0.505889 
+ Recall: 0.425984
+ IoU: 0.300822
+
+test Error: 
+ Avg loss: 0.61605691 
+ F1: 0.549228 
+ Precision: 0.589346 
+ Recall: 0.514223
+ IoU: 0.378576
+
+We have finished training iteration 75
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_71_.pth
+per-ex loss: 0.594218  [    2/   88]
+per-ex loss: 0.534195  [    4/   88]
+per-ex loss: 0.574943  [    6/   88]
+per-ex loss: 0.607424  [    8/   88]
+per-ex loss: 0.555999  [   10/   88]
+per-ex loss: 0.766701  [   12/   88]
+per-ex loss: 0.624535  [   14/   88]
+per-ex loss: 0.833495  [   16/   88]
+per-ex loss: 0.802813  [   18/   88]
+per-ex loss: 0.534139  [   20/   88]
+per-ex loss: 0.731372  [   22/   88]
+per-ex loss: 0.582941  [   24/   88]
+per-ex loss: 0.553013  [   26/   88]
+per-ex loss: 0.582189  [   28/   88]
+per-ex loss: 0.526306  [   30/   88]
+per-ex loss: 0.717724  [   32/   88]
+per-ex loss: 0.711116  [   34/   88]
+per-ex loss: 0.523551  [   36/   88]
+per-ex loss: 0.624347  [   38/   88]
+per-ex loss: 0.646791  [   40/   88]
+per-ex loss: 0.684022  [   42/   88]
+per-ex loss: 0.502495  [   44/   88]
+per-ex loss: 0.788770  [   46/   88]
+per-ex loss: 0.501129  [   48/   88]
+per-ex loss: 0.496008  [   50/   88]
+per-ex loss: 0.714090  [   52/   88]
+per-ex loss: 0.554057  [   54/   88]
+per-ex loss: 0.497972  [   56/   88]
+per-ex loss: 0.551655  [   58/   88]
+per-ex loss: 0.507394  [   60/   88]
+per-ex loss: 0.474766  [   62/   88]
+per-ex loss: 0.571582  [   64/   88]
+per-ex loss: 0.649898  [   66/   88]
+per-ex loss: 0.423082  [   68/   88]
+per-ex loss: 0.692761  [   70/   88]
+per-ex loss: 0.698116  [   72/   88]
+per-ex loss: 0.707816  [   74/   88]
+per-ex loss: 0.615538  [   76/   88]
+per-ex loss: 0.764051  [   78/   88]
+per-ex loss: 0.510914  [   80/   88]
+per-ex loss: 0.499968  [   82/   88]
+per-ex loss: 0.797520  [   84/   88]
+per-ex loss: 0.662998  [   86/   88]
+per-ex loss: 0.725979  [   88/   88]
+Train Error: Avg loss: 0.61864529
+validation Error: 
+ Avg loss: 0.70857889 
+ F1: 0.416539 
+ Precision: 0.338752 
+ Recall: 0.540700
+ IoU: 0.263056
+
+test Error: 
+ Avg loss: 0.63898601 
+ F1: 0.508548 
+ Precision: 0.437064 
+ Recall: 0.607987
+ IoU: 0.340975
+
+We have finished training iteration 76
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_73_.pth
+per-ex loss: 0.591216  [    2/   88]
+per-ex loss: 0.541266  [    4/   88]
+per-ex loss: 0.795855  [    6/   88]
+per-ex loss: 0.685534  [    8/   88]
+per-ex loss: 0.643096  [   10/   88]
+per-ex loss: 0.545743  [   12/   88]
+per-ex loss: 0.750215  [   14/   88]
+per-ex loss: 0.561034  [   16/   88]
+per-ex loss: 0.476611  [   18/   88]
+per-ex loss: 0.469421  [   20/   88]
+per-ex loss: 0.551869  [   22/   88]
+per-ex loss: 0.577936  [   24/   88]
+per-ex loss: 0.765157  [   26/   88]
+per-ex loss: 0.672104  [   28/   88]
+per-ex loss: 0.466999  [   30/   88]
+per-ex loss: 0.589362  [   32/   88]
+per-ex loss: 0.505291  [   34/   88]
+per-ex loss: 0.500002  [   36/   88]
+per-ex loss: 0.544302  [   38/   88]
+per-ex loss: 0.697091  [   40/   88]
+per-ex loss: 0.519205  [   42/   88]
+per-ex loss: 0.652486  [   44/   88]
+per-ex loss: 0.470261  [   46/   88]
+per-ex loss: 0.546429  [   48/   88]
+per-ex loss: 0.525209  [   50/   88]
+per-ex loss: 0.649264  [   52/   88]
+per-ex loss: 0.541404  [   54/   88]
+per-ex loss: 0.580997  [   56/   88]
+per-ex loss: 0.739717  [   58/   88]
+per-ex loss: 0.501486  [   60/   88]
+per-ex loss: 0.638416  [   62/   88]
+per-ex loss: 0.594618  [   64/   88]
+per-ex loss: 0.583311  [   66/   88]
+per-ex loss: 0.472640  [   68/   88]
+per-ex loss: 0.561936  [   70/   88]
+per-ex loss: 0.687133  [   72/   88]
+per-ex loss: 0.801136  [   74/   88]
+per-ex loss: 0.755166  [   76/   88]
+per-ex loss: 0.530862  [   78/   88]
+per-ex loss: 0.604030  [   80/   88]
+per-ex loss: 0.683394  [   82/   88]
+per-ex loss: 0.754585  [   84/   88]
+per-ex loss: 0.607823  [   86/   88]
+per-ex loss: 0.555067  [   88/   88]
+Train Error: Avg loss: 0.60196996
+validation Error: 
+ Avg loss: 0.63869142 
+ F1: 0.438411 
+ Precision: 0.705583 
+ Recall: 0.317999
+ IoU: 0.280746
+
+test Error: 
+ Avg loss: 0.61005864 
+ F1: 0.485642 
+ Precision: 0.765150 
+ Recall: 0.355704
+ IoU: 0.320692
+
+We have finished training iteration 77
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_72_.pth
+per-ex loss: 0.646956  [    2/   88]
+per-ex loss: 0.607841  [    4/   88]
+per-ex loss: 0.494685  [    6/   88]
+per-ex loss: 0.658700  [    8/   88]
+per-ex loss: 0.699005  [   10/   88]
+per-ex loss: 0.609319  [   12/   88]
+per-ex loss: 0.697023  [   14/   88]
+per-ex loss: 0.578478  [   16/   88]
+per-ex loss: 0.477944  [   18/   88]
+per-ex loss: 0.521805  [   20/   88]
+per-ex loss: 0.641681  [   22/   88]
+per-ex loss: 0.523685  [   24/   88]
+per-ex loss: 0.618078  [   26/   88]
+per-ex loss: 0.670987  [   28/   88]
+per-ex loss: 0.463223  [   30/   88]
+per-ex loss: 0.517650  [   32/   88]
+per-ex loss: 0.679098  [   34/   88]
+per-ex loss: 0.665297  [   36/   88]
+per-ex loss: 0.591001  [   38/   88]
+per-ex loss: 0.546002  [   40/   88]
+per-ex loss: 0.479754  [   42/   88]
+per-ex loss: 0.482325  [   44/   88]
+per-ex loss: 0.426273  [   46/   88]
+per-ex loss: 0.483186  [   48/   88]
+per-ex loss: 0.516910  [   50/   88]
+per-ex loss: 0.643864  [   52/   88]
+per-ex loss: 0.736742  [   54/   88]
+per-ex loss: 0.479296  [   56/   88]
+per-ex loss: 0.732516  [   58/   88]
+per-ex loss: 0.696203  [   60/   88]
+per-ex loss: 0.787266  [   62/   88]
+per-ex loss: 0.602696  [   64/   88]
+per-ex loss: 0.756335  [   66/   88]
+per-ex loss: 0.450887  [   68/   88]
+per-ex loss: 0.443796  [   70/   88]
+per-ex loss: 0.504445  [   72/   88]
+per-ex loss: 0.621510  [   74/   88]
+per-ex loss: 0.564949  [   76/   88]
+per-ex loss: 0.576920  [   78/   88]
+per-ex loss: 0.569615  [   80/   88]
+per-ex loss: 0.493091  [   82/   88]
+per-ex loss: 0.675290  [   84/   88]
+per-ex loss: 0.453439  [   86/   88]
+per-ex loss: 0.705117  [   88/   88]
+Train Error: Avg loss: 0.58615639
+validation Error: 
+ Avg loss: 0.68048426 
+ F1: 0.415539 
+ Precision: 0.380588 
+ Recall: 0.457558
+ IoU: 0.262259
+
+test Error: 
+ Avg loss: 0.58874460 
+ F1: 0.534234 
+ Precision: 0.520419 
+ Recall: 0.548803
+ IoU: 0.364475
+
+We have finished training iteration 78
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_76_.pth
+per-ex loss: 0.760314  [    2/   88]
+per-ex loss: 0.744947  [    4/   88]
+per-ex loss: 0.659300  [    6/   88]
+per-ex loss: 0.546675  [    8/   88]
+per-ex loss: 0.596213  [   10/   88]
+per-ex loss: 0.630112  [   12/   88]
+per-ex loss: 0.625491  [   14/   88]
+per-ex loss: 0.550903  [   16/   88]
+per-ex loss: 0.662578  [   18/   88]
+per-ex loss: 0.483307  [   20/   88]
+per-ex loss: 0.667548  [   22/   88]
+per-ex loss: 0.550347  [   24/   88]
+per-ex loss: 0.496935  [   26/   88]
+per-ex loss: 0.665012  [   28/   88]
+per-ex loss: 0.472055  [   30/   88]
+per-ex loss: 0.458010  [   32/   88]
+per-ex loss: 0.639712  [   34/   88]
+per-ex loss: 0.501466  [   36/   88]
+per-ex loss: 0.478853  [   38/   88]
+per-ex loss: 0.433473  [   40/   88]
+per-ex loss: 0.547908  [   42/   88]
+per-ex loss: 0.413365  [   44/   88]
+per-ex loss: 0.696742  [   46/   88]
+per-ex loss: 0.663119  [   48/   88]
+per-ex loss: 0.628655  [   50/   88]
+per-ex loss: 0.433069  [   52/   88]
+per-ex loss: 0.615095  [   54/   88]
+per-ex loss: 0.651919  [   56/   88]
+per-ex loss: 0.790325  [   58/   88]
+per-ex loss: 0.543358  [   60/   88]
+per-ex loss: 0.529288  [   62/   88]
+per-ex loss: 0.548190  [   64/   88]
+per-ex loss: 0.629540  [   66/   88]
+per-ex loss: 0.600652  [   68/   88]
+per-ex loss: 0.751223  [   70/   88]
+per-ex loss: 0.525459  [   72/   88]
+per-ex loss: 0.530760  [   74/   88]
+per-ex loss: 0.588212  [   76/   88]
+per-ex loss: 0.523737  [   78/   88]
+per-ex loss: 0.780249  [   80/   88]
+per-ex loss: 0.555205  [   82/   88]
+per-ex loss: 0.509065  [   84/   88]
+per-ex loss: 0.760624  [   86/   88]
+per-ex loss: 0.747431  [   88/   88]
+Train Error: Avg loss: 0.59514633
+validation Error: 
+ Avg loss: 0.69946328 
+ F1: 0.366602 
+ Precision: 0.275437 
+ Recall: 0.547975
+ IoU: 0.224442
+
+test Error: 
+ Avg loss: 0.62530794 
+ F1: 0.460877 
+ Precision: 0.370181 
+ Recall: 0.610436
+ IoU: 0.299441
+
+We have finished training iteration 79
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_74_.pth
+per-ex loss: 0.709570  [    2/   88]
+per-ex loss: 0.520901  [    4/   88]
+per-ex loss: 0.668411  [    6/   88]
+per-ex loss: 0.641821  [    8/   88]
+per-ex loss: 0.488746  [   10/   88]
+per-ex loss: 0.489345  [   12/   88]
+per-ex loss: 0.720235  [   14/   88]
+per-ex loss: 0.547189  [   16/   88]
+per-ex loss: 0.499594  [   18/   88]
+per-ex loss: 0.644947  [   20/   88]
+per-ex loss: 0.694693  [   22/   88]
+per-ex loss: 0.704537  [   24/   88]
+per-ex loss: 0.638181  [   26/   88]
+per-ex loss: 0.677702  [   28/   88]
+per-ex loss: 0.538392  [   30/   88]
+per-ex loss: 0.544218  [   32/   88]
+per-ex loss: 0.498552  [   34/   88]
+per-ex loss: 0.657614  [   36/   88]
+per-ex loss: 0.555705  [   38/   88]
+per-ex loss: 0.425464  [   40/   88]
+per-ex loss: 0.539840  [   42/   88]
+per-ex loss: 0.478794  [   44/   88]
+per-ex loss: 0.505165  [   46/   88]
+per-ex loss: 0.739377  [   48/   88]
+per-ex loss: 0.671833  [   50/   88]
+per-ex loss: 0.482878  [   52/   88]
+per-ex loss: 0.638847  [   54/   88]
+per-ex loss: 0.599646  [   56/   88]
+per-ex loss: 0.529963  [   58/   88]
+per-ex loss: 0.518237  [   60/   88]
+per-ex loss: 0.532605  [   62/   88]
+per-ex loss: 0.767007  [   64/   88]
+per-ex loss: 0.480663  [   66/   88]
+per-ex loss: 0.590966  [   68/   88]
+per-ex loss: 0.714995  [   70/   88]
+per-ex loss: 0.594625  [   72/   88]
+per-ex loss: 0.535452  [   74/   88]
+per-ex loss: 0.497363  [   76/   88]
+per-ex loss: 0.494192  [   78/   88]
+per-ex loss: 0.632883  [   80/   88]
+per-ex loss: 0.741787  [   82/   88]
+per-ex loss: 0.406350  [   84/   88]
+per-ex loss: 0.552563  [   86/   88]
+per-ex loss: 0.584097  [   88/   88]
+Train Error: Avg loss: 0.58399885
+validation Error: 
+ Avg loss: 0.59160151 
+ F1: 0.476002 
+ Precision: 0.636581 
+ Recall: 0.380117
+ IoU: 0.312338
+
+test Error: 
+ Avg loss: 0.53743537 
+ F1: 0.550068 
+ Precision: 0.682761 
+ Recall: 0.460560
+ IoU: 0.379375
+
+We have finished training iteration 80
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_78_.pth
+per-ex loss: 0.650567  [    2/   88]
+per-ex loss: 0.725231  [    4/   88]
+per-ex loss: 0.659973  [    6/   88]
+per-ex loss: 0.437377  [    8/   88]
+per-ex loss: 0.556244  [   10/   88]
+per-ex loss: 0.480396  [   12/   88]
+per-ex loss: 0.593163  [   14/   88]
+per-ex loss: 0.636557  [   16/   88]
+per-ex loss: 0.544898  [   18/   88]
+per-ex loss: 0.577694  [   20/   88]
+per-ex loss: 0.650471  [   22/   88]
+per-ex loss: 0.560303  [   24/   88]
+per-ex loss: 0.529662  [   26/   88]
+per-ex loss: 0.506357  [   28/   88]
+per-ex loss: 0.576344  [   30/   88]
+per-ex loss: 0.468658  [   32/   88]
+per-ex loss: 0.554969  [   34/   88]
+per-ex loss: 0.475883  [   36/   88]
+per-ex loss: 0.517470  [   38/   88]
+per-ex loss: 0.470136  [   40/   88]
+per-ex loss: 0.620318  [   42/   88]
+per-ex loss: 0.704889  [   44/   88]
+per-ex loss: 0.667772  [   46/   88]
+per-ex loss: 0.453689  [   48/   88]
+per-ex loss: 0.654545  [   50/   88]
+per-ex loss: 0.587585  [   52/   88]
+per-ex loss: 0.463936  [   54/   88]
+per-ex loss: 0.592997  [   56/   88]
+per-ex loss: 0.658477  [   58/   88]
+per-ex loss: 0.660037  [   60/   88]
+per-ex loss: 0.512129  [   62/   88]
+per-ex loss: 0.553191  [   64/   88]
+per-ex loss: 0.476086  [   66/   88]
+per-ex loss: 0.550451  [   68/   88]
+per-ex loss: 0.653745  [   70/   88]
+per-ex loss: 0.675092  [   72/   88]
+per-ex loss: 0.472052  [   74/   88]
+per-ex loss: 0.578231  [   76/   88]
+per-ex loss: 0.519808  [   78/   88]
+per-ex loss: 0.621213  [   80/   88]
+per-ex loss: 0.431651  [   82/   88]
+per-ex loss: 0.597585  [   84/   88]
+per-ex loss: 0.460669  [   86/   88]
+per-ex loss: 0.648050  [   88/   88]
+Train Error: Avg loss: 0.56787616
+validation Error: 
+ Avg loss: 0.58375413 
+ F1: 0.462760 
+ Precision: 0.542604 
+ Recall: 0.403401
+ IoU: 0.301033
+
+test Error: 
+ Avg loss: 0.53088144 
+ F1: 0.548688 
+ Precision: 0.610099 
+ Recall: 0.498510
+ IoU: 0.378064
+
+We have finished training iteration 81
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_79_.pth
+per-ex loss: 0.635931  [    2/   88]
+per-ex loss: 0.614692  [    4/   88]
+per-ex loss: 0.514603  [    6/   88]
+per-ex loss: 0.559978  [    8/   88]
+per-ex loss: 0.491097  [   10/   88]
+per-ex loss: 0.548442  [   12/   88]
+per-ex loss: 0.602048  [   14/   88]
+per-ex loss: 0.729670  [   16/   88]
+per-ex loss: 0.610727  [   18/   88]
+per-ex loss: 0.522998  [   20/   88]
+per-ex loss: 0.480456  [   22/   88]
+per-ex loss: 0.525461  [   24/   88]
+per-ex loss: 0.464866  [   26/   88]
+per-ex loss: 0.524590  [   28/   88]
+per-ex loss: 0.540911  [   30/   88]
+per-ex loss: 0.516045  [   32/   88]
+per-ex loss: 0.409785  [   34/   88]
+per-ex loss: 0.553608  [   36/   88]
+per-ex loss: 0.604363  [   38/   88]
+per-ex loss: 0.601539  [   40/   88]
+per-ex loss: 0.445250  [   42/   88]
+per-ex loss: 0.648505  [   44/   88]
+per-ex loss: 0.530951  [   46/   88]
+per-ex loss: 0.434259  [   48/   88]
+per-ex loss: 0.506848  [   50/   88]
+per-ex loss: 0.458673  [   52/   88]
+per-ex loss: 0.739365  [   54/   88]
+per-ex loss: 0.514917  [   56/   88]
+per-ex loss: 0.743803  [   58/   88]
+per-ex loss: 0.496374  [   60/   88]
+per-ex loss: 0.518706  [   62/   88]
+per-ex loss: 0.679822  [   64/   88]
+per-ex loss: 0.769918  [   66/   88]
+per-ex loss: 0.561552  [   68/   88]
+per-ex loss: 0.624063  [   70/   88]
+per-ex loss: 0.575548  [   72/   88]
+per-ex loss: 0.551018  [   74/   88]
+per-ex loss: 0.464772  [   76/   88]
+per-ex loss: 0.557173  [   78/   88]
+per-ex loss: 0.628987  [   80/   88]
+per-ex loss: 0.503296  [   82/   88]
+per-ex loss: 0.669023  [   84/   88]
+per-ex loss: 0.530834  [   86/   88]
+per-ex loss: 0.480424  [   88/   88]
+Train Error: Avg loss: 0.56104298
+validation Error: 
+ Avg loss: 0.62685880 
+ F1: 0.440350 
+ Precision: 0.400777 
+ Recall: 0.488594
+ IoU: 0.282339
+
+test Error: 
+ Avg loss: 0.55221240 
+ F1: 0.530398 
+ Precision: 0.502092 
+ Recall: 0.562087
+ IoU: 0.360913
+
+We have finished training iteration 82
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_75_.pth
+per-ex loss: 0.733080  [    2/   88]
+per-ex loss: 0.466790  [    4/   88]
+per-ex loss: 0.480334  [    6/   88]
+per-ex loss: 0.602747  [    8/   88]
+per-ex loss: 0.453882  [   10/   88]
+per-ex loss: 0.620417  [   12/   88]
+per-ex loss: 0.637336  [   14/   88]
+per-ex loss: 0.630270  [   16/   88]
+per-ex loss: 0.433484  [   18/   88]
+per-ex loss: 0.484829  [   20/   88]
+per-ex loss: 0.608694  [   22/   88]
+per-ex loss: 0.552295  [   24/   88]
+per-ex loss: 0.641267  [   26/   88]
+per-ex loss: 0.616041  [   28/   88]
+per-ex loss: 0.648075  [   30/   88]
+per-ex loss: 0.753547  [   32/   88]
+per-ex loss: 0.490141  [   34/   88]
+per-ex loss: 0.580948  [   36/   88]
+per-ex loss: 0.464399  [   38/   88]
+per-ex loss: 0.488137  [   40/   88]
+per-ex loss: 0.616069  [   42/   88]
+per-ex loss: 0.478630  [   44/   88]
+per-ex loss: 0.685989  [   46/   88]
+per-ex loss: 0.463390  [   48/   88]
+per-ex loss: 0.550846  [   50/   88]
+per-ex loss: 0.599769  [   52/   88]
+per-ex loss: 0.566850  [   54/   88]
+per-ex loss: 0.521156  [   56/   88]
+per-ex loss: 0.748302  [   58/   88]
+per-ex loss: 0.451361  [   60/   88]
+per-ex loss: 0.431708  [   62/   88]
+per-ex loss: 0.437316  [   64/   88]
+per-ex loss: 0.603474  [   66/   88]
+per-ex loss: 0.674030  [   68/   88]
+per-ex loss: 0.515687  [   70/   88]
+per-ex loss: 0.430643  [   72/   88]
+per-ex loss: 0.460178  [   74/   88]
+per-ex loss: 0.636793  [   76/   88]
+per-ex loss: 0.650757  [   78/   88]
+per-ex loss: 0.631647  [   80/   88]
+per-ex loss: 0.500314  [   82/   88]
+per-ex loss: 0.466390  [   84/   88]
+per-ex loss: 0.519813  [   86/   88]
+per-ex loss: 0.462517  [   88/   88]
+Train Error: Avg loss: 0.55659865
+validation Error: 
+ Avg loss: 0.56050381 
+ F1: 0.481903 
+ Precision: 0.581373 
+ Recall: 0.411498
+ IoU: 0.317439
+
+test Error: 
+ Avg loss: 0.51152416 
+ F1: 0.558390 
+ Precision: 0.660316 
+ Recall: 0.483723
+ IoU: 0.387338
+
+We have finished training iteration 83
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_77_.pth
+per-ex loss: 0.642608  [    2/   88]
+per-ex loss: 0.621880  [    4/   88]
+per-ex loss: 0.617573  [    6/   88]
+per-ex loss: 0.668917  [    8/   88]
+per-ex loss: 0.522145  [   10/   88]
+per-ex loss: 0.507471  [   12/   88]
+per-ex loss: 0.483272  [   14/   88]
+per-ex loss: 0.533326  [   16/   88]
+per-ex loss: 0.441481  [   18/   88]
+per-ex loss: 0.486486  [   20/   88]
+per-ex loss: 0.454968  [   22/   88]
+per-ex loss: 0.474153  [   24/   88]
+per-ex loss: 0.456827  [   26/   88]
+per-ex loss: 0.544522  [   28/   88]
+per-ex loss: 0.597902  [   30/   88]
+per-ex loss: 0.494831  [   32/   88]
+per-ex loss: 0.659835  [   34/   88]
+per-ex loss: 0.747120  [   36/   88]
+per-ex loss: 0.536734  [   38/   88]
+per-ex loss: 0.630568  [   40/   88]
+per-ex loss: 0.484564  [   42/   88]
+per-ex loss: 0.520268  [   44/   88]
+per-ex loss: 0.570586  [   46/   88]
+per-ex loss: 0.470649  [   48/   88]
+per-ex loss: 0.560151  [   50/   88]
+per-ex loss: 0.472531  [   52/   88]
+per-ex loss: 0.475931  [   54/   88]
+per-ex loss: 0.500502  [   56/   88]
+per-ex loss: 0.450956  [   58/   88]
+per-ex loss: 0.427995  [   60/   88]
+per-ex loss: 0.434400  [   62/   88]
+per-ex loss: 0.558016  [   64/   88]
+per-ex loss: 0.516072  [   66/   88]
+per-ex loss: 0.439379  [   68/   88]
+per-ex loss: 0.481391  [   70/   88]
+per-ex loss: 0.707682  [   72/   88]
+per-ex loss: 0.484827  [   74/   88]
+per-ex loss: 0.654245  [   76/   88]
+per-ex loss: 0.616919  [   78/   88]
+per-ex loss: 0.626563  [   80/   88]
+per-ex loss: 0.522822  [   82/   88]
+per-ex loss: 0.587820  [   84/   88]
+per-ex loss: 0.507269  [   86/   88]
+per-ex loss: 0.536077  [   88/   88]
+Train Error: Avg loss: 0.53932356
+validation Error: 
+ Avg loss: 0.56044279 
+ F1: 0.498196 
+ Precision: 0.612407 
+ Recall: 0.419889
+ IoU: 0.331732
+
+test Error: 
+ Avg loss: 0.51285209 
+ F1: 0.558522 
+ Precision: 0.673677 
+ Recall: 0.476988
+ IoU: 0.387465
+
+We have finished training iteration 84
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_82_.pth
+per-ex loss: 0.584295  [    2/   88]
+per-ex loss: 0.410212  [    4/   88]
+per-ex loss: 0.586980  [    6/   88]
+per-ex loss: 0.620056  [    8/   88]
+per-ex loss: 0.667012  [   10/   88]
+per-ex loss: 0.415434  [   12/   88]
+per-ex loss: 0.677095  [   14/   88]
+per-ex loss: 0.620152  [   16/   88]
+per-ex loss: 0.512901  [   18/   88]
+per-ex loss: 0.557469  [   20/   88]
+per-ex loss: 0.469983  [   22/   88]
+per-ex loss: 0.485121  [   24/   88]
+per-ex loss: 0.414693  [   26/   88]
+per-ex loss: 0.537799  [   28/   88]
+per-ex loss: 0.414444  [   30/   88]
+per-ex loss: 0.561870  [   32/   88]
+per-ex loss: 0.546182  [   34/   88]
+per-ex loss: 0.614881  [   36/   88]
+per-ex loss: 0.647068  [   38/   88]
+per-ex loss: 0.594375  [   40/   88]
+per-ex loss: 0.403139  [   42/   88]
+per-ex loss: 0.738204  [   44/   88]
+per-ex loss: 0.554814  [   46/   88]
+per-ex loss: 0.508068  [   48/   88]
+per-ex loss: 0.427398  [   50/   88]
+per-ex loss: 0.574992  [   52/   88]
+per-ex loss: 0.425855  [   54/   88]
+per-ex loss: 0.545412  [   56/   88]
+per-ex loss: 0.512045  [   58/   88]
+per-ex loss: 0.409328  [   60/   88]
+per-ex loss: 0.755213  [   62/   88]
+per-ex loss: 0.575107  [   64/   88]
+per-ex loss: 0.527866  [   66/   88]
+per-ex loss: 0.525219  [   68/   88]
+per-ex loss: 0.706100  [   70/   88]
+per-ex loss: 0.560318  [   72/   88]
+per-ex loss: 0.720453  [   74/   88]
+per-ex loss: 0.622931  [   76/   88]
+per-ex loss: 0.675309  [   78/   88]
+per-ex loss: 0.508287  [   80/   88]
+per-ex loss: 0.515409  [   82/   88]
+per-ex loss: 0.533595  [   84/   88]
+per-ex loss: 0.467923  [   86/   88]
+per-ex loss: 0.682308  [   88/   88]
+Train Error: Avg loss: 0.55484803
+validation Error: 
+ Avg loss: 0.56446705 
+ F1: 0.489322 
+ Precision: 0.618305 
+ Recall: 0.404864
+ IoU: 0.323909
+
+test Error: 
+ Avg loss: 0.51657258 
+ F1: 0.552553 
+ Precision: 0.687697 
+ Recall: 0.461801
+ IoU: 0.381743
+
+We have finished training iteration 85
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_80_.pth
+per-ex loss: 0.468720  [    2/   88]
+per-ex loss: 0.552625  [    4/   88]
+per-ex loss: 0.475145  [    6/   88]
+per-ex loss: 0.521742  [    8/   88]
+per-ex loss: 0.636386  [   10/   88]
+per-ex loss: 0.497899  [   12/   88]
+per-ex loss: 0.697585  [   14/   88]
+per-ex loss: 0.521647  [   16/   88]
+per-ex loss: 0.494511  [   18/   88]
+per-ex loss: 0.586846  [   20/   88]
+per-ex loss: 0.577816  [   22/   88]
+per-ex loss: 0.683396  [   24/   88]
+per-ex loss: 0.604851  [   26/   88]
+per-ex loss: 0.693905  [   28/   88]
+per-ex loss: 0.499909  [   30/   88]
+per-ex loss: 0.655174  [   32/   88]
+per-ex loss: 0.488089  [   34/   88]
+per-ex loss: 0.479998  [   36/   88]
+per-ex loss: 0.721655  [   38/   88]
+per-ex loss: 0.450509  [   40/   88]
+per-ex loss: 0.437232  [   42/   88]
+per-ex loss: 0.455019  [   44/   88]
+per-ex loss: 0.589641  [   46/   88]
+per-ex loss: 0.413057  [   48/   88]
+per-ex loss: 0.520023  [   50/   88]
+per-ex loss: 0.536308  [   52/   88]
+per-ex loss: 0.558822  [   54/   88]
+per-ex loss: 0.402008  [   56/   88]
+per-ex loss: 0.449604  [   58/   88]
+per-ex loss: 0.642552  [   60/   88]
+per-ex loss: 0.463207  [   62/   88]
+per-ex loss: 0.631134  [   64/   88]
+per-ex loss: 0.567147  [   66/   88]
+per-ex loss: 0.590081  [   68/   88]
+per-ex loss: 0.436206  [   70/   88]
+per-ex loss: 0.659869  [   72/   88]
+per-ex loss: 0.448636  [   74/   88]
+per-ex loss: 0.555248  [   76/   88]
+per-ex loss: 0.532341  [   78/   88]
+per-ex loss: 0.595690  [   80/   88]
+per-ex loss: 0.430177  [   82/   88]
+per-ex loss: 0.636820  [   84/   88]
+per-ex loss: 0.525341  [   86/   88]
+per-ex loss: 0.443543  [   88/   88]
+Train Error: Avg loss: 0.54154795
+validation Error: 
+ Avg loss: 0.55330551 
+ F1: 0.489487 
+ Precision: 0.645395 
+ Recall: 0.394249
+ IoU: 0.324054
+
+test Error: 
+ Avg loss: 0.51143395 
+ F1: 0.550956 
+ Precision: 0.697352 
+ Recall: 0.455361
+ IoU: 0.380220
+
+We have finished training iteration 86
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_81_.pth
+per-ex loss: 0.522501  [    2/   88]
+per-ex loss: 0.475696  [    4/   88]
+per-ex loss: 0.625344  [    6/   88]
+per-ex loss: 0.492639  [    8/   88]
+per-ex loss: 0.443013  [   10/   88]
+per-ex loss: 0.593035  [   12/   88]
+per-ex loss: 0.481166  [   14/   88]
+per-ex loss: 0.652492  [   16/   88]
+per-ex loss: 0.633785  [   18/   88]
+per-ex loss: 0.631630  [   20/   88]
+per-ex loss: 0.519740  [   22/   88]
+per-ex loss: 0.553317  [   24/   88]
+per-ex loss: 0.471731  [   26/   88]
+per-ex loss: 0.499194  [   28/   88]
+per-ex loss: 0.396137  [   30/   88]
+per-ex loss: 0.623905  [   32/   88]
+per-ex loss: 0.589472  [   34/   88]
+per-ex loss: 0.632472  [   36/   88]
+per-ex loss: 0.450177  [   38/   88]
+per-ex loss: 0.620274  [   40/   88]
+per-ex loss: 0.496068  [   42/   88]
+per-ex loss: 0.471555  [   44/   88]
+per-ex loss: 0.732558  [   46/   88]
+per-ex loss: 0.490506  [   48/   88]
+per-ex loss: 0.429465  [   50/   88]
+per-ex loss: 0.532106  [   52/   88]
+per-ex loss: 0.459701  [   54/   88]
+per-ex loss: 0.673254  [   56/   88]
+per-ex loss: 0.548348  [   58/   88]
+per-ex loss: 0.473331  [   60/   88]
+per-ex loss: 0.618301  [   62/   88]
+per-ex loss: 0.459336  [   64/   88]
+per-ex loss: 0.504745  [   66/   88]
+per-ex loss: 0.468321  [   68/   88]
+per-ex loss: 0.487144  [   70/   88]
+per-ex loss: 0.501326  [   72/   88]
+per-ex loss: 0.436812  [   74/   88]
+per-ex loss: 0.476622  [   76/   88]
+per-ex loss: 0.529923  [   78/   88]
+per-ex loss: 0.598070  [   80/   88]
+per-ex loss: 0.686267  [   82/   88]
+per-ex loss: 0.506615  [   84/   88]
+per-ex loss: 0.650879  [   86/   88]
+per-ex loss: 0.410497  [   88/   88]
+Train Error: Avg loss: 0.53521517
+validation Error: 
+ Avg loss: 0.56722603 
+ F1: 0.475282 
+ Precision: 0.480382 
+ Recall: 0.470288
+ IoU: 0.311718
+
+test Error: 
+ Avg loss: 0.50946160 
+ F1: 0.551142 
+ Precision: 0.605844 
+ Recall: 0.505501
+ IoU: 0.380398
+
+We have finished training iteration 87
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_85_.pth
+per-ex loss: 0.671041  [    2/   88]
+per-ex loss: 0.547267  [    4/   88]
+per-ex loss: 0.495744  [    6/   88]
+per-ex loss: 0.528531  [    8/   88]
+per-ex loss: 0.656493  [   10/   88]
+per-ex loss: 0.536906  [   12/   88]
+per-ex loss: 0.601169  [   14/   88]
+per-ex loss: 0.531829  [   16/   88]
+per-ex loss: 0.422480  [   18/   88]
+per-ex loss: 0.425461  [   20/   88]
+per-ex loss: 0.628510  [   22/   88]
+per-ex loss: 0.435517  [   24/   88]
+per-ex loss: 0.384010  [   26/   88]
+per-ex loss: 0.646400  [   28/   88]
+per-ex loss: 0.518328  [   30/   88]
+per-ex loss: 0.478689  [   32/   88]
+per-ex loss: 0.711627  [   34/   88]
+per-ex loss: 0.583128  [   36/   88]
+per-ex loss: 0.502680  [   38/   88]
+per-ex loss: 0.599526  [   40/   88]
+per-ex loss: 0.635786  [   42/   88]
+per-ex loss: 0.637924  [   44/   88]
+per-ex loss: 0.661167  [   46/   88]
+per-ex loss: 0.431890  [   48/   88]
+per-ex loss: 0.505651  [   50/   88]
+per-ex loss: 0.603278  [   52/   88]
+per-ex loss: 0.725323  [   54/   88]
+per-ex loss: 0.491505  [   56/   88]
+per-ex loss: 0.576055  [   58/   88]
+per-ex loss: 0.473441  [   60/   88]
+per-ex loss: 0.426169  [   62/   88]
+per-ex loss: 0.404922  [   64/   88]
+per-ex loss: 0.442131  [   66/   88]
+per-ex loss: 0.514072  [   68/   88]
+per-ex loss: 0.687281  [   70/   88]
+per-ex loss: 0.548737  [   72/   88]
+per-ex loss: 0.527210  [   74/   88]
+per-ex loss: 0.392313  [   76/   88]
+per-ex loss: 0.767778  [   78/   88]
+per-ex loss: 0.575756  [   80/   88]
+per-ex loss: 0.435640  [   82/   88]
+per-ex loss: 0.450272  [   84/   88]
+per-ex loss: 0.590335  [   86/   88]
+per-ex loss: 0.482444  [   88/   88]
+Train Error: Avg loss: 0.54300948
+validation Error: 
+ Avg loss: 0.54727655 
+ F1: 0.494133 
+ Precision: 0.538172 
+ Recall: 0.456755
+ IoU: 0.328138
+
+test Error: 
+ Avg loss: 0.49649115 
+ F1: 0.564577 
+ Precision: 0.605660 
+ Recall: 0.528713
+ IoU: 0.393317
+
+We have finished training iteration 88
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_83_.pth
+per-ex loss: 0.487906  [    2/   88]
+per-ex loss: 0.562349  [    4/   88]
+per-ex loss: 0.482723  [    6/   88]
+per-ex loss: 0.490347  [    8/   88]
+per-ex loss: 0.406479  [   10/   88]
+per-ex loss: 0.585488  [   12/   88]
+per-ex loss: 0.405033  [   14/   88]
+per-ex loss: 0.670365  [   16/   88]
+per-ex loss: 0.478001  [   18/   88]
+per-ex loss: 0.585845  [   20/   88]
+per-ex loss: 0.503624  [   22/   88]
+per-ex loss: 0.523874  [   24/   88]
+per-ex loss: 0.578865  [   26/   88]
+per-ex loss: 0.565397  [   28/   88]
+per-ex loss: 0.660661  [   30/   88]
+per-ex loss: 0.486892  [   32/   88]
+per-ex loss: 0.592180  [   34/   88]
+per-ex loss: 0.492829  [   36/   88]
+per-ex loss: 0.456972  [   38/   88]
+per-ex loss: 0.668684  [   40/   88]
+per-ex loss: 0.506114  [   42/   88]
+per-ex loss: 0.581670  [   44/   88]
+per-ex loss: 0.549688  [   46/   88]
+per-ex loss: 0.474722  [   48/   88]
+per-ex loss: 0.446333  [   50/   88]
+per-ex loss: 0.492170  [   52/   88]
+per-ex loss: 0.556938  [   54/   88]
+per-ex loss: 0.423953  [   56/   88]
+per-ex loss: 0.528511  [   58/   88]
+per-ex loss: 0.422530  [   60/   88]
+per-ex loss: 0.496186  [   62/   88]
+per-ex loss: 0.515697  [   64/   88]
+per-ex loss: 0.417019  [   66/   88]
+per-ex loss: 0.705387  [   68/   88]
+per-ex loss: 0.483988  [   70/   88]
+per-ex loss: 0.412005  [   72/   88]
+per-ex loss: 0.534610  [   74/   88]
+per-ex loss: 0.667537  [   76/   88]
+per-ex loss: 0.426456  [   78/   88]
+per-ex loss: 0.509609  [   80/   88]
+per-ex loss: 0.671234  [   82/   88]
+per-ex loss: 0.509275  [   84/   88]
+per-ex loss: 0.424075  [   86/   88]
+per-ex loss: 0.702976  [   88/   88]
+Train Error: Avg loss: 0.52598179
+validation Error: 
+ Avg loss: 0.53549936 
+ F1: 0.497999 
+ Precision: 0.615742 
+ Recall: 0.418058
+ IoU: 0.331557
+
+test Error: 
+ Avg loss: 0.50022131 
+ F1: 0.553287 
+ Precision: 0.665498 
+ Recall: 0.473457
+ IoU: 0.382444
+
+We have finished training iteration 89
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_87_.pth
+per-ex loss: 0.426961  [    2/   88]
+per-ex loss: 0.457346  [    4/   88]
+per-ex loss: 0.542156  [    6/   88]
+per-ex loss: 0.585303  [    8/   88]
+per-ex loss: 0.497574  [   10/   88]
+per-ex loss: 0.496742  [   12/   88]
+per-ex loss: 0.600970  [   14/   88]
+per-ex loss: 0.597928  [   16/   88]
+per-ex loss: 0.648920  [   18/   88]
+per-ex loss: 0.436725  [   20/   88]
+per-ex loss: 0.543089  [   22/   88]
+per-ex loss: 0.494913  [   24/   88]
+per-ex loss: 0.464477  [   26/   88]
+per-ex loss: 0.507370  [   28/   88]
+per-ex loss: 0.467187  [   30/   88]
+per-ex loss: 0.500696  [   32/   88]
+per-ex loss: 0.569886  [   34/   88]
+per-ex loss: 0.473767  [   36/   88]
+per-ex loss: 0.414191  [   38/   88]
+per-ex loss: 0.446426  [   40/   88]
+per-ex loss: 0.500179  [   42/   88]
+per-ex loss: 0.437528  [   44/   88]
+per-ex loss: 0.681152  [   46/   88]
+per-ex loss: 0.472675  [   48/   88]
+per-ex loss: 0.495820  [   50/   88]
+per-ex loss: 0.719935  [   52/   88]
+per-ex loss: 0.462795  [   54/   88]
+per-ex loss: 0.625736  [   56/   88]
+per-ex loss: 0.516710  [   58/   88]
+per-ex loss: 0.455393  [   60/   88]
+per-ex loss: 0.539390  [   62/   88]
+per-ex loss: 0.566565  [   64/   88]
+per-ex loss: 0.634489  [   66/   88]
+per-ex loss: 0.493355  [   68/   88]
+per-ex loss: 0.433310  [   70/   88]
+per-ex loss: 0.551820  [   72/   88]
+per-ex loss: 0.500903  [   74/   88]
+per-ex loss: 0.678770  [   76/   88]
+per-ex loss: 0.454685  [   78/   88]
+per-ex loss: 0.557867  [   80/   88]
+per-ex loss: 0.439418  [   82/   88]
+per-ex loss: 0.441641  [   84/   88]
+per-ex loss: 0.544977  [   86/   88]
+per-ex loss: 0.666398  [   88/   88]
+Train Error: Avg loss: 0.52373041
+validation Error: 
+ Avg loss: 0.56045473 
+ F1: 0.463553 
+ Precision: 0.689038 
+ Recall: 0.349259
+ IoU: 0.301704
+
+test Error: 
+ Avg loss: 0.53632173 
+ F1: 0.510008 
+ Precision: 0.761801 
+ Recall: 0.383314
+ IoU: 0.342289
+
+We have finished training iteration 90
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_84_.pth
+per-ex loss: 0.478495  [    2/   88]
+per-ex loss: 0.550972  [    4/   88]
+per-ex loss: 0.729662  [    6/   88]
+per-ex loss: 0.451902  [    8/   88]
+per-ex loss: 0.462522  [   10/   88]
+per-ex loss: 0.441896  [   12/   88]
+per-ex loss: 0.549807  [   14/   88]
+per-ex loss: 0.412103  [   16/   88]
+per-ex loss: 0.474002  [   18/   88]
+per-ex loss: 0.567556  [   20/   88]
+per-ex loss: 0.604029  [   22/   88]
+per-ex loss: 0.450632  [   24/   88]
+per-ex loss: 0.441194  [   26/   88]
+per-ex loss: 0.460954  [   28/   88]
+per-ex loss: 0.472049  [   30/   88]
+per-ex loss: 0.464997  [   32/   88]
+per-ex loss: 0.727688  [   34/   88]
+per-ex loss: 0.486376  [   36/   88]
+per-ex loss: 0.443269  [   38/   88]
+per-ex loss: 0.541197  [   40/   88]
+per-ex loss: 0.410425  [   42/   88]
+per-ex loss: 0.649614  [   44/   88]
+per-ex loss: 0.643888  [   46/   88]
+per-ex loss: 0.581116  [   48/   88]
+per-ex loss: 0.582514  [   50/   88]
+per-ex loss: 0.470891  [   52/   88]
+per-ex loss: 0.645686  [   54/   88]
+per-ex loss: 0.544917  [   56/   88]
+per-ex loss: 0.503282  [   58/   88]
+per-ex loss: 0.488444  [   60/   88]
+per-ex loss: 0.453269  [   62/   88]
+per-ex loss: 0.579968  [   64/   88]
+per-ex loss: 0.444116  [   66/   88]
+per-ex loss: 0.498011  [   68/   88]
+per-ex loss: 0.480369  [   70/   88]
+per-ex loss: 0.603160  [   72/   88]
+per-ex loss: 0.523668  [   74/   88]
+per-ex loss: 0.653534  [   76/   88]
+per-ex loss: 0.464364  [   78/   88]
+per-ex loss: 0.453325  [   80/   88]
+per-ex loss: 0.573500  [   82/   88]
+per-ex loss: 0.500265  [   84/   88]
+per-ex loss: 0.393907  [   86/   88]
+per-ex loss: 0.464029  [   88/   88]
+Train Error: Avg loss: 0.51858102
+validation Error: 
+ Avg loss: 0.56647432 
+ F1: 0.478726 
+ Precision: 0.453307 
+ Recall: 0.507165
+ IoU: 0.314688
+
+test Error: 
+ Avg loss: 0.50326969 
+ F1: 0.557610 
+ Precision: 0.535758 
+ Recall: 0.581322
+ IoU: 0.386588
+
+We have finished training iteration 91
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_86_.pth
+per-ex loss: 0.594248  [    2/   88]
+per-ex loss: 0.597557  [    4/   88]
+per-ex loss: 0.430370  [    6/   88]
+per-ex loss: 0.631126  [    8/   88]
+per-ex loss: 0.633333  [   10/   88]
+per-ex loss: 0.494127  [   12/   88]
+per-ex loss: 0.480828  [   14/   88]
+per-ex loss: 0.444097  [   16/   88]
+per-ex loss: 0.591420  [   18/   88]
+per-ex loss: 0.478716  [   20/   88]
+per-ex loss: 0.546655  [   22/   88]
+per-ex loss: 0.432145  [   24/   88]
+per-ex loss: 0.416810  [   26/   88]
+per-ex loss: 0.545218  [   28/   88]
+per-ex loss: 0.697881  [   30/   88]
+per-ex loss: 0.459393  [   32/   88]
+per-ex loss: 0.528874  [   34/   88]
+per-ex loss: 0.501452  [   36/   88]
+per-ex loss: 0.598225  [   38/   88]
+per-ex loss: 0.444985  [   40/   88]
+per-ex loss: 0.395621  [   42/   88]
+per-ex loss: 0.542665  [   44/   88]
+per-ex loss: 0.466945  [   46/   88]
+per-ex loss: 0.710759  [   48/   88]
+per-ex loss: 0.534048  [   50/   88]
+per-ex loss: 0.444373  [   52/   88]
+per-ex loss: 0.574547  [   54/   88]
+per-ex loss: 0.430754  [   56/   88]
+per-ex loss: 0.388835  [   58/   88]
+per-ex loss: 0.621115  [   60/   88]
+per-ex loss: 0.378454  [   62/   88]
+per-ex loss: 0.456206  [   64/   88]
+per-ex loss: 0.475710  [   66/   88]
+per-ex loss: 0.396769  [   68/   88]
+per-ex loss: 0.404963  [   70/   88]
+per-ex loss: 0.620654  [   72/   88]
+per-ex loss: 0.715754  [   74/   88]
+per-ex loss: 0.625951  [   76/   88]
+per-ex loss: 0.556205  [   78/   88]
+per-ex loss: 0.516697  [   80/   88]
+per-ex loss: 0.668119  [   82/   88]
+per-ex loss: 0.676584  [   84/   88]
+per-ex loss: 0.462445  [   86/   88]
+per-ex loss: 0.455646  [   88/   88]
+Train Error: Avg loss: 0.52425635
+validation Error: 
+ Avg loss: 0.53227950 
+ F1: 0.504865 
+ Precision: 0.536146 
+ Recall: 0.477032
+ IoU: 0.337671
+
+test Error: 
+ Avg loss: 0.48849831 
+ F1: 0.567794 
+ Precision: 0.587073 
+ Recall: 0.549740
+ IoU: 0.396447
+
+We have finished training iteration 92
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_90_.pth
+per-ex loss: 0.536529  [    2/   88]
+per-ex loss: 0.450897  [    4/   88]
+per-ex loss: 0.503495  [    6/   88]
+per-ex loss: 0.446765  [    8/   88]
+per-ex loss: 0.400636  [   10/   88]
+per-ex loss: 0.604630  [   12/   88]
+per-ex loss: 0.441310  [   14/   88]
+per-ex loss: 0.461020  [   16/   88]
+per-ex loss: 0.602238  [   18/   88]
+per-ex loss: 0.725384  [   20/   88]
+per-ex loss: 0.641305  [   22/   88]
+per-ex loss: 0.486846  [   24/   88]
+per-ex loss: 0.587149  [   26/   88]
+per-ex loss: 0.530451  [   28/   88]
+per-ex loss: 0.661201  [   30/   88]
+per-ex loss: 0.436297  [   32/   88]
+per-ex loss: 0.404384  [   34/   88]
+per-ex loss: 0.411153  [   36/   88]
+per-ex loss: 0.535083  [   38/   88]
+per-ex loss: 0.401338  [   40/   88]
+per-ex loss: 0.431841  [   42/   88]
+per-ex loss: 0.621633  [   44/   88]
+per-ex loss: 0.427748  [   46/   88]
+per-ex loss: 0.419962  [   48/   88]
+per-ex loss: 0.483246  [   50/   88]
+per-ex loss: 0.688776  [   52/   88]
+per-ex loss: 0.573937  [   54/   88]
+per-ex loss: 0.545261  [   56/   88]
+per-ex loss: 0.484361  [   58/   88]
+per-ex loss: 0.381896  [   60/   88]
+per-ex loss: 0.588516  [   62/   88]
+per-ex loss: 0.645228  [   64/   88]
+per-ex loss: 0.609285  [   66/   88]
+per-ex loss: 0.433332  [   68/   88]
+per-ex loss: 0.465506  [   70/   88]
+per-ex loss: 0.681529  [   72/   88]
+per-ex loss: 0.590996  [   74/   88]
+per-ex loss: 0.494036  [   76/   88]
+per-ex loss: 0.682979  [   78/   88]
+per-ex loss: 0.497064  [   80/   88]
+per-ex loss: 0.421852  [   82/   88]
+per-ex loss: 0.468488  [   84/   88]
+per-ex loss: 0.556044  [   86/   88]
+per-ex loss: 0.438023  [   88/   88]
+Train Error: Avg loss: 0.52044654
+validation Error: 
+ Avg loss: 0.52838302 
+ F1: 0.508170 
+ Precision: 0.590549 
+ Recall: 0.445961
+ IoU: 0.340636
+
+test Error: 
+ Avg loss: 0.48089536 
+ F1: 0.570877 
+ Precision: 0.643624 
+ Recall: 0.512904
+ IoU: 0.399459
+
+We have finished training iteration 93
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_91_.pth
+per-ex loss: 0.658291  [    2/   88]
+per-ex loss: 0.383302  [    4/   88]
+per-ex loss: 0.493718  [    6/   88]
+per-ex loss: 0.529405  [    8/   88]
+per-ex loss: 0.456372  [   10/   88]
+per-ex loss: 0.401562  [   12/   88]
+per-ex loss: 0.621381  [   14/   88]
+per-ex loss: 0.549938  [   16/   88]
+per-ex loss: 0.452360  [   18/   88]
+per-ex loss: 0.616766  [   20/   88]
+per-ex loss: 0.368063  [   22/   88]
+per-ex loss: 0.427523  [   24/   88]
+per-ex loss: 0.610835  [   26/   88]
+per-ex loss: 0.551941  [   28/   88]
+per-ex loss: 0.607361  [   30/   88]
+per-ex loss: 0.555831  [   32/   88]
+per-ex loss: 0.589136  [   34/   88]
+per-ex loss: 0.399937  [   36/   88]
+per-ex loss: 0.484366  [   38/   88]
+per-ex loss: 0.667386  [   40/   88]
+per-ex loss: 0.618325  [   42/   88]
+per-ex loss: 0.587164  [   44/   88]
+per-ex loss: 0.654714  [   46/   88]
+per-ex loss: 0.409769  [   48/   88]
+per-ex loss: 0.458273  [   50/   88]
+per-ex loss: 0.486457  [   52/   88]
+per-ex loss: 0.499270  [   54/   88]
+per-ex loss: 0.451993  [   56/   88]
+per-ex loss: 0.662612  [   58/   88]
+per-ex loss: 0.442782  [   60/   88]
+per-ex loss: 0.507192  [   62/   88]
+per-ex loss: 0.449802  [   64/   88]
+per-ex loss: 0.484578  [   66/   88]
+per-ex loss: 0.552181  [   68/   88]
+per-ex loss: 0.437774  [   70/   88]
+per-ex loss: 0.354344  [   72/   88]
+per-ex loss: 0.482497  [   74/   88]
+per-ex loss: 0.481241  [   76/   88]
+per-ex loss: 0.413571  [   78/   88]
+per-ex loss: 0.561601  [   80/   88]
+per-ex loss: 0.640961  [   82/   88]
+per-ex loss: 0.487707  [   84/   88]
+per-ex loss: 0.558080  [   86/   88]
+per-ex loss: 0.432507  [   88/   88]
+Train Error: Avg loss: 0.51229240
+validation Error: 
+ Avg loss: 0.54257541 
+ F1: 0.495812 
+ Precision: 0.575068 
+ Recall: 0.435756
+ IoU: 0.329621
+
+test Error: 
+ Avg loss: 0.48978449 
+ F1: 0.566912 
+ Precision: 0.629463 
+ Recall: 0.515669
+ IoU: 0.395588
+
+We have finished training iteration 94
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_88_.pth
+per-ex loss: 0.408123  [    2/   88]
+per-ex loss: 0.581807  [    4/   88]
+per-ex loss: 0.442344  [    6/   88]
+per-ex loss: 0.601570  [    8/   88]
+per-ex loss: 0.423759  [   10/   88]
+per-ex loss: 0.665861  [   12/   88]
+per-ex loss: 0.534198  [   14/   88]
+per-ex loss: 0.554619  [   16/   88]
+per-ex loss: 0.431067  [   18/   88]
+per-ex loss: 0.508646  [   20/   88]
+per-ex loss: 0.649869  [   22/   88]
+per-ex loss: 0.597417  [   24/   88]
+per-ex loss: 0.394311  [   26/   88]
+per-ex loss: 0.417033  [   28/   88]
+per-ex loss: 0.461671  [   30/   88]
+per-ex loss: 0.633823  [   32/   88]
+per-ex loss: 0.460563  [   34/   88]
+per-ex loss: 0.450990  [   36/   88]
+per-ex loss: 0.530236  [   38/   88]
+per-ex loss: 0.584897  [   40/   88]
+per-ex loss: 0.443379  [   42/   88]
+per-ex loss: 0.519151  [   44/   88]
+per-ex loss: 0.557904  [   46/   88]
+per-ex loss: 0.635614  [   48/   88]
+per-ex loss: 0.584255  [   50/   88]
+per-ex loss: 0.477354  [   52/   88]
+per-ex loss: 0.648808  [   54/   88]
+per-ex loss: 0.410941  [   56/   88]
+per-ex loss: 0.506157  [   58/   88]
+per-ex loss: 0.443205  [   60/   88]
+per-ex loss: 0.590203  [   62/   88]
+per-ex loss: 0.429270  [   64/   88]
+per-ex loss: 0.590173  [   66/   88]
+per-ex loss: 0.413271  [   68/   88]
+per-ex loss: 0.512431  [   70/   88]
+per-ex loss: 0.581374  [   72/   88]
+per-ex loss: 0.453514  [   74/   88]
+per-ex loss: 0.458849  [   76/   88]
+per-ex loss: 0.408885  [   78/   88]
+per-ex loss: 0.739980  [   80/   88]
+per-ex loss: 0.527501  [   82/   88]
+per-ex loss: 0.493777  [   84/   88]
+per-ex loss: 0.538266  [   86/   88]
+per-ex loss: 0.536015  [   88/   88]
+Train Error: Avg loss: 0.51893368
+validation Error: 
+ Avg loss: 0.54233324 
+ F1: 0.482895 
+ Precision: 0.645427 
+ Recall: 0.385754
+ IoU: 0.318300
+
+test Error: 
+ Avg loss: 0.50242220 
+ F1: 0.543663 
+ Precision: 0.733822 
+ Recall: 0.431774
+ IoU: 0.373308
+
+We have finished training iteration 95
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_89_.pth
+per-ex loss: 0.604637  [    2/   88]
+per-ex loss: 0.611849  [    4/   88]
+per-ex loss: 0.607579  [    6/   88]
+per-ex loss: 0.624280  [    8/   88]
+per-ex loss: 0.615827  [   10/   88]
+per-ex loss: 0.396892  [   12/   88]
+per-ex loss: 0.514854  [   14/   88]
+per-ex loss: 0.469576  [   16/   88]
+per-ex loss: 0.658285  [   18/   88]
+per-ex loss: 0.457741  [   20/   88]
+per-ex loss: 0.528635  [   22/   88]
+per-ex loss: 0.573743  [   24/   88]
+per-ex loss: 0.544378  [   26/   88]
+per-ex loss: 0.482444  [   28/   88]
+per-ex loss: 0.400865  [   30/   88]
+per-ex loss: 0.418242  [   32/   88]
+per-ex loss: 0.457597  [   34/   88]
+per-ex loss: 0.595285  [   36/   88]
+per-ex loss: 0.451723  [   38/   88]
+per-ex loss: 0.479184  [   40/   88]
+per-ex loss: 0.653262  [   42/   88]
+per-ex loss: 0.536271  [   44/   88]
+per-ex loss: 0.565496  [   46/   88]
+per-ex loss: 0.426237  [   48/   88]
+per-ex loss: 0.487675  [   50/   88]
+per-ex loss: 0.562613  [   52/   88]
+per-ex loss: 0.417429  [   54/   88]
+per-ex loss: 0.435456  [   56/   88]
+per-ex loss: 0.546263  [   58/   88]
+per-ex loss: 0.603899  [   60/   88]
+per-ex loss: 0.417236  [   62/   88]
+per-ex loss: 0.399192  [   64/   88]
+per-ex loss: 0.726204  [   66/   88]
+per-ex loss: 0.403014  [   68/   88]
+per-ex loss: 0.655827  [   70/   88]
+per-ex loss: 0.558753  [   72/   88]
+per-ex loss: 0.441098  [   74/   88]
+per-ex loss: 0.386631  [   76/   88]
+per-ex loss: 0.436242  [   78/   88]
+per-ex loss: 0.518522  [   80/   88]
+per-ex loss: 0.565426  [   82/   88]
+per-ex loss: 0.537171  [   84/   88]
+per-ex loss: 0.498466  [   86/   88]
+per-ex loss: 0.716008  [   88/   88]
+Train Error: Avg loss: 0.52245473
+validation Error: 
+ Avg loss: 0.55330421 
+ F1: 0.478304 
+ Precision: 0.493194 
+ Recall: 0.464286
+ IoU: 0.314323
+
+test Error: 
+ Avg loss: 0.48740354 
+ F1: 0.562583 
+ Precision: 0.597991 
+ Recall: 0.531133
+ IoU: 0.391384
+
+We have finished training iteration 96
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_94_.pth
+per-ex loss: 0.434233  [    2/   88]
+per-ex loss: 0.514894  [    4/   88]
+per-ex loss: 0.528604  [    6/   88]
+per-ex loss: 0.471689  [    8/   88]
+per-ex loss: 0.442989  [   10/   88]
+per-ex loss: 0.638213  [   12/   88]
+per-ex loss: 0.396222  [   14/   88]
+per-ex loss: 0.386490  [   16/   88]
+per-ex loss: 0.524050  [   18/   88]
+per-ex loss: 0.697074  [   20/   88]
+per-ex loss: 0.640948  [   22/   88]
+per-ex loss: 0.729452  [   24/   88]
+per-ex loss: 0.600322  [   26/   88]
+per-ex loss: 0.413119  [   28/   88]
+per-ex loss: 0.618185  [   30/   88]
+per-ex loss: 0.478530  [   32/   88]
+per-ex loss: 0.593724  [   34/   88]
+per-ex loss: 0.441084  [   36/   88]
+per-ex loss: 0.470738  [   38/   88]
+per-ex loss: 0.406886  [   40/   88]
+per-ex loss: 0.447030  [   42/   88]
+per-ex loss: 0.445234  [   44/   88]
+per-ex loss: 0.415084  [   46/   88]
+per-ex loss: 0.638109  [   48/   88]
+per-ex loss: 0.607516  [   50/   88]
+per-ex loss: 0.486204  [   52/   88]
+per-ex loss: 0.493830  [   54/   88]
+per-ex loss: 0.436657  [   56/   88]
+per-ex loss: 0.572647  [   58/   88]
+per-ex loss: 0.567012  [   60/   88]
+per-ex loss: 0.598482  [   62/   88]
+per-ex loss: 0.556775  [   64/   88]
+per-ex loss: 0.428629  [   66/   88]
+per-ex loss: 0.477451  [   68/   88]
+per-ex loss: 0.506801  [   70/   88]
+per-ex loss: 0.527007  [   72/   88]
+per-ex loss: 0.378769  [   74/   88]
+per-ex loss: 0.501704  [   76/   88]
+per-ex loss: 0.417522  [   78/   88]
+per-ex loss: 0.479005  [   80/   88]
+per-ex loss: 0.407643  [   82/   88]
+per-ex loss: 0.501455  [   84/   88]
+per-ex loss: 0.514564  [   86/   88]
+per-ex loss: 0.627412  [   88/   88]
+Train Error: Avg loss: 0.51045432
+validation Error: 
+ Avg loss: 0.54910911 
+ F1: 0.468585 
+ Precision: 0.717373 
+ Recall: 0.347924
+ IoU: 0.305982
+
+test Error: 
+ Avg loss: 0.52776946 
+ F1: 0.516021 
+ Precision: 0.769013 
+ Recall: 0.388283
+ IoU: 0.347728
+
+We have finished training iteration 97
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_95_.pth
+per-ex loss: 0.485769  [    2/   88]
+per-ex loss: 0.522480  [    4/   88]
+per-ex loss: 0.654091  [    6/   88]
+per-ex loss: 0.610980  [    8/   88]
+per-ex loss: 0.411561  [   10/   88]
+per-ex loss: 0.626765  [   12/   88]
+per-ex loss: 0.460131  [   14/   88]
+per-ex loss: 0.502902  [   16/   88]
+per-ex loss: 0.472085  [   18/   88]
+per-ex loss: 0.494802  [   20/   88]
+per-ex loss: 0.584985  [   22/   88]
+per-ex loss: 0.422069  [   24/   88]
+per-ex loss: 0.409047  [   26/   88]
+per-ex loss: 0.647438  [   28/   88]
+per-ex loss: 0.739682  [   30/   88]
+per-ex loss: 0.460217  [   32/   88]
+per-ex loss: 0.484516  [   34/   88]
+per-ex loss: 0.536161  [   36/   88]
+per-ex loss: 0.534231  [   38/   88]
+per-ex loss: 0.604371  [   40/   88]
+per-ex loss: 0.464574  [   42/   88]
+per-ex loss: 0.467524  [   44/   88]
+per-ex loss: 0.650104  [   46/   88]
+per-ex loss: 0.615086  [   48/   88]
+per-ex loss: 0.625309  [   50/   88]
+per-ex loss: 0.441438  [   52/   88]
+per-ex loss: 0.465761  [   54/   88]
+per-ex loss: 0.470443  [   56/   88]
+per-ex loss: 0.435087  [   58/   88]
+per-ex loss: 0.494294  [   60/   88]
+per-ex loss: 0.524956  [   62/   88]
+per-ex loss: 0.447075  [   64/   88]
+per-ex loss: 0.543668  [   66/   88]
+per-ex loss: 0.402630  [   68/   88]
+per-ex loss: 0.358532  [   70/   88]
+per-ex loss: 0.460221  [   72/   88]
+per-ex loss: 0.665567  [   74/   88]
+per-ex loss: 0.484286  [   76/   88]
+per-ex loss: 0.471696  [   78/   88]
+per-ex loss: 0.540790  [   80/   88]
+per-ex loss: 0.376641  [   82/   88]
+per-ex loss: 0.653296  [   84/   88]
+per-ex loss: 0.578728  [   86/   88]
+per-ex loss: 0.479875  [   88/   88]
+Train Error: Avg loss: 0.51776957
+validation Error: 
+ Avg loss: 0.52934931 
+ F1: 0.500964 
+ Precision: 0.618120 
+ Recall: 0.421142
+ IoU: 0.334191
+
+test Error: 
+ Avg loss: 0.48515025 
+ F1: 0.561879 
+ Precision: 0.652365 
+ Recall: 0.493436
+ IoU: 0.390703
+
+We have finished training iteration 98
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_96_.pth
+per-ex loss: 0.575893  [    2/   88]
+per-ex loss: 0.404599  [    4/   88]
+per-ex loss: 0.356368  [    6/   88]
+per-ex loss: 0.415648  [    8/   88]
+per-ex loss: 0.470896  [   10/   88]
+per-ex loss: 0.603316  [   12/   88]
+per-ex loss: 0.561635  [   14/   88]
+per-ex loss: 0.528065  [   16/   88]
+per-ex loss: 0.462657  [   18/   88]
+per-ex loss: 0.448513  [   20/   88]
+per-ex loss: 0.540483  [   22/   88]
+per-ex loss: 0.551332  [   24/   88]
+per-ex loss: 0.513048  [   26/   88]
+per-ex loss: 0.442902  [   28/   88]
+per-ex loss: 0.542583  [   30/   88]
+per-ex loss: 0.559223  [   32/   88]
+per-ex loss: 0.410623  [   34/   88]
+per-ex loss: 0.569955  [   36/   88]
+per-ex loss: 0.628725  [   38/   88]
+per-ex loss: 0.429029  [   40/   88]
+per-ex loss: 0.409923  [   42/   88]
+per-ex loss: 0.497435  [   44/   88]
+per-ex loss: 0.512422  [   46/   88]
+per-ex loss: 0.413248  [   48/   88]
+per-ex loss: 0.560013  [   50/   88]
+per-ex loss: 0.451858  [   52/   88]
+per-ex loss: 0.687817  [   54/   88]
+per-ex loss: 0.495409  [   56/   88]
+per-ex loss: 0.474054  [   58/   88]
+per-ex loss: 0.641791  [   60/   88]
+per-ex loss: 0.421532  [   62/   88]
+per-ex loss: 0.656618  [   64/   88]
+per-ex loss: 0.465697  [   66/   88]
+per-ex loss: 0.499876  [   68/   88]
+per-ex loss: 0.505686  [   70/   88]
+per-ex loss: 0.612196  [   72/   88]
+per-ex loss: 0.425579  [   74/   88]
+per-ex loss: 0.407643  [   76/   88]
+per-ex loss: 0.488434  [   78/   88]
+per-ex loss: 0.580372  [   80/   88]
+per-ex loss: 0.447870  [   82/   88]
+per-ex loss: 0.474039  [   84/   88]
+per-ex loss: 0.527279  [   86/   88]
+per-ex loss: 0.492011  [   88/   88]
+Train Error: Avg loss: 0.50373397
+validation Error: 
+ Avg loss: 0.54349836 
+ F1: 0.484550 
+ Precision: 0.566203 
+ Recall: 0.423479
+ IoU: 0.319740
+
+test Error: 
+ Avg loss: 0.48872788 
+ F1: 0.554863 
+ Precision: 0.675320 
+ Recall: 0.470873
+ IoU: 0.383951
+
+We have finished training iteration 99
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_97_.pth
+per-ex loss: 0.395960  [    2/   88]
+per-ex loss: 0.527348  [    4/   88]
+per-ex loss: 0.579627  [    6/   88]
+per-ex loss: 0.449403  [    8/   88]
+per-ex loss: 0.494573  [   10/   88]
+per-ex loss: 0.469374  [   12/   88]
+per-ex loss: 0.503762  [   14/   88]
+per-ex loss: 0.465980  [   16/   88]
+per-ex loss: 0.660620  [   18/   88]
+per-ex loss: 0.415541  [   20/   88]
+per-ex loss: 0.466707  [   22/   88]
+per-ex loss: 0.576637  [   24/   88]
+per-ex loss: 0.640404  [   26/   88]
+per-ex loss: 0.493378  [   28/   88]
+per-ex loss: 0.461757  [   30/   88]
+per-ex loss: 0.487232  [   32/   88]
+per-ex loss: 0.689235  [   34/   88]
+per-ex loss: 0.517069  [   36/   88]
+per-ex loss: 0.615902  [   38/   88]
+per-ex loss: 0.462960  [   40/   88]
+per-ex loss: 0.644654  [   42/   88]
+per-ex loss: 0.654652  [   44/   88]
+per-ex loss: 0.473196  [   46/   88]
+per-ex loss: 0.453271  [   48/   88]
+per-ex loss: 0.602471  [   50/   88]
+per-ex loss: 0.554364  [   52/   88]
+per-ex loss: 0.525296  [   54/   88]
+per-ex loss: 0.498205  [   56/   88]
+per-ex loss: 0.459857  [   58/   88]
+per-ex loss: 0.516212  [   60/   88]
+per-ex loss: 0.533908  [   62/   88]
+per-ex loss: 0.412123  [   64/   88]
+per-ex loss: 0.600813  [   66/   88]
+per-ex loss: 0.487982  [   68/   88]
+per-ex loss: 0.436028  [   70/   88]
+per-ex loss: 0.407668  [   72/   88]
+per-ex loss: 0.425930  [   74/   88]
+per-ex loss: 0.547639  [   76/   88]
+per-ex loss: 0.350731  [   78/   88]
+per-ex loss: 0.402185  [   80/   88]
+per-ex loss: 0.479829  [   82/   88]
+per-ex loss: 0.392617  [   84/   88]
+per-ex loss: 0.634889  [   86/   88]
+per-ex loss: 0.672053  [   88/   88]
+Train Error: Avg loss: 0.51227369
+validation Error: 
+ Avg loss: 0.52992345 
+ F1: 0.493180 
+ Precision: 0.545126 
+ Recall: 0.450273
+ IoU: 0.327299
+
+test Error: 
+ Avg loss: 0.49072116 
+ F1: 0.557095 
+ Precision: 0.610912 
+ Recall: 0.511993
+ IoU: 0.386093
+
+We have finished training iteration 100
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_92_.pth
+per-ex loss: 0.605461  [    2/   88]
+per-ex loss: 0.452612  [    4/   88]
+per-ex loss: 0.416847  [    6/   88]
+per-ex loss: 0.568874  [    8/   88]
+per-ex loss: 0.642152  [   10/   88]
+per-ex loss: 0.442007  [   12/   88]
+per-ex loss: 0.484024  [   14/   88]
+per-ex loss: 0.548299  [   16/   88]
+per-ex loss: 0.455091  [   18/   88]
+per-ex loss: 0.628050  [   20/   88]
+per-ex loss: 0.536849  [   22/   88]
+per-ex loss: 0.694743  [   24/   88]
+per-ex loss: 0.428658  [   26/   88]
+per-ex loss: 0.483025  [   28/   88]
+per-ex loss: 0.518890  [   30/   88]
+per-ex loss: 0.379152  [   32/   88]
+per-ex loss: 0.408255  [   34/   88]
+per-ex loss: 0.429675  [   36/   88]
+per-ex loss: 0.505885  [   38/   88]
+per-ex loss: 0.413948  [   40/   88]
+per-ex loss: 0.595182  [   42/   88]
+per-ex loss: 0.509930  [   44/   88]
+per-ex loss: 0.554082  [   46/   88]
+per-ex loss: 0.535177  [   48/   88]
+per-ex loss: 0.455500  [   50/   88]
+per-ex loss: 0.625586  [   52/   88]
+per-ex loss: 0.563890  [   54/   88]
+per-ex loss: 0.422918  [   56/   88]
+per-ex loss: 0.467957  [   58/   88]
+per-ex loss: 0.618838  [   60/   88]
+per-ex loss: 0.482435  [   62/   88]
+per-ex loss: 0.505610  [   64/   88]
+per-ex loss: 0.629647  [   66/   88]
+per-ex loss: 0.567083  [   68/   88]
+per-ex loss: 0.532851  [   70/   88]
+per-ex loss: 0.564813  [   72/   88]
+per-ex loss: 0.606242  [   74/   88]
+per-ex loss: 0.578274  [   76/   88]
+per-ex loss: 0.501596  [   78/   88]
+per-ex loss: 0.429412  [   80/   88]
+per-ex loss: 0.472338  [   82/   88]
+per-ex loss: 0.488123  [   84/   88]
+per-ex loss: 0.403019  [   86/   88]
+per-ex loss: 0.488165  [   88/   88]
+Train Error: Avg loss: 0.51457197
+validation Error: 
+ Avg loss: 0.55248213 
+ F1: 0.486054 
+ Precision: 0.534224 
+ Recall: 0.445853
+ IoU: 0.321051
+
+test Error: 
+ Avg loss: 0.48467768 
+ F1: 0.560388 
+ Precision: 0.621310 
+ Recall: 0.510346
+ IoU: 0.389263
+
+We have finished training iteration 101
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_99_.pth
+per-ex loss: 0.416481  [    2/   88]
+per-ex loss: 0.468447  [    4/   88]
+per-ex loss: 0.635275  [    6/   88]
+per-ex loss: 0.622651  [    8/   88]
+per-ex loss: 0.421214  [   10/   88]
+per-ex loss: 0.483810  [   12/   88]
+per-ex loss: 0.399476  [   14/   88]
+per-ex loss: 0.524965  [   16/   88]
+per-ex loss: 0.416105  [   18/   88]
+per-ex loss: 0.552617  [   20/   88]
+per-ex loss: 0.727365  [   22/   88]
+per-ex loss: 0.383440  [   24/   88]
+per-ex loss: 0.491688  [   26/   88]
+per-ex loss: 0.642629  [   28/   88]
+per-ex loss: 0.642303  [   30/   88]
+per-ex loss: 0.496564  [   32/   88]
+per-ex loss: 0.490261  [   34/   88]
+per-ex loss: 0.474931  [   36/   88]
+per-ex loss: 0.430519  [   38/   88]
+per-ex loss: 0.562213  [   40/   88]
+per-ex loss: 0.585562  [   42/   88]
+per-ex loss: 0.442599  [   44/   88]
+per-ex loss: 0.551235  [   46/   88]
+per-ex loss: 0.444010  [   48/   88]
+per-ex loss: 0.631140  [   50/   88]
+per-ex loss: 0.672354  [   52/   88]
+per-ex loss: 0.421236  [   54/   88]
+per-ex loss: 0.462558  [   56/   88]
+per-ex loss: 0.476601  [   58/   88]
+per-ex loss: 0.494857  [   60/   88]
+per-ex loss: 0.438141  [   62/   88]
+per-ex loss: 0.521837  [   64/   88]
+per-ex loss: 0.568836  [   66/   88]
+per-ex loss: 0.565763  [   68/   88]
+per-ex loss: 0.487078  [   70/   88]
+per-ex loss: 0.415060  [   72/   88]
+per-ex loss: 0.415591  [   74/   88]
+per-ex loss: 0.484568  [   76/   88]
+per-ex loss: 0.470609  [   78/   88]
+per-ex loss: 0.628438  [   80/   88]
+per-ex loss: 0.644040  [   82/   88]
+per-ex loss: 0.435119  [   84/   88]
+per-ex loss: 0.436508  [   86/   88]
+per-ex loss: 0.680478  [   88/   88]
+Train Error: Avg loss: 0.51493569
+validation Error: 
+ Avg loss: 0.53438702 
+ F1: 0.493325 
+ Precision: 0.616345 
+ Recall: 0.411242
+ IoU: 0.327426
+
+test Error: 
+ Avg loss: 0.49087934 
+ F1: 0.550373 
+ Precision: 0.688646 
+ Recall: 0.458343
+ IoU: 0.379665
+
+We have finished training iteration 102
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_100_.pth
+per-ex loss: 0.420242  [    2/   88]
+per-ex loss: 0.641263  [    4/   88]
+per-ex loss: 0.412919  [    6/   88]
+per-ex loss: 0.530782  [    8/   88]
+per-ex loss: 0.643307  [   10/   88]
+per-ex loss: 0.526221  [   12/   88]
+per-ex loss: 0.421269  [   14/   88]
+per-ex loss: 0.470111  [   16/   88]
+per-ex loss: 0.529735  [   18/   88]
+per-ex loss: 0.476050  [   20/   88]
+per-ex loss: 0.429708  [   22/   88]
+per-ex loss: 0.503292  [   24/   88]
+per-ex loss: 0.601026  [   26/   88]
+per-ex loss: 0.454341  [   28/   88]
+per-ex loss: 0.475187  [   30/   88]
+per-ex loss: 0.458217  [   32/   88]
+per-ex loss: 0.577447  [   34/   88]
+per-ex loss: 0.478134  [   36/   88]
+per-ex loss: 0.485138  [   38/   88]
+per-ex loss: 0.432486  [   40/   88]
+per-ex loss: 0.530245  [   42/   88]
+per-ex loss: 0.423304  [   44/   88]
+per-ex loss: 0.705469  [   46/   88]
+per-ex loss: 0.625436  [   48/   88]
+per-ex loss: 0.431610  [   50/   88]
+per-ex loss: 0.398706  [   52/   88]
+per-ex loss: 0.550757  [   54/   88]
+per-ex loss: 0.453123  [   56/   88]
+per-ex loss: 0.576098  [   58/   88]
+per-ex loss: 0.446609  [   60/   88]
+per-ex loss: 0.621440  [   62/   88]
+per-ex loss: 0.455718  [   64/   88]
+per-ex loss: 0.542259  [   66/   88]
+per-ex loss: 0.399583  [   68/   88]
+per-ex loss: 0.633592  [   70/   88]
+per-ex loss: 0.639856  [   72/   88]
+per-ex loss: 0.501056  [   74/   88]
+per-ex loss: 0.636581  [   76/   88]
+per-ex loss: 0.459749  [   78/   88]
+per-ex loss: 0.612358  [   80/   88]
+per-ex loss: 0.441516  [   82/   88]
+per-ex loss: 0.552384  [   84/   88]
+per-ex loss: 0.434161  [   86/   88]
+per-ex loss: 0.396504  [   88/   88]
+Train Error: Avg loss: 0.50988608
+validation Error: 
+ Avg loss: 0.52869671 
+ F1: 0.502143 
+ Precision: 0.597141 
+ Recall: 0.433223
+ IoU: 0.335241
+
+test Error: 
+ Avg loss: 0.47626346 
+ F1: 0.566525 
+ Precision: 0.671422 
+ Recall: 0.489976
+ IoU: 0.395211
+
+We have finished training iteration 103
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_101_.pth
+per-ex loss: 0.389778  [    2/   88]
+per-ex loss: 0.584635  [    4/   88]
+per-ex loss: 0.399654  [    6/   88]
+per-ex loss: 0.520602  [    8/   88]
+per-ex loss: 0.458429  [   10/   88]
+per-ex loss: 0.627247  [   12/   88]
+per-ex loss: 0.579068  [   14/   88]
+per-ex loss: 0.414146  [   16/   88]
+per-ex loss: 0.654664  [   18/   88]
+per-ex loss: 0.373111  [   20/   88]
+per-ex loss: 0.415570  [   22/   88]
+per-ex loss: 0.605159  [   24/   88]
+per-ex loss: 0.560382  [   26/   88]
+per-ex loss: 0.695774  [   28/   88]
+per-ex loss: 0.643399  [   30/   88]
+per-ex loss: 0.399168  [   32/   88]
+per-ex loss: 0.431656  [   34/   88]
+per-ex loss: 0.416850  [   36/   88]
+per-ex loss: 0.408154  [   38/   88]
+per-ex loss: 0.470185  [   40/   88]
+per-ex loss: 0.516929  [   42/   88]
+per-ex loss: 0.689164  [   44/   88]
+per-ex loss: 0.393993  [   46/   88]
+per-ex loss: 0.521326  [   48/   88]
+per-ex loss: 0.479920  [   50/   88]
+per-ex loss: 0.475786  [   52/   88]
+per-ex loss: 0.586033  [   54/   88]
+per-ex loss: 0.606680  [   56/   88]
+per-ex loss: 0.649199  [   58/   88]
+per-ex loss: 0.473173  [   60/   88]
+per-ex loss: 0.380416  [   62/   88]
+per-ex loss: 0.452030  [   64/   88]
+per-ex loss: 0.520098  [   66/   88]
+per-ex loss: 0.528939  [   68/   88]
+per-ex loss: 0.467853  [   70/   88]
+per-ex loss: 0.535748  [   72/   88]
+per-ex loss: 0.633937  [   74/   88]
+per-ex loss: 0.397681  [   76/   88]
+per-ex loss: 0.441717  [   78/   88]
+per-ex loss: 0.524139  [   80/   88]
+per-ex loss: 0.469701  [   82/   88]
+per-ex loss: 0.643525  [   84/   88]
+per-ex loss: 0.455355  [   86/   88]
+per-ex loss: 0.431419  [   88/   88]
+Train Error: Avg loss: 0.50732712
+validation Error: 
+ Avg loss: 0.52215290 
+ F1: 0.500928 
+ Precision: 0.546669 
+ Recall: 0.462250
+ IoU: 0.334159
+
+test Error: 
+ Avg loss: 0.48019011 
+ F1: 0.569477 
+ Precision: 0.609022 
+ Recall: 0.534754
+ IoU: 0.398090
+
+We have finished training iteration 104
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_102_.pth
+per-ex loss: 0.648879  [    2/   88]
+per-ex loss: 0.406757  [    4/   88]
+per-ex loss: 0.590438  [    6/   88]
+per-ex loss: 0.563661  [    8/   88]
+per-ex loss: 0.431533  [   10/   88]
+per-ex loss: 0.646248  [   12/   88]
+per-ex loss: 0.549588  [   14/   88]
+per-ex loss: 0.416869  [   16/   88]
+per-ex loss: 0.427112  [   18/   88]
+per-ex loss: 0.379372  [   20/   88]
+per-ex loss: 0.397346  [   22/   88]
+per-ex loss: 0.510272  [   24/   88]
+per-ex loss: 0.720020  [   26/   88]
+per-ex loss: 0.482333  [   28/   88]
+per-ex loss: 0.474531  [   30/   88]
+per-ex loss: 0.541228  [   32/   88]
+per-ex loss: 0.638218  [   34/   88]
+per-ex loss: 0.368539  [   36/   88]
+per-ex loss: 0.667468  [   38/   88]
+per-ex loss: 0.500921  [   40/   88]
+per-ex loss: 0.456967  [   42/   88]
+per-ex loss: 0.476105  [   44/   88]
+per-ex loss: 0.475851  [   46/   88]
+per-ex loss: 0.480749  [   48/   88]
+per-ex loss: 0.484549  [   50/   88]
+per-ex loss: 0.493096  [   52/   88]
+per-ex loss: 0.570492  [   54/   88]
+per-ex loss: 0.630847  [   56/   88]
+per-ex loss: 0.544139  [   58/   88]
+per-ex loss: 0.542768  [   60/   88]
+per-ex loss: 0.543766  [   62/   88]
+per-ex loss: 0.407686  [   64/   88]
+per-ex loss: 0.534640  [   66/   88]
+per-ex loss: 0.407146  [   68/   88]
+per-ex loss: 0.435991  [   70/   88]
+per-ex loss: 0.442170  [   72/   88]
+per-ex loss: 0.407502  [   74/   88]
+per-ex loss: 0.462274  [   76/   88]
+per-ex loss: 0.604283  [   78/   88]
+per-ex loss: 0.464269  [   80/   88]
+per-ex loss: 0.493563  [   82/   88]
+per-ex loss: 0.384445  [   84/   88]
+per-ex loss: 0.619617  [   86/   88]
+per-ex loss: 0.627088  [   88/   88]
+Train Error: Avg loss: 0.50798493
+validation Error: 
+ Avg loss: 0.52071595 
+ F1: 0.506579 
+ Precision: 0.545980 
+ Recall: 0.472483
+ IoU: 0.339208
+
+test Error: 
+ Avg loss: 0.46866771 
+ F1: 0.573921 
+ Precision: 0.609910 
+ Recall: 0.541942
+ IoU: 0.402446
+
+We have finished training iteration 105
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_98_.pth
+per-ex loss: 0.484789  [    2/   88]
+per-ex loss: 0.491820  [    4/   88]
+per-ex loss: 0.487694  [    6/   88]
+per-ex loss: 0.671671  [    8/   88]
+per-ex loss: 0.470283  [   10/   88]
+per-ex loss: 0.592423  [   12/   88]
+per-ex loss: 0.606557  [   14/   88]
+per-ex loss: 0.573976  [   16/   88]
+per-ex loss: 0.447231  [   18/   88]
+per-ex loss: 0.525960  [   20/   88]
+per-ex loss: 0.408631  [   22/   88]
+per-ex loss: 0.422737  [   24/   88]
+per-ex loss: 0.483209  [   26/   88]
+per-ex loss: 0.454884  [   28/   88]
+per-ex loss: 0.487970  [   30/   88]
+per-ex loss: 0.507289  [   32/   88]
+per-ex loss: 0.516645  [   34/   88]
+per-ex loss: 0.531497  [   36/   88]
+per-ex loss: 0.353362  [   38/   88]
+per-ex loss: 0.421457  [   40/   88]
+per-ex loss: 0.480543  [   42/   88]
+per-ex loss: 0.691967  [   44/   88]
+per-ex loss: 0.451959  [   46/   88]
+per-ex loss: 0.434403  [   48/   88]
+per-ex loss: 0.465072  [   50/   88]
+per-ex loss: 0.671932  [   52/   88]
+per-ex loss: 0.363103  [   54/   88]
+per-ex loss: 0.536211  [   56/   88]
+per-ex loss: 0.522686  [   58/   88]
+per-ex loss: 0.495726  [   60/   88]
+per-ex loss: 0.601100  [   62/   88]
+per-ex loss: 0.423982  [   64/   88]
+per-ex loss: 0.595546  [   66/   88]
+per-ex loss: 0.513730  [   68/   88]
+per-ex loss: 0.641477  [   70/   88]
+per-ex loss: 0.569780  [   72/   88]
+per-ex loss: 0.484218  [   74/   88]
+per-ex loss: 0.576203  [   76/   88]
+per-ex loss: 0.503419  [   78/   88]
+per-ex loss: 0.427747  [   80/   88]
+per-ex loss: 0.412279  [   82/   88]
+per-ex loss: 0.606563  [   84/   88]
+per-ex loss: 0.471176  [   86/   88]
+per-ex loss: 0.520060  [   88/   88]
+Train Error: Avg loss: 0.50911288
+validation Error: 
+ Avg loss: 0.51530884 
+ F1: 0.498516 
+ Precision: 0.510601 
+ Recall: 0.486990
+ IoU: 0.332016
+
+test Error: 
+ Avg loss: 0.46905937 
+ F1: 0.570368 
+ Precision: 0.567687 
+ Recall: 0.573075
+ IoU: 0.398962
+
+We have finished training iteration 106
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_103_.pth
+per-ex loss: 0.441120  [    2/   88]
+per-ex loss: 0.451100  [    4/   88]
+per-ex loss: 0.457903  [    6/   88]
+per-ex loss: 0.697984  [    8/   88]
+per-ex loss: 0.584823  [   10/   88]
+per-ex loss: 0.406120  [   12/   88]
+per-ex loss: 0.474094  [   14/   88]
+per-ex loss: 0.475146  [   16/   88]
+per-ex loss: 0.617590  [   18/   88]
+per-ex loss: 0.400387  [   20/   88]
+per-ex loss: 0.433863  [   22/   88]
+per-ex loss: 0.655863  [   24/   88]
+per-ex loss: 0.492720  [   26/   88]
+per-ex loss: 0.399983  [   28/   88]
+per-ex loss: 0.385632  [   30/   88]
+per-ex loss: 0.457075  [   32/   88]
+per-ex loss: 0.398281  [   34/   88]
+per-ex loss: 0.542730  [   36/   88]
+per-ex loss: 0.519015  [   38/   88]
+per-ex loss: 0.415160  [   40/   88]
+per-ex loss: 0.506810  [   42/   88]
+per-ex loss: 0.466850  [   44/   88]
+per-ex loss: 0.389830  [   46/   88]
+per-ex loss: 0.439420  [   48/   88]
+per-ex loss: 0.525933  [   50/   88]
+per-ex loss: 0.523407  [   52/   88]
+per-ex loss: 0.583099  [   54/   88]
+per-ex loss: 0.489760  [   56/   88]
+per-ex loss: 0.520570  [   58/   88]
+per-ex loss: 0.555873  [   60/   88]
+per-ex loss: 0.399129  [   62/   88]
+per-ex loss: 0.577990  [   64/   88]
+per-ex loss: 0.548803  [   66/   88]
+per-ex loss: 0.433099  [   68/   88]
+per-ex loss: 0.481131  [   70/   88]
+per-ex loss: 0.531111  [   72/   88]
+per-ex loss: 0.614448  [   74/   88]
+per-ex loss: 0.603109  [   76/   88]
+per-ex loss: 0.400322  [   78/   88]
+per-ex loss: 0.401135  [   80/   88]
+per-ex loss: 0.585364  [   82/   88]
+per-ex loss: 0.435080  [   84/   88]
+per-ex loss: 0.421957  [   86/   88]
+per-ex loss: 0.589705  [   88/   88]
+Train Error: Avg loss: 0.49387556
+validation Error: 
+ Avg loss: 0.52104269 
+ F1: 0.504604 
+ Precision: 0.595319 
+ Recall: 0.437880
+ IoU: 0.337439
+
+test Error: 
+ Avg loss: 0.46465227 
+ F1: 0.577157 
+ Precision: 0.657877 
+ Recall: 0.514081
+ IoU: 0.405637
+
+We have finished training iteration 107
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_93_.pth
+per-ex loss: 0.414186  [    2/   88]
+per-ex loss: 0.459488  [    4/   88]
+per-ex loss: 0.446566  [    6/   88]
+per-ex loss: 0.595003  [    8/   88]
+per-ex loss: 0.412481  [   10/   88]
+per-ex loss: 0.383279  [   12/   88]
+per-ex loss: 0.522045  [   14/   88]
+per-ex loss: 0.532251  [   16/   88]
+per-ex loss: 0.503302  [   18/   88]
+per-ex loss: 0.447440  [   20/   88]
+per-ex loss: 0.512514  [   22/   88]
+per-ex loss: 0.499297  [   24/   88]
+per-ex loss: 0.586865  [   26/   88]
+per-ex loss: 0.429389  [   28/   88]
+per-ex loss: 0.549091  [   30/   88]
+per-ex loss: 0.464870  [   32/   88]
+per-ex loss: 0.561507  [   34/   88]
+per-ex loss: 0.419329  [   36/   88]
+per-ex loss: 0.673256  [   38/   88]
+per-ex loss: 0.379611  [   40/   88]
+per-ex loss: 0.648706  [   42/   88]
+per-ex loss: 0.594673  [   44/   88]
+per-ex loss: 0.660114  [   46/   88]
+per-ex loss: 0.391076  [   48/   88]
+per-ex loss: 0.691623  [   50/   88]
+per-ex loss: 0.453955  [   52/   88]
+per-ex loss: 0.416373  [   54/   88]
+per-ex loss: 0.406684  [   56/   88]
+per-ex loss: 0.387668  [   58/   88]
+per-ex loss: 0.493592  [   60/   88]
+per-ex loss: 0.630547  [   62/   88]
+per-ex loss: 0.626486  [   64/   88]
+per-ex loss: 0.462204  [   66/   88]
+per-ex loss: 0.458862  [   68/   88]
+per-ex loss: 0.570971  [   70/   88]
+per-ex loss: 0.469674  [   72/   88]
+per-ex loss: 0.547525  [   74/   88]
+per-ex loss: 0.379224  [   76/   88]
+per-ex loss: 0.616372  [   78/   88]
+per-ex loss: 0.455056  [   80/   88]
+per-ex loss: 0.373805  [   82/   88]
+per-ex loss: 0.487746  [   84/   88]
+per-ex loss: 0.446759  [   86/   88]
+per-ex loss: 0.586012  [   88/   88]
+Train Error: Avg loss: 0.50107900
+validation Error: 
+ Avg loss: 0.52756297 
+ F1: 0.489029 
+ Precision: 0.691550 
+ Recall: 0.378256
+ IoU: 0.323652
+
+test Error: 
+ Avg loss: 0.50299880 
+ F1: 0.534443 
+ Precision: 0.748255 
+ Recall: 0.415667
+ IoU: 0.364669
+
+We have finished training iteration 108
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_104_.pth
+per-ex loss: 0.457105  [    2/   88]
+per-ex loss: 0.385124  [    4/   88]
+per-ex loss: 0.388673  [    6/   88]
+per-ex loss: 0.492228  [    8/   88]
+per-ex loss: 0.439052  [   10/   88]
+per-ex loss: 0.414059  [   12/   88]
+per-ex loss: 0.376133  [   14/   88]
+per-ex loss: 0.485219  [   16/   88]
+per-ex loss: 0.549551  [   18/   88]
+per-ex loss: 0.614428  [   20/   88]
+per-ex loss: 0.412356  [   22/   88]
+per-ex loss: 0.389207  [   24/   88]
+per-ex loss: 0.637721  [   26/   88]
+per-ex loss: 0.542345  [   28/   88]
+per-ex loss: 0.588613  [   30/   88]
+per-ex loss: 0.600587  [   32/   88]
+per-ex loss: 0.623028  [   34/   88]
+per-ex loss: 0.516356  [   36/   88]
+per-ex loss: 0.462270  [   38/   88]
+per-ex loss: 0.541041  [   40/   88]
+per-ex loss: 0.615800  [   42/   88]
+per-ex loss: 0.430786  [   44/   88]
+per-ex loss: 0.505679  [   46/   88]
+per-ex loss: 0.513797  [   48/   88]
+per-ex loss: 0.571283  [   50/   88]
+per-ex loss: 0.464802  [   52/   88]
+per-ex loss: 0.504375  [   54/   88]
+per-ex loss: 0.385700  [   56/   88]
+per-ex loss: 0.452994  [   58/   88]
+per-ex loss: 0.681097  [   60/   88]
+per-ex loss: 0.531414  [   62/   88]
+per-ex loss: 0.486862  [   64/   88]
+per-ex loss: 0.530494  [   66/   88]
+per-ex loss: 0.533732  [   68/   88]
+per-ex loss: 0.496298  [   70/   88]
+per-ex loss: 0.438163  [   72/   88]
+per-ex loss: 0.475858  [   74/   88]
+per-ex loss: 0.621433  [   76/   88]
+per-ex loss: 0.455490  [   78/   88]
+per-ex loss: 0.457829  [   80/   88]
+per-ex loss: 0.477125  [   82/   88]
+per-ex loss: 0.590518  [   84/   88]
+per-ex loss: 0.448997  [   86/   88]
+per-ex loss: 0.418783  [   88/   88]
+Train Error: Avg loss: 0.50010017
+validation Error: 
+ Avg loss: 0.51854043 
+ F1: 0.504311 
+ Precision: 0.607856 
+ Recall: 0.430908
+ IoU: 0.337176
+
+test Error: 
+ Avg loss: 0.47484075 
+ F1: 0.565621 
+ Precision: 0.674384 
+ Recall: 0.487068
+ IoU: 0.394332
+
+We have finished training iteration 109
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_107_.pth
+per-ex loss: 0.434014  [    2/   88]
+per-ex loss: 0.504200  [    4/   88]
+per-ex loss: 0.562920  [    6/   88]
+per-ex loss: 0.575309  [    8/   88]
+per-ex loss: 0.425316  [   10/   88]
+per-ex loss: 0.468768  [   12/   88]
+per-ex loss: 0.364573  [   14/   88]
+per-ex loss: 0.438301  [   16/   88]
+per-ex loss: 0.504089  [   18/   88]
+per-ex loss: 0.561836  [   20/   88]
+per-ex loss: 0.577501  [   22/   88]
+per-ex loss: 0.373885  [   24/   88]
+per-ex loss: 0.548524  [   26/   88]
+per-ex loss: 0.462045  [   28/   88]
+per-ex loss: 0.540343  [   30/   88]
+per-ex loss: 0.457376  [   32/   88]
+per-ex loss: 0.407375  [   34/   88]
+per-ex loss: 0.458096  [   36/   88]
+per-ex loss: 0.452868  [   38/   88]
+per-ex loss: 0.518193  [   40/   88]
+per-ex loss: 0.610829  [   42/   88]
+per-ex loss: 0.466603  [   44/   88]
+per-ex loss: 0.597755  [   46/   88]
+per-ex loss: 0.570617  [   48/   88]
+per-ex loss: 0.397599  [   50/   88]
+per-ex loss: 0.593146  [   52/   88]
+per-ex loss: 0.505932  [   54/   88]
+per-ex loss: 0.426739  [   56/   88]
+per-ex loss: 0.583593  [   58/   88]
+per-ex loss: 0.493340  [   60/   88]
+per-ex loss: 0.518531  [   62/   88]
+per-ex loss: 0.569417  [   64/   88]
+per-ex loss: 0.671157  [   66/   88]
+per-ex loss: 0.477459  [   68/   88]
+per-ex loss: 0.450722  [   70/   88]
+per-ex loss: 0.495785  [   72/   88]
+per-ex loss: 0.409724  [   74/   88]
+per-ex loss: 0.502981  [   76/   88]
+per-ex loss: 0.384433  [   78/   88]
+per-ex loss: 0.584781  [   80/   88]
+per-ex loss: 0.463981  [   82/   88]
+per-ex loss: 0.695483  [   84/   88]
+per-ex loss: 0.403798  [   86/   88]
+per-ex loss: 0.537171  [   88/   88]
+Train Error: Avg loss: 0.50107057
+validation Error: 
+ Avg loss: 0.56249142 
+ F1: 0.469918 
+ Precision: 0.459206 
+ Recall: 0.481142
+ IoU: 0.307120
+
+test Error: 
+ Avg loss: 0.47472885 
+ F1: 0.561781 
+ Precision: 0.597134 
+ Recall: 0.530380
+ IoU: 0.390609
+
+We have finished training iteration 110
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_108_.pth
+per-ex loss: 0.454260  [    2/   88]
+per-ex loss: 0.420797  [    4/   88]
+per-ex loss: 0.404595  [    6/   88]
+per-ex loss: 0.432290  [    8/   88]
+per-ex loss: 0.556848  [   10/   88]
+per-ex loss: 0.473032  [   12/   88]
+per-ex loss: 0.508332  [   14/   88]
+per-ex loss: 0.477704  [   16/   88]
+per-ex loss: 0.535607  [   18/   88]
+per-ex loss: 0.390291  [   20/   88]
+per-ex loss: 0.561392  [   22/   88]
+per-ex loss: 0.385351  [   24/   88]
+per-ex loss: 0.495032  [   26/   88]
+per-ex loss: 0.389808  [   28/   88]
+per-ex loss: 0.618924  [   30/   88]
+per-ex loss: 0.687861  [   32/   88]
+per-ex loss: 0.555652  [   34/   88]
+per-ex loss: 0.503409  [   36/   88]
+per-ex loss: 0.385802  [   38/   88]
+per-ex loss: 0.575254  [   40/   88]
+per-ex loss: 0.595677  [   42/   88]
+per-ex loss: 0.516500  [   44/   88]
+per-ex loss: 0.683523  [   46/   88]
+per-ex loss: 0.415039  [   48/   88]
+per-ex loss: 0.552578  [   50/   88]
+per-ex loss: 0.483786  [   52/   88]
+per-ex loss: 0.415440  [   54/   88]
+per-ex loss: 0.504457  [   56/   88]
+per-ex loss: 0.570343  [   58/   88]
+per-ex loss: 0.437189  [   60/   88]
+per-ex loss: 0.582354  [   62/   88]
+per-ex loss: 0.517987  [   64/   88]
+per-ex loss: 0.584698  [   66/   88]
+per-ex loss: 0.464140  [   68/   88]
+per-ex loss: 0.693196  [   70/   88]
+per-ex loss: 0.478858  [   72/   88]
+per-ex loss: 0.495263  [   74/   88]
+per-ex loss: 0.573484  [   76/   88]
+per-ex loss: 0.446735  [   78/   88]
+per-ex loss: 0.609097  [   80/   88]
+per-ex loss: 0.406734  [   82/   88]
+per-ex loss: 0.441570  [   84/   88]
+per-ex loss: 0.466287  [   86/   88]
+per-ex loss: 0.520157  [   88/   88]
+Train Error: Avg loss: 0.50607574
+validation Error: 
+ Avg loss: 0.53860671 
+ F1: 0.501596 
+ Precision: 0.526642 
+ Recall: 0.478824
+ IoU: 0.334754
+
+test Error: 
+ Avg loss: 0.48864580 
+ F1: 0.561786 
+ Precision: 0.588177 
+ Recall: 0.537662
+ IoU: 0.390614
+
+We have finished training iteration 111
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_105_.pth
+per-ex loss: 0.575079  [    2/   88]
+per-ex loss: 0.479218  [    4/   88]
+per-ex loss: 0.441472  [    6/   88]
+per-ex loss: 0.533953  [    8/   88]
+per-ex loss: 0.368222  [   10/   88]
+per-ex loss: 0.654942  [   12/   88]
+per-ex loss: 0.472771  [   14/   88]
+per-ex loss: 0.608752  [   16/   88]
+per-ex loss: 0.440683  [   18/   88]
+per-ex loss: 0.579465  [   20/   88]
+per-ex loss: 0.551530  [   22/   88]
+per-ex loss: 0.429122  [   24/   88]
+per-ex loss: 0.484301  [   26/   88]
+per-ex loss: 0.462269  [   28/   88]
+per-ex loss: 0.443321  [   30/   88]
+per-ex loss: 0.431290  [   32/   88]
+per-ex loss: 0.443620  [   34/   88]
+per-ex loss: 0.457080  [   36/   88]
+per-ex loss: 0.592689  [   38/   88]
+per-ex loss: 0.447574  [   40/   88]
+per-ex loss: 0.463733  [   42/   88]
+per-ex loss: 0.449775  [   44/   88]
+per-ex loss: 0.458350  [   46/   88]
+per-ex loss: 0.463504  [   48/   88]
+per-ex loss: 0.441168  [   50/   88]
+per-ex loss: 0.417173  [   52/   88]
+per-ex loss: 0.449591  [   54/   88]
+per-ex loss: 0.505760  [   56/   88]
+per-ex loss: 0.476780  [   58/   88]
+per-ex loss: 0.458382  [   60/   88]
+per-ex loss: 0.563956  [   62/   88]
+per-ex loss: 0.500124  [   64/   88]
+per-ex loss: 0.697630  [   66/   88]
+per-ex loss: 0.452519  [   68/   88]
+per-ex loss: 0.398343  [   70/   88]
+per-ex loss: 0.505084  [   72/   88]
+per-ex loss: 0.496822  [   74/   88]
+per-ex loss: 0.362509  [   76/   88]
+per-ex loss: 0.438428  [   78/   88]
+per-ex loss: 0.627382  [   80/   88]
+per-ex loss: 0.543529  [   82/   88]
+per-ex loss: 0.521871  [   84/   88]
+per-ex loss: 0.403975  [   86/   88]
+per-ex loss: 0.556960  [   88/   88]
+Train Error: Avg loss: 0.48978873
+validation Error: 
+ Avg loss: 0.52762267 
+ F1: 0.488268 
+ Precision: 0.486547 
+ Recall: 0.490001
+ IoU: 0.322986
+
+test Error: 
+ Avg loss: 0.46893347 
+ F1: 0.569289 
+ Precision: 0.598171 
+ Recall: 0.543067
+ IoU: 0.397906
+
+We have finished training iteration 112
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_110_.pth
+per-ex loss: 0.513549  [    2/   88]
+per-ex loss: 0.469740  [    4/   88]
+per-ex loss: 0.414937  [    6/   88]
+per-ex loss: 0.631212  [    8/   88]
+per-ex loss: 0.501780  [   10/   88]
+per-ex loss: 0.411406  [   12/   88]
+per-ex loss: 0.645235  [   14/   88]
+per-ex loss: 0.578828  [   16/   88]
+per-ex loss: 0.424349  [   18/   88]
+per-ex loss: 0.410825  [   20/   88]
+per-ex loss: 0.517452  [   22/   88]
+per-ex loss: 0.604293  [   24/   88]
+per-ex loss: 0.520602  [   26/   88]
+per-ex loss: 0.474352  [   28/   88]
+per-ex loss: 0.410059  [   30/   88]
+per-ex loss: 0.493248  [   32/   88]
+per-ex loss: 0.372579  [   34/   88]
+per-ex loss: 0.535419  [   36/   88]
+per-ex loss: 0.497216  [   38/   88]
+per-ex loss: 0.603551  [   40/   88]
+per-ex loss: 0.450098  [   42/   88]
+per-ex loss: 0.565395  [   44/   88]
+per-ex loss: 0.577272  [   46/   88]
+per-ex loss: 0.690505  [   48/   88]
+per-ex loss: 0.463532  [   50/   88]
+per-ex loss: 0.466416  [   52/   88]
+per-ex loss: 0.531132  [   54/   88]
+per-ex loss: 0.418863  [   56/   88]
+per-ex loss: 0.547042  [   58/   88]
+per-ex loss: 0.389005  [   60/   88]
+per-ex loss: 0.392854  [   62/   88]
+per-ex loss: 0.481199  [   64/   88]
+per-ex loss: 0.394473  [   66/   88]
+per-ex loss: 0.418069  [   68/   88]
+per-ex loss: 0.625320  [   70/   88]
+per-ex loss: 0.446795  [   72/   88]
+per-ex loss: 0.489025  [   74/   88]
+per-ex loss: 0.372689  [   76/   88]
+per-ex loss: 0.500459  [   78/   88]
+per-ex loss: 0.424121  [   80/   88]
+per-ex loss: 0.387410  [   82/   88]
+per-ex loss: 0.565378  [   84/   88]
+per-ex loss: 0.450025  [   86/   88]
+per-ex loss: 0.454252  [   88/   88]
+Train Error: Avg loss: 0.48936275
+validation Error: 
+ Avg loss: 0.51168986 
+ F1: 0.511537 
+ Precision: 0.541661 
+ Recall: 0.484587
+ IoU: 0.343668
+
+test Error: 
+ Avg loss: 0.46983286 
+ F1: 0.571376 
+ Precision: 0.612564 
+ Recall: 0.535377
+ IoU: 0.399948
+
+We have finished training iteration 113
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_111_.pth
+per-ex loss: 0.612403  [    2/   88]
+per-ex loss: 0.466500  [    4/   88]
+per-ex loss: 0.523500  [    6/   88]
+per-ex loss: 0.582852  [    8/   88]
+per-ex loss: 0.509301  [   10/   88]
+per-ex loss: 0.645967  [   12/   88]
+per-ex loss: 0.411733  [   14/   88]
+per-ex loss: 0.417912  [   16/   88]
+per-ex loss: 0.430678  [   18/   88]
+per-ex loss: 0.389489  [   20/   88]
+per-ex loss: 0.480567  [   22/   88]
+per-ex loss: 0.540982  [   24/   88]
+per-ex loss: 0.469207  [   26/   88]
+per-ex loss: 0.470945  [   28/   88]
+per-ex loss: 0.475936  [   30/   88]
+per-ex loss: 0.439562  [   32/   88]
+per-ex loss: 0.477204  [   34/   88]
+per-ex loss: 0.679944  [   36/   88]
+per-ex loss: 0.559465  [   38/   88]
+per-ex loss: 0.486152  [   40/   88]
+per-ex loss: 0.424448  [   42/   88]
+per-ex loss: 0.689965  [   44/   88]
+per-ex loss: 0.465800  [   46/   88]
+per-ex loss: 0.398734  [   48/   88]
+per-ex loss: 0.592138  [   50/   88]
+per-ex loss: 0.413906  [   52/   88]
+per-ex loss: 0.550389  [   54/   88]
+per-ex loss: 0.556199  [   56/   88]
+per-ex loss: 0.467776  [   58/   88]
+per-ex loss: 0.588833  [   60/   88]
+per-ex loss: 0.462928  [   62/   88]
+per-ex loss: 0.564181  [   64/   88]
+per-ex loss: 0.449060  [   66/   88]
+per-ex loss: 0.706576  [   68/   88]
+per-ex loss: 0.394757  [   70/   88]
+per-ex loss: 0.570641  [   72/   88]
+per-ex loss: 0.445126  [   74/   88]
+per-ex loss: 0.401124  [   76/   88]
+per-ex loss: 0.429013  [   78/   88]
+per-ex loss: 0.389438  [   80/   88]
+per-ex loss: 0.410973  [   82/   88]
+per-ex loss: 0.649257  [   84/   88]
+per-ex loss: 0.587148  [   86/   88]
+per-ex loss: 0.446513  [   88/   88]
+Train Error: Avg loss: 0.50284591
+validation Error: 
+ Avg loss: 0.52832858 
+ F1: 0.504645 
+ Precision: 0.604448 
+ Recall: 0.433129
+ IoU: 0.337475
+
+test Error: 
+ Avg loss: 0.48726456 
+ F1: 0.556907 
+ Precision: 0.634390 
+ Recall: 0.496292
+ IoU: 0.385912
+
+We have finished training iteration 114
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_112_.pth
+per-ex loss: 0.590499  [    2/   88]
+per-ex loss: 0.541076  [    4/   88]
+per-ex loss: 0.356442  [    6/   88]
+per-ex loss: 0.693879  [    8/   88]
+per-ex loss: 0.522926  [   10/   88]
+per-ex loss: 0.514561  [   12/   88]
+per-ex loss: 0.489684  [   14/   88]
+per-ex loss: 0.412997  [   16/   88]
+per-ex loss: 0.454779  [   18/   88]
+per-ex loss: 0.492302  [   20/   88]
+per-ex loss: 0.388493  [   22/   88]
+per-ex loss: 0.555758  [   24/   88]
+per-ex loss: 0.583621  [   26/   88]
+per-ex loss: 0.490626  [   28/   88]
+per-ex loss: 0.562475  [   30/   88]
+per-ex loss: 0.381980  [   32/   88]
+per-ex loss: 0.492330  [   34/   88]
+per-ex loss: 0.443791  [   36/   88]
+per-ex loss: 0.395534  [   38/   88]
+per-ex loss: 0.429515  [   40/   88]
+per-ex loss: 0.488561  [   42/   88]
+per-ex loss: 0.377984  [   44/   88]
+per-ex loss: 0.457676  [   46/   88]
+per-ex loss: 0.521911  [   48/   88]
+per-ex loss: 0.441241  [   50/   88]
+per-ex loss: 0.470076  [   52/   88]
+per-ex loss: 0.657109  [   54/   88]
+per-ex loss: 0.386032  [   56/   88]
+per-ex loss: 0.416628  [   58/   88]
+per-ex loss: 0.467006  [   60/   88]
+per-ex loss: 0.506634  [   62/   88]
+per-ex loss: 0.627671  [   64/   88]
+per-ex loss: 0.656090  [   66/   88]
+per-ex loss: 0.527877  [   68/   88]
+per-ex loss: 0.375579  [   70/   88]
+per-ex loss: 0.462585  [   72/   88]
+per-ex loss: 0.528218  [   74/   88]
+per-ex loss: 0.557587  [   76/   88]
+per-ex loss: 0.454802  [   78/   88]
+per-ex loss: 0.428707  [   80/   88]
+per-ex loss: 0.434248  [   82/   88]
+per-ex loss: 0.560241  [   84/   88]
+per-ex loss: 0.490485  [   86/   88]
+per-ex loss: 0.417878  [   88/   88]
+Train Error: Avg loss: 0.48877493
+validation Error: 
+ Avg loss: 0.52940943 
+ F1: 0.488590 
+ Precision: 0.486006 
+ Recall: 0.491202
+ IoU: 0.323268
+
+test Error: 
+ Avg loss: 0.46541772 
+ F1: 0.572020 
+ Precision: 0.583957 
+ Recall: 0.560560
+ IoU: 0.400579
+
+We have finished training iteration 115
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_109_.pth
+per-ex loss: 0.494612  [    2/   88]
+per-ex loss: 0.528757  [    4/   88]
+per-ex loss: 0.430702  [    6/   88]
+per-ex loss: 0.560341  [    8/   88]
+per-ex loss: 0.627456  [   10/   88]
+per-ex loss: 0.459108  [   12/   88]
+per-ex loss: 0.466660  [   14/   88]
+per-ex loss: 0.689400  [   16/   88]
+per-ex loss: 0.571134  [   18/   88]
+per-ex loss: 0.664738  [   20/   88]
+per-ex loss: 0.583437  [   22/   88]
+per-ex loss: 0.414171  [   24/   88]
+per-ex loss: 0.403760  [   26/   88]
+per-ex loss: 0.573039  [   28/   88]
+per-ex loss: 0.513886  [   30/   88]
+per-ex loss: 0.389577  [   32/   88]
+per-ex loss: 0.447332  [   34/   88]
+per-ex loss: 0.564375  [   36/   88]
+per-ex loss: 0.412099  [   38/   88]
+per-ex loss: 0.508374  [   40/   88]
+per-ex loss: 0.371068  [   42/   88]
+per-ex loss: 0.415116  [   44/   88]
+per-ex loss: 0.617881  [   46/   88]
+per-ex loss: 0.484197  [   48/   88]
+per-ex loss: 0.384494  [   50/   88]
+per-ex loss: 0.530919  [   52/   88]
+per-ex loss: 0.442296  [   54/   88]
+per-ex loss: 0.598928  [   56/   88]
+per-ex loss: 0.602972  [   58/   88]
+per-ex loss: 0.409230  [   60/   88]
+per-ex loss: 0.442628  [   62/   88]
+per-ex loss: 0.674166  [   64/   88]
+per-ex loss: 0.419882  [   66/   88]
+per-ex loss: 0.362906  [   68/   88]
+per-ex loss: 0.500544  [   70/   88]
+per-ex loss: 0.608127  [   72/   88]
+per-ex loss: 0.409818  [   74/   88]
+per-ex loss: 0.521562  [   76/   88]
+per-ex loss: 0.594308  [   78/   88]
+per-ex loss: 0.395802  [   80/   88]
+per-ex loss: 0.438661  [   82/   88]
+per-ex loss: 0.557212  [   84/   88]
+per-ex loss: 0.487395  [   86/   88]
+per-ex loss: 0.600326  [   88/   88]
+Train Error: Avg loss: 0.50394080
+validation Error: 
+ Avg loss: 0.51369458 
+ F1: 0.508710 
+ Precision: 0.553689 
+ Recall: 0.470489
+ IoU: 0.341121
+
+test Error: 
+ Avg loss: 0.45705179 
+ F1: 0.578617 
+ Precision: 0.633968 
+ Recall: 0.532155
+ IoU: 0.407080
+
+We have finished training iteration 116
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_114_.pth
+per-ex loss: 0.478807  [    2/   88]
+per-ex loss: 0.405369  [    4/   88]
+per-ex loss: 0.451544  [    6/   88]
+per-ex loss: 0.550149  [    8/   88]
+per-ex loss: 0.452872  [   10/   88]
+per-ex loss: 0.417092  [   12/   88]
+per-ex loss: 0.588680  [   14/   88]
+per-ex loss: 0.412942  [   16/   88]
+per-ex loss: 0.405725  [   18/   88]
+per-ex loss: 0.611184  [   20/   88]
+per-ex loss: 0.503524  [   22/   88]
+per-ex loss: 0.607497  [   24/   88]
+per-ex loss: 0.519166  [   26/   88]
+per-ex loss: 0.613722  [   28/   88]
+per-ex loss: 0.470150  [   30/   88]
+per-ex loss: 0.379187  [   32/   88]
+per-ex loss: 0.442800  [   34/   88]
+per-ex loss: 0.499859  [   36/   88]
+per-ex loss: 0.679362  [   38/   88]
+per-ex loss: 0.487643  [   40/   88]
+per-ex loss: 0.438886  [   42/   88]
+per-ex loss: 0.510870  [   44/   88]
+per-ex loss: 0.479239  [   46/   88]
+per-ex loss: 0.550693  [   48/   88]
+per-ex loss: 0.361687  [   50/   88]
+per-ex loss: 0.617483  [   52/   88]
+per-ex loss: 0.458924  [   54/   88]
+per-ex loss: 0.616631  [   56/   88]
+per-ex loss: 0.486730  [   58/   88]
+per-ex loss: 0.520418  [   60/   88]
+per-ex loss: 0.452115  [   62/   88]
+per-ex loss: 0.444286  [   64/   88]
+per-ex loss: 0.404459  [   66/   88]
+per-ex loss: 0.545694  [   68/   88]
+per-ex loss: 0.558401  [   70/   88]
+per-ex loss: 0.587153  [   72/   88]
+per-ex loss: 0.517211  [   74/   88]
+per-ex loss: 0.446716  [   76/   88]
+per-ex loss: 0.384938  [   78/   88]
+per-ex loss: 0.426632  [   80/   88]
+per-ex loss: 0.468924  [   82/   88]
+per-ex loss: 0.380609  [   84/   88]
+per-ex loss: 0.442802  [   86/   88]
+per-ex loss: 0.397790  [   88/   88]
+Train Error: Avg loss: 0.48810378
+validation Error: 
+ Avg loss: 0.51059740 
+ F1: 0.513747 
+ Precision: 0.632055 
+ Recall: 0.432746
+ IoU: 0.345666
+
+test Error: 
+ Avg loss: 0.47147051 
+ F1: 0.570743 
+ Precision: 0.667537 
+ Recall: 0.498464
+ IoU: 0.399328
+
+We have finished training iteration 117
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_115_.pth
+per-ex loss: 0.425333  [    2/   88]
+per-ex loss: 0.386525  [    4/   88]
+per-ex loss: 0.423906  [    6/   88]
+per-ex loss: 0.423338  [    8/   88]
+per-ex loss: 0.630852  [   10/   88]
+per-ex loss: 0.438857  [   12/   88]
+per-ex loss: 0.505999  [   14/   88]
+per-ex loss: 0.627136  [   16/   88]
+per-ex loss: 0.526394  [   18/   88]
+per-ex loss: 0.395661  [   20/   88]
+per-ex loss: 0.459234  [   22/   88]
+per-ex loss: 0.529214  [   24/   88]
+per-ex loss: 0.497356  [   26/   88]
+per-ex loss: 0.648555  [   28/   88]
+per-ex loss: 0.482696  [   30/   88]
+per-ex loss: 0.486709  [   32/   88]
+per-ex loss: 0.453169  [   34/   88]
+per-ex loss: 0.417824  [   36/   88]
+per-ex loss: 0.614069  [   38/   88]
+per-ex loss: 0.468902  [   40/   88]
+per-ex loss: 0.425017  [   42/   88]
+per-ex loss: 0.430613  [   44/   88]
+per-ex loss: 0.525514  [   46/   88]
+per-ex loss: 0.529483  [   48/   88]
+per-ex loss: 0.507231  [   50/   88]
+per-ex loss: 0.648790  [   52/   88]
+per-ex loss: 0.408790  [   54/   88]
+per-ex loss: 0.399554  [   56/   88]
+per-ex loss: 0.499512  [   58/   88]
+per-ex loss: 0.560103  [   60/   88]
+per-ex loss: 0.509371  [   62/   88]
+per-ex loss: 0.395162  [   64/   88]
+per-ex loss: 0.696104  [   66/   88]
+per-ex loss: 0.634735  [   68/   88]
+per-ex loss: 0.446421  [   70/   88]
+per-ex loss: 0.595608  [   72/   88]
+per-ex loss: 0.410938  [   74/   88]
+per-ex loss: 0.620471  [   76/   88]
+per-ex loss: 0.537246  [   78/   88]
+per-ex loss: 0.504911  [   80/   88]
+per-ex loss: 0.573882  [   82/   88]
+per-ex loss: 0.416361  [   84/   88]
+per-ex loss: 0.519516  [   86/   88]
+per-ex loss: 0.420662  [   88/   88]
+Train Error: Avg loss: 0.50131191
+validation Error: 
+ Avg loss: 0.53367537 
+ F1: 0.476797 
+ Precision: 0.427390 
+ Recall: 0.539120
+ IoU: 0.313023
+
+test Error: 
+ Avg loss: 0.47034117 
+ F1: 0.568332 
+ Precision: 0.525245 
+ Recall: 0.619120
+ IoU: 0.396972
+
+We have finished training iteration 118
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_106_.pth
+per-ex loss: 0.388387  [    2/   88]
+per-ex loss: 0.429671  [    4/   88]
+per-ex loss: 0.511261  [    6/   88]
+per-ex loss: 0.479432  [    8/   88]
+per-ex loss: 0.420086  [   10/   88]
+per-ex loss: 0.376237  [   12/   88]
+per-ex loss: 0.394701  [   14/   88]
+per-ex loss: 0.578077  [   16/   88]
+per-ex loss: 0.425753  [   18/   88]
+per-ex loss: 0.459914  [   20/   88]
+per-ex loss: 0.603637  [   22/   88]
+per-ex loss: 0.453150  [   24/   88]
+per-ex loss: 0.534642  [   26/   88]
+per-ex loss: 0.414553  [   28/   88]
+per-ex loss: 0.487587  [   30/   88]
+per-ex loss: 0.424131  [   32/   88]
+per-ex loss: 0.394539  [   34/   88]
+per-ex loss: 0.486237  [   36/   88]
+per-ex loss: 0.538118  [   38/   88]
+per-ex loss: 0.468826  [   40/   88]
+per-ex loss: 0.394301  [   42/   88]
+per-ex loss: 0.498014  [   44/   88]
+per-ex loss: 0.602172  [   46/   88]
+per-ex loss: 0.637176  [   48/   88]
+per-ex loss: 0.425017  [   50/   88]
+per-ex loss: 0.555348  [   52/   88]
+per-ex loss: 0.486544  [   54/   88]
+per-ex loss: 0.516727  [   56/   88]
+per-ex loss: 0.541961  [   58/   88]
+per-ex loss: 0.414434  [   60/   88]
+per-ex loss: 0.481426  [   62/   88]
+per-ex loss: 0.514051  [   64/   88]
+per-ex loss: 0.370830  [   66/   88]
+per-ex loss: 0.449145  [   68/   88]
+per-ex loss: 0.395061  [   70/   88]
+per-ex loss: 0.439462  [   72/   88]
+per-ex loss: 0.644901  [   74/   88]
+per-ex loss: 0.515503  [   76/   88]
+per-ex loss: 0.555258  [   78/   88]
+per-ex loss: 0.406584  [   80/   88]
+per-ex loss: 0.613400  [   82/   88]
+per-ex loss: 0.423661  [   84/   88]
+per-ex loss: 0.566293  [   86/   88]
+per-ex loss: 0.408400  [   88/   88]
+Train Error: Avg loss: 0.48010468
+validation Error: 
+ Avg loss: 0.52356991 
+ F1: 0.498978 
+ Precision: 0.498100 
+ Recall: 0.499859
+ IoU: 0.332426
+
+test Error: 
+ Avg loss: 0.46388882 
+ F1: 0.574004 
+ Precision: 0.591152 
+ Recall: 0.557822
+ IoU: 0.402528
+
+We have finished training iteration 119
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_116_.pth
+per-ex loss: 0.388199  [    2/   88]
+per-ex loss: 0.387767  [    4/   88]
+per-ex loss: 0.540466  [    6/   88]
+per-ex loss: 0.476073  [    8/   88]
+per-ex loss: 0.458792  [   10/   88]
+per-ex loss: 0.423417  [   12/   88]
+per-ex loss: 0.391271  [   14/   88]
+per-ex loss: 0.533984  [   16/   88]
+per-ex loss: 0.564528  [   18/   88]
+per-ex loss: 0.527910  [   20/   88]
+per-ex loss: 0.500851  [   22/   88]
+per-ex loss: 0.526432  [   24/   88]
+per-ex loss: 0.674831  [   26/   88]
+per-ex loss: 0.371096  [   28/   88]
+per-ex loss: 0.403305  [   30/   88]
+per-ex loss: 0.408383  [   32/   88]
+per-ex loss: 0.472071  [   34/   88]
+per-ex loss: 0.465938  [   36/   88]
+per-ex loss: 0.356746  [   38/   88]
+per-ex loss: 0.613220  [   40/   88]
+per-ex loss: 0.464833  [   42/   88]
+per-ex loss: 0.515343  [   44/   88]
+per-ex loss: 0.500285  [   46/   88]
+per-ex loss: 0.435880  [   48/   88]
+per-ex loss: 0.610595  [   50/   88]
+per-ex loss: 0.479721  [   52/   88]
+per-ex loss: 0.579345  [   54/   88]
+per-ex loss: 0.574826  [   56/   88]
+per-ex loss: 0.462300  [   58/   88]
+per-ex loss: 0.374910  [   60/   88]
+per-ex loss: 0.536087  [   62/   88]
+per-ex loss: 0.634128  [   64/   88]
+per-ex loss: 0.488864  [   66/   88]
+per-ex loss: 0.482677  [   68/   88]
+per-ex loss: 0.429427  [   70/   88]
+per-ex loss: 0.586772  [   72/   88]
+per-ex loss: 0.499179  [   74/   88]
+per-ex loss: 0.533323  [   76/   88]
+per-ex loss: 0.650785  [   78/   88]
+per-ex loss: 0.548783  [   80/   88]
+per-ex loss: 0.494027  [   82/   88]
+per-ex loss: 0.590927  [   84/   88]
+per-ex loss: 0.416173  [   86/   88]
+per-ex loss: 0.431179  [   88/   88]
+Train Error: Avg loss: 0.49558290
+validation Error: 
+ Avg loss: 0.51654255 
+ F1: 0.506628 
+ Precision: 0.596858 
+ Recall: 0.440097
+ IoU: 0.339251
+
+test Error: 
+ Avg loss: 0.46990363 
+ F1: 0.567773 
+ Precision: 0.658883 
+ Recall: 0.498799
+ IoU: 0.396426
+
+We have finished training iteration 120
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_118_.pth
+per-ex loss: 0.547265  [    2/   88]
+per-ex loss: 0.440664  [    4/   88]
+per-ex loss: 0.533469  [    6/   88]
+per-ex loss: 0.389095  [    8/   88]
+per-ex loss: 0.400622  [   10/   88]
+per-ex loss: 0.392393  [   12/   88]
+per-ex loss: 0.436243  [   14/   88]
+per-ex loss: 0.547803  [   16/   88]
+per-ex loss: 0.606180  [   18/   88]
+per-ex loss: 0.586970  [   20/   88]
+per-ex loss: 0.692556  [   22/   88]
+per-ex loss: 0.517507  [   24/   88]
+per-ex loss: 0.512106  [   26/   88]
+per-ex loss: 0.394518  [   28/   88]
+per-ex loss: 0.455599  [   30/   88]
+per-ex loss: 0.492686  [   32/   88]
+per-ex loss: 0.425145  [   34/   88]
+per-ex loss: 0.527800  [   36/   88]
+per-ex loss: 0.398971  [   38/   88]
+per-ex loss: 0.567577  [   40/   88]
+per-ex loss: 0.495091  [   42/   88]
+per-ex loss: 0.430244  [   44/   88]
+per-ex loss: 0.541617  [   46/   88]
+per-ex loss: 0.397293  [   48/   88]
+per-ex loss: 0.465677  [   50/   88]
+per-ex loss: 0.449591  [   52/   88]
+per-ex loss: 0.477344  [   54/   88]
+per-ex loss: 0.423970  [   56/   88]
+per-ex loss: 0.460910  [   58/   88]
+per-ex loss: 0.699492  [   60/   88]
+per-ex loss: 0.605552  [   62/   88]
+per-ex loss: 0.567906  [   64/   88]
+per-ex loss: 0.412555  [   66/   88]
+per-ex loss: 0.501033  [   68/   88]
+per-ex loss: 0.418127  [   70/   88]
+per-ex loss: 0.479944  [   72/   88]
+per-ex loss: 0.475371  [   74/   88]
+per-ex loss: 0.662784  [   76/   88]
+per-ex loss: 0.420840  [   78/   88]
+per-ex loss: 0.521620  [   80/   88]
+per-ex loss: 0.398687  [   82/   88]
+per-ex loss: 0.432134  [   84/   88]
+per-ex loss: 0.441394  [   86/   88]
+per-ex loss: 0.580627  [   88/   88]
+Train Error: Avg loss: 0.49147658
+validation Error: 
+ Avg loss: 0.60402813 
+ F1: 0.428269 
+ Precision: 0.354878 
+ Recall: 0.539932
+ IoU: 0.272483
+
+test Error: 
+ Avg loss: 0.49298419 
+ F1: 0.543929 
+ Precision: 0.512407 
+ Recall: 0.579583
+ IoU: 0.373559
+
+We have finished training iteration 121
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_119_.pth
+per-ex loss: 0.574140  [    2/   88]
+per-ex loss: 0.458947  [    4/   88]
+per-ex loss: 0.521800  [    6/   88]
+per-ex loss: 0.536118  [    8/   88]
+per-ex loss: 0.511748  [   10/   88]
+per-ex loss: 0.557011  [   12/   88]
+per-ex loss: 0.465293  [   14/   88]
+per-ex loss: 0.662486  [   16/   88]
+per-ex loss: 0.673377  [   18/   88]
+per-ex loss: 0.397594  [   20/   88]
+per-ex loss: 0.456467  [   22/   88]
+per-ex loss: 0.543716  [   24/   88]
+per-ex loss: 0.564480  [   26/   88]
+per-ex loss: 0.344619  [   28/   88]
+per-ex loss: 0.571730  [   30/   88]
+per-ex loss: 0.665536  [   32/   88]
+per-ex loss: 0.464176  [   34/   88]
+per-ex loss: 0.505183  [   36/   88]
+per-ex loss: 0.431064  [   38/   88]
+per-ex loss: 0.472428  [   40/   88]
+per-ex loss: 0.393767  [   42/   88]
+per-ex loss: 0.400928  [   44/   88]
+per-ex loss: 0.570601  [   46/   88]
+per-ex loss: 0.355944  [   48/   88]
+per-ex loss: 0.399634  [   50/   88]
+per-ex loss: 0.535130  [   52/   88]
+per-ex loss: 0.368461  [   54/   88]
+per-ex loss: 0.472326  [   56/   88]
+per-ex loss: 0.524905  [   58/   88]
+per-ex loss: 0.398243  [   60/   88]
+per-ex loss: 0.446967  [   62/   88]
+per-ex loss: 0.606437  [   64/   88]
+per-ex loss: 0.549676  [   66/   88]
+per-ex loss: 0.605401  [   68/   88]
+per-ex loss: 0.383740  [   70/   88]
+per-ex loss: 0.553592  [   72/   88]
+per-ex loss: 0.433916  [   74/   88]
+per-ex loss: 0.466442  [   76/   88]
+per-ex loss: 0.570416  [   78/   88]
+per-ex loss: 0.450220  [   80/   88]
+per-ex loss: 0.508141  [   82/   88]
+per-ex loss: 0.568070  [   84/   88]
+per-ex loss: 0.387147  [   86/   88]
+per-ex loss: 0.407628  [   88/   88]
+Train Error: Avg loss: 0.49399190
+validation Error: 
+ Avg loss: 0.51625590 
+ F1: 0.504650 
+ Precision: 0.570226 
+ Recall: 0.452600
+ IoU: 0.337479
+
+test Error: 
+ Avg loss: 0.46466580 
+ F1: 0.575426 
+ Precision: 0.640864 
+ Recall: 0.522114
+ IoU: 0.403929
+
+We have finished training iteration 122
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_120_.pth
+per-ex loss: 0.479216  [    2/   88]
+per-ex loss: 0.590956  [    4/   88]
+per-ex loss: 0.416588  [    6/   88]
+per-ex loss: 0.457327  [    8/   88]
+per-ex loss: 0.496062  [   10/   88]
+per-ex loss: 0.466421  [   12/   88]
+per-ex loss: 0.554239  [   14/   88]
+per-ex loss: 0.424448  [   16/   88]
+per-ex loss: 0.495858  [   18/   88]
+per-ex loss: 0.565784  [   20/   88]
+per-ex loss: 0.519506  [   22/   88]
+per-ex loss: 0.437456  [   24/   88]
+per-ex loss: 0.445380  [   26/   88]
+per-ex loss: 0.401141  [   28/   88]
+per-ex loss: 0.640231  [   30/   88]
+per-ex loss: 0.460747  [   32/   88]
+per-ex loss: 0.587072  [   34/   88]
+per-ex loss: 0.516118  [   36/   88]
+per-ex loss: 0.548130  [   38/   88]
+per-ex loss: 0.578707  [   40/   88]
+per-ex loss: 0.538813  [   42/   88]
+per-ex loss: 0.418745  [   44/   88]
+per-ex loss: 0.557381  [   46/   88]
+per-ex loss: 0.452902  [   48/   88]
+per-ex loss: 0.438348  [   50/   88]
+per-ex loss: 0.483133  [   52/   88]
+per-ex loss: 0.409796  [   54/   88]
+per-ex loss: 0.404715  [   56/   88]
+per-ex loss: 0.434146  [   58/   88]
+per-ex loss: 0.629405  [   60/   88]
+per-ex loss: 0.566669  [   62/   88]
+per-ex loss: 0.376295  [   64/   88]
+per-ex loss: 0.621220  [   66/   88]
+per-ex loss: 0.381393  [   68/   88]
+per-ex loss: 0.502773  [   70/   88]
+per-ex loss: 0.573006  [   72/   88]
+per-ex loss: 0.416809  [   74/   88]
+per-ex loss: 0.434959  [   76/   88]
+per-ex loss: 0.508991  [   78/   88]
+per-ex loss: 0.403218  [   80/   88]
+per-ex loss: 0.502226  [   82/   88]
+per-ex loss: 0.495772  [   84/   88]
+per-ex loss: 0.407947  [   86/   88]
+per-ex loss: 0.576806  [   88/   88]
+Train Error: Avg loss: 0.49129219
+validation Error: 
+ Avg loss: 0.50570133 
+ F1: 0.515028 
+ Precision: 0.557184 
+ Recall: 0.478803
+ IoU: 0.346827
+
+test Error: 
+ Avg loss: 0.45913220 
+ F1: 0.578689 
+ Precision: 0.629894 
+ Recall: 0.535183
+ IoU: 0.407152
+
+We have finished training iteration 123
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_121_.pth
+per-ex loss: 0.470966  [    2/   88]
+per-ex loss: 0.486632  [    4/   88]
+per-ex loss: 0.421904  [    6/   88]
+per-ex loss: 0.561109  [    8/   88]
+per-ex loss: 0.371293  [   10/   88]
+per-ex loss: 0.413066  [   12/   88]
+per-ex loss: 0.614427  [   14/   88]
+per-ex loss: 0.371000  [   16/   88]
+per-ex loss: 0.455392  [   18/   88]
+per-ex loss: 0.541804  [   20/   88]
+per-ex loss: 0.434493  [   22/   88]
+per-ex loss: 0.504596  [   24/   88]
+per-ex loss: 0.380150  [   26/   88]
+per-ex loss: 0.369370  [   28/   88]
+per-ex loss: 0.495718  [   30/   88]
+per-ex loss: 0.639204  [   32/   88]
+per-ex loss: 0.436126  [   34/   88]
+per-ex loss: 0.472737  [   36/   88]
+per-ex loss: 0.411552  [   38/   88]
+per-ex loss: 0.501256  [   40/   88]
+per-ex loss: 0.527317  [   42/   88]
+per-ex loss: 0.435220  [   44/   88]
+per-ex loss: 0.509152  [   46/   88]
+per-ex loss: 0.690811  [   48/   88]
+per-ex loss: 0.397106  [   50/   88]
+per-ex loss: 0.663787  [   52/   88]
+per-ex loss: 0.353235  [   54/   88]
+per-ex loss: 0.459621  [   56/   88]
+per-ex loss: 0.431145  [   58/   88]
+per-ex loss: 0.471003  [   60/   88]
+per-ex loss: 0.431709  [   62/   88]
+per-ex loss: 0.621775  [   64/   88]
+per-ex loss: 0.650938  [   66/   88]
+per-ex loss: 0.402621  [   68/   88]
+per-ex loss: 0.502761  [   70/   88]
+per-ex loss: 0.467628  [   72/   88]
+per-ex loss: 0.394087  [   74/   88]
+per-ex loss: 0.567226  [   76/   88]
+per-ex loss: 0.446539  [   78/   88]
+per-ex loss: 0.681514  [   80/   88]
+per-ex loss: 0.607673  [   82/   88]
+per-ex loss: 0.506512  [   84/   88]
+per-ex loss: 0.422411  [   86/   88]
+per-ex loss: 0.492809  [   88/   88]
+Train Error: Avg loss: 0.48834988
+validation Error: 
+ Avg loss: 0.51251834 
+ F1: 0.512572 
+ Precision: 0.534424 
+ Recall: 0.492437
+ IoU: 0.344603
+
+test Error: 
+ Avg loss: 0.46392670 
+ F1: 0.568292 
+ Precision: 0.614199 
+ Recall: 0.528769
+ IoU: 0.396932
+
+We have finished training iteration 124
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_122_.pth
+per-ex loss: 0.643990  [    2/   88]
+per-ex loss: 0.456480  [    4/   88]
+per-ex loss: 0.430313  [    6/   88]
+per-ex loss: 0.621742  [    8/   88]
+per-ex loss: 0.631252  [   10/   88]
+per-ex loss: 0.443537  [   12/   88]
+per-ex loss: 0.549687  [   14/   88]
+per-ex loss: 0.570639  [   16/   88]
+per-ex loss: 0.503502  [   18/   88]
+per-ex loss: 0.557337  [   20/   88]
+per-ex loss: 0.576427  [   22/   88]
+per-ex loss: 0.390019  [   24/   88]
+per-ex loss: 0.484093  [   26/   88]
+per-ex loss: 0.398362  [   28/   88]
+per-ex loss: 0.552591  [   30/   88]
+per-ex loss: 0.682322  [   32/   88]
+per-ex loss: 0.343897  [   34/   88]
+per-ex loss: 0.667878  [   36/   88]
+per-ex loss: 0.386064  [   38/   88]
+per-ex loss: 0.556023  [   40/   88]
+per-ex loss: 0.563347  [   42/   88]
+per-ex loss: 0.508986  [   44/   88]
+per-ex loss: 0.395045  [   46/   88]
+per-ex loss: 0.463895  [   48/   88]
+per-ex loss: 0.484025  [   50/   88]
+per-ex loss: 0.433153  [   52/   88]
+per-ex loss: 0.446382  [   54/   88]
+per-ex loss: 0.506216  [   56/   88]
+per-ex loss: 0.377545  [   58/   88]
+per-ex loss: 0.603012  [   60/   88]
+per-ex loss: 0.417867  [   62/   88]
+per-ex loss: 0.530424  [   64/   88]
+per-ex loss: 0.401052  [   66/   88]
+per-ex loss: 0.503651  [   68/   88]
+per-ex loss: 0.400432  [   70/   88]
+per-ex loss: 0.423079  [   72/   88]
+per-ex loss: 0.507582  [   74/   88]
+per-ex loss: 0.458212  [   76/   88]
+per-ex loss: 0.514215  [   78/   88]
+per-ex loss: 0.626984  [   80/   88]
+per-ex loss: 0.451794  [   82/   88]
+per-ex loss: 0.478196  [   84/   88]
+per-ex loss: 0.443090  [   86/   88]
+per-ex loss: 0.533734  [   88/   88]
+Train Error: Avg loss: 0.49813803
+validation Error: 
+ Avg loss: 0.52015508 
+ F1: 0.508228 
+ Precision: 0.629835 
+ Recall: 0.425981
+ IoU: 0.340688
+
+test Error: 
+ Avg loss: 0.47292105 
+ F1: 0.566161 
+ Precision: 0.677755 
+ Recall: 0.486120
+ IoU: 0.394857
+
+We have finished training iteration 125
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_113_.pth
+per-ex loss: 0.433181  [    2/   88]
+per-ex loss: 0.402144  [    4/   88]
+per-ex loss: 0.472940  [    6/   88]
+per-ex loss: 0.436903  [    8/   88]
+per-ex loss: 0.490151  [   10/   88]
+per-ex loss: 0.574601  [   12/   88]
+per-ex loss: 0.432736  [   14/   88]
+per-ex loss: 0.662157  [   16/   88]
+per-ex loss: 0.546001  [   18/   88]
+per-ex loss: 0.579974  [   20/   88]
+per-ex loss: 0.435062  [   22/   88]
+per-ex loss: 0.579191  [   24/   88]
+per-ex loss: 0.410972  [   26/   88]
+per-ex loss: 0.522323  [   28/   88]
+per-ex loss: 0.496575  [   30/   88]
+per-ex loss: 0.593401  [   32/   88]
+per-ex loss: 0.519175  [   34/   88]
+per-ex loss: 0.473105  [   36/   88]
+per-ex loss: 0.501092  [   38/   88]
+per-ex loss: 0.431228  [   40/   88]
+per-ex loss: 0.390518  [   42/   88]
+per-ex loss: 0.486238  [   44/   88]
+per-ex loss: 0.562065  [   46/   88]
+per-ex loss: 0.417789  [   48/   88]
+per-ex loss: 0.622604  [   50/   88]
+per-ex loss: 0.555610  [   52/   88]
+per-ex loss: 0.431524  [   54/   88]
+per-ex loss: 0.407914  [   56/   88]
+per-ex loss: 0.374095  [   58/   88]
+per-ex loss: 0.429945  [   60/   88]
+per-ex loss: 0.447004  [   62/   88]
+per-ex loss: 0.458500  [   64/   88]
+per-ex loss: 0.629495  [   66/   88]
+per-ex loss: 0.478775  [   68/   88]
+per-ex loss: 0.367262  [   70/   88]
+per-ex loss: 0.540448  [   72/   88]
+per-ex loss: 0.512262  [   74/   88]
+per-ex loss: 0.513055  [   76/   88]
+per-ex loss: 0.439343  [   78/   88]
+per-ex loss: 0.374774  [   80/   88]
+per-ex loss: 0.451468  [   82/   88]
+per-ex loss: 0.447510  [   84/   88]
+per-ex loss: 0.513010  [   86/   88]
+per-ex loss: 0.583354  [   88/   88]
+Train Error: Avg loss: 0.48698809
+validation Error: 
+ Avg loss: 0.51270912 
+ F1: 0.512064 
+ Precision: 0.585379 
+ Recall: 0.455070
+ IoU: 0.344144
+
+test Error: 
+ Avg loss: 0.45675640 
+ F1: 0.580265 
+ Precision: 0.658092 
+ Recall: 0.518899
+ IoU: 0.408713
+
+We have finished training iteration 126
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_124_.pth
+per-ex loss: 0.606722  [    2/   88]
+per-ex loss: 0.532814  [    4/   88]
+per-ex loss: 0.517078  [    6/   88]
+per-ex loss: 0.386886  [    8/   88]
+per-ex loss: 0.384710  [   10/   88]
+per-ex loss: 0.490962  [   12/   88]
+per-ex loss: 0.387854  [   14/   88]
+per-ex loss: 0.517650  [   16/   88]
+per-ex loss: 0.484670  [   18/   88]
+per-ex loss: 0.525506  [   20/   88]
+per-ex loss: 0.519936  [   22/   88]
+per-ex loss: 0.429224  [   24/   88]
+per-ex loss: 0.671488  [   26/   88]
+per-ex loss: 0.545213  [   28/   88]
+per-ex loss: 0.466645  [   30/   88]
+per-ex loss: 0.480372  [   32/   88]
+per-ex loss: 0.524195  [   34/   88]
+per-ex loss: 0.474037  [   36/   88]
+per-ex loss: 0.452876  [   38/   88]
+per-ex loss: 0.440470  [   40/   88]
+per-ex loss: 0.616822  [   42/   88]
+per-ex loss: 0.431407  [   44/   88]
+per-ex loss: 0.420007  [   46/   88]
+per-ex loss: 0.611974  [   48/   88]
+per-ex loss: 0.434754  [   50/   88]
+per-ex loss: 0.511877  [   52/   88]
+per-ex loss: 0.672689  [   54/   88]
+per-ex loss: 0.478446  [   56/   88]
+per-ex loss: 0.588832  [   58/   88]
+per-ex loss: 0.643174  [   60/   88]
+per-ex loss: 0.402947  [   62/   88]
+per-ex loss: 0.443578  [   64/   88]
+per-ex loss: 0.386479  [   66/   88]
+per-ex loss: 0.494001  [   68/   88]
+per-ex loss: 0.439682  [   70/   88]
+per-ex loss: 0.569634  [   72/   88]
+per-ex loss: 0.432129  [   74/   88]
+per-ex loss: 0.375778  [   76/   88]
+per-ex loss: 0.403199  [   78/   88]
+per-ex loss: 0.386358  [   80/   88]
+per-ex loss: 0.396326  [   82/   88]
+per-ex loss: 0.547549  [   84/   88]
+per-ex loss: 0.440335  [   86/   88]
+per-ex loss: 0.465754  [   88/   88]
+Train Error: Avg loss: 0.48711449
+validation Error: 
+ Avg loss: 0.51321240 
+ F1: 0.515192 
+ Precision: 0.577927 
+ Recall: 0.464744
+ IoU: 0.346976
+
+test Error: 
+ Avg loss: 0.46592697 
+ F1: 0.574093 
+ Precision: 0.639088 
+ Recall: 0.521098
+ IoU: 0.402616
+
+We have finished training iteration 127
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_125_.pth
+per-ex loss: 0.464880  [    2/   88]
+per-ex loss: 0.431646  [    4/   88]
+per-ex loss: 0.443514  [    6/   88]
+per-ex loss: 0.385179  [    8/   88]
+per-ex loss: 0.453473  [   10/   88]
+per-ex loss: 0.477345  [   12/   88]
+per-ex loss: 0.522445  [   14/   88]
+per-ex loss: 0.590620  [   16/   88]
+per-ex loss: 0.382008  [   18/   88]
+per-ex loss: 0.384392  [   20/   88]
+per-ex loss: 0.463301  [   22/   88]
+per-ex loss: 0.657928  [   24/   88]
+per-ex loss: 0.378093  [   26/   88]
+per-ex loss: 0.464546  [   28/   88]
+per-ex loss: 0.365059  [   30/   88]
+per-ex loss: 0.469894  [   32/   88]
+per-ex loss: 0.451252  [   34/   88]
+per-ex loss: 0.521204  [   36/   88]
+per-ex loss: 0.461406  [   38/   88]
+per-ex loss: 0.416772  [   40/   88]
+per-ex loss: 0.593217  [   42/   88]
+per-ex loss: 0.421608  [   44/   88]
+per-ex loss: 0.373967  [   46/   88]
+per-ex loss: 0.531417  [   48/   88]
+per-ex loss: 0.475214  [   50/   88]
+per-ex loss: 0.493327  [   52/   88]
+per-ex loss: 0.573033  [   54/   88]
+per-ex loss: 0.518421  [   56/   88]
+per-ex loss: 0.475456  [   58/   88]
+per-ex loss: 0.395348  [   60/   88]
+per-ex loss: 0.626183  [   62/   88]
+per-ex loss: 0.428243  [   64/   88]
+per-ex loss: 0.458162  [   66/   88]
+per-ex loss: 0.574172  [   68/   88]
+per-ex loss: 0.413204  [   70/   88]
+per-ex loss: 0.479040  [   72/   88]
+per-ex loss: 0.496590  [   74/   88]
+per-ex loss: 0.563894  [   76/   88]
+per-ex loss: 0.429336  [   78/   88]
+per-ex loss: 0.637233  [   80/   88]
+per-ex loss: 0.498577  [   82/   88]
+per-ex loss: 0.522992  [   84/   88]
+per-ex loss: 0.470744  [   86/   88]
+per-ex loss: 0.425647  [   88/   88]
+Train Error: Avg loss: 0.47863603
+validation Error: 
+ Avg loss: 0.53917849 
+ F1: 0.490150 
+ Precision: 0.550264 
+ Recall: 0.441877
+ IoU: 0.324635
+
+test Error: 
+ Avg loss: 0.48978309 
+ F1: 0.547690 
+ Precision: 0.630118 
+ Recall: 0.484332
+ IoU: 0.377116
+
+We have finished training iteration 128
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_126_.pth
+per-ex loss: 0.423330  [    2/   88]
+per-ex loss: 0.402780  [    4/   88]
+per-ex loss: 0.462607  [    6/   88]
+per-ex loss: 0.452238  [    8/   88]
+per-ex loss: 0.452032  [   10/   88]
+per-ex loss: 0.506693  [   12/   88]
+per-ex loss: 0.418896  [   14/   88]
+per-ex loss: 0.392950  [   16/   88]
+per-ex loss: 0.473470  [   18/   88]
+per-ex loss: 0.576268  [   20/   88]
+per-ex loss: 0.389846  [   22/   88]
+per-ex loss: 0.573721  [   24/   88]
+per-ex loss: 0.435157  [   26/   88]
+per-ex loss: 0.372924  [   28/   88]
+per-ex loss: 0.504343  [   30/   88]
+per-ex loss: 0.499629  [   32/   88]
+per-ex loss: 0.544447  [   34/   88]
+per-ex loss: 0.533728  [   36/   88]
+per-ex loss: 0.476259  [   38/   88]
+per-ex loss: 0.529467  [   40/   88]
+per-ex loss: 0.413870  [   42/   88]
+per-ex loss: 0.570167  [   44/   88]
+per-ex loss: 0.627269  [   46/   88]
+per-ex loss: 0.472156  [   48/   88]
+per-ex loss: 0.619158  [   50/   88]
+per-ex loss: 0.651272  [   52/   88]
+per-ex loss: 0.439962  [   54/   88]
+per-ex loss: 0.588109  [   56/   88]
+per-ex loss: 0.463360  [   58/   88]
+per-ex loss: 0.455243  [   60/   88]
+per-ex loss: 0.415201  [   62/   88]
+per-ex loss: 0.649535  [   64/   88]
+per-ex loss: 0.448060  [   66/   88]
+per-ex loss: 0.393701  [   68/   88]
+per-ex loss: 0.515417  [   70/   88]
+per-ex loss: 0.508713  [   72/   88]
+per-ex loss: 0.512491  [   74/   88]
+per-ex loss: 0.376729  [   76/   88]
+per-ex loss: 0.379981  [   78/   88]
+per-ex loss: 0.700738  [   80/   88]
+per-ex loss: 0.429077  [   82/   88]
+per-ex loss: 0.493112  [   84/   88]
+per-ex loss: 0.404229  [   86/   88]
+per-ex loss: 0.574708  [   88/   88]
+Train Error: Avg loss: 0.48916007
+validation Error: 
+ Avg loss: 0.52075396 
+ F1: 0.511218 
+ Precision: 0.570622 
+ Recall: 0.463017
+ IoU: 0.343380
+
+test Error: 
+ Avg loss: 0.46385262 
+ F1: 0.576399 
+ Precision: 0.646081 
+ Recall: 0.520285
+ IoU: 0.404888
+
+We have finished training iteration 129
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_127_.pth
+per-ex loss: 0.391881  [    2/   88]
+per-ex loss: 0.502458  [    4/   88]
+per-ex loss: 0.575230  [    6/   88]
+per-ex loss: 0.570699  [    8/   88]
+per-ex loss: 0.483061  [   10/   88]
+per-ex loss: 0.437832  [   12/   88]
+per-ex loss: 0.451333  [   14/   88]
+per-ex loss: 0.630517  [   16/   88]
+per-ex loss: 0.497272  [   18/   88]
+per-ex loss: 0.691460  [   20/   88]
+per-ex loss: 0.489350  [   22/   88]
+per-ex loss: 0.483109  [   24/   88]
+per-ex loss: 0.463340  [   26/   88]
+per-ex loss: 0.490282  [   28/   88]
+per-ex loss: 0.362915  [   30/   88]
+per-ex loss: 0.406819  [   32/   88]
+per-ex loss: 0.511558  [   34/   88]
+per-ex loss: 0.386759  [   36/   88]
+per-ex loss: 0.465457  [   38/   88]
+per-ex loss: 0.517951  [   40/   88]
+per-ex loss: 0.406053  [   42/   88]
+per-ex loss: 0.467266  [   44/   88]
+per-ex loss: 0.484035  [   46/   88]
+per-ex loss: 0.467590  [   48/   88]
+per-ex loss: 0.381395  [   50/   88]
+per-ex loss: 0.471279  [   52/   88]
+per-ex loss: 0.496815  [   54/   88]
+per-ex loss: 0.375851  [   56/   88]
+per-ex loss: 0.416638  [   58/   88]
+per-ex loss: 0.561649  [   60/   88]
+per-ex loss: 0.425653  [   62/   88]
+per-ex loss: 0.464370  [   64/   88]
+per-ex loss: 0.491170  [   66/   88]
+per-ex loss: 0.410282  [   68/   88]
+per-ex loss: 0.404506  [   70/   88]
+per-ex loss: 0.567728  [   72/   88]
+per-ex loss: 0.506504  [   74/   88]
+per-ex loss: 0.577555  [   76/   88]
+per-ex loss: 0.557792  [   78/   88]
+per-ex loss: 0.427379  [   80/   88]
+per-ex loss: 0.408051  [   82/   88]
+per-ex loss: 0.596388  [   84/   88]
+per-ex loss: 0.618829  [   86/   88]
+per-ex loss: 0.443137  [   88/   88]
+Train Error: Avg loss: 0.48266362
+validation Error: 
+ Avg loss: 0.51171640 
+ F1: 0.504716 
+ Precision: 0.530675 
+ Recall: 0.481178
+ IoU: 0.337538
+
+test Error: 
+ Avg loss: 0.47004170 
+ F1: 0.566321 
+ Precision: 0.602060 
+ Recall: 0.534587
+ IoU: 0.395013
+
+We have finished training iteration 130
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_128_.pth
+per-ex loss: 0.418721  [    2/   88]
+per-ex loss: 0.542379  [    4/   88]
+per-ex loss: 0.495312  [    6/   88]
+per-ex loss: 0.468442  [    8/   88]
+per-ex loss: 0.383942  [   10/   88]
+per-ex loss: 0.578763  [   12/   88]
+per-ex loss: 0.436359  [   14/   88]
+per-ex loss: 0.370724  [   16/   88]
+per-ex loss: 0.408128  [   18/   88]
+per-ex loss: 0.431623  [   20/   88]
+per-ex loss: 0.478673  [   22/   88]
+per-ex loss: 0.559730  [   24/   88]
+per-ex loss: 0.582666  [   26/   88]
+per-ex loss: 0.415403  [   28/   88]
+per-ex loss: 0.418935  [   30/   88]
+per-ex loss: 0.412335  [   32/   88]
+per-ex loss: 0.429984  [   34/   88]
+per-ex loss: 0.526917  [   36/   88]
+per-ex loss: 0.577526  [   38/   88]
+per-ex loss: 0.445296  [   40/   88]
+per-ex loss: 0.636705  [   42/   88]
+per-ex loss: 0.392221  [   44/   88]
+per-ex loss: 0.600436  [   46/   88]
+per-ex loss: 0.413357  [   48/   88]
+per-ex loss: 0.369043  [   50/   88]
+per-ex loss: 0.560848  [   52/   88]
+per-ex loss: 0.461223  [   54/   88]
+per-ex loss: 0.394413  [   56/   88]
+per-ex loss: 0.432088  [   58/   88]
+per-ex loss: 0.466814  [   60/   88]
+per-ex loss: 0.381216  [   62/   88]
+per-ex loss: 0.467668  [   64/   88]
+per-ex loss: 0.505284  [   66/   88]
+per-ex loss: 0.436032  [   68/   88]
+per-ex loss: 0.503684  [   70/   88]
+per-ex loss: 0.505657  [   72/   88]
+per-ex loss: 0.486433  [   74/   88]
+per-ex loss: 0.514027  [   76/   88]
+per-ex loss: 0.592727  [   78/   88]
+per-ex loss: 0.470242  [   80/   88]
+per-ex loss: 0.552354  [   82/   88]
+per-ex loss: 0.625525  [   84/   88]
+per-ex loss: 0.397439  [   86/   88]
+per-ex loss: 0.517751  [   88/   88]
+Train Error: Avg loss: 0.47875098
+validation Error: 
+ Avg loss: 0.52315585 
+ F1: 0.506210 
+ Precision: 0.495484 
+ Recall: 0.517409
+ IoU: 0.338876
+
+test Error: 
+ Avg loss: 0.45149176 
+ F1: 0.581782 
+ Precision: 0.571484 
+ Recall: 0.592458
+ IoU: 0.410221
+
+We have finished training iteration 131
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_129_.pth
+per-ex loss: 0.685610  [    2/   88]
+per-ex loss: 0.422140  [    4/   88]
+per-ex loss: 0.399974  [    6/   88]
+per-ex loss: 0.438008  [    8/   88]
+per-ex loss: 0.439041  [   10/   88]
+per-ex loss: 0.353545  [   12/   88]
+per-ex loss: 0.542213  [   14/   88]
+per-ex loss: 0.439255  [   16/   88]
+per-ex loss: 0.546533  [   18/   88]
+per-ex loss: 0.360462  [   20/   88]
+per-ex loss: 0.583055  [   22/   88]
+per-ex loss: 0.564651  [   24/   88]
+per-ex loss: 0.402068  [   26/   88]
+per-ex loss: 0.401401  [   28/   88]
+per-ex loss: 0.619406  [   30/   88]
+per-ex loss: 0.506550  [   32/   88]
+per-ex loss: 0.530614  [   34/   88]
+per-ex loss: 0.505445  [   36/   88]
+per-ex loss: 0.583692  [   38/   88]
+per-ex loss: 0.460040  [   40/   88]
+per-ex loss: 0.486907  [   42/   88]
+per-ex loss: 0.479613  [   44/   88]
+per-ex loss: 0.378486  [   46/   88]
+per-ex loss: 0.536525  [   48/   88]
+per-ex loss: 0.561281  [   50/   88]
+per-ex loss: 0.414387  [   52/   88]
+per-ex loss: 0.373262  [   54/   88]
+per-ex loss: 0.436689  [   56/   88]
+per-ex loss: 0.618235  [   58/   88]
+per-ex loss: 0.575927  [   60/   88]
+per-ex loss: 0.469638  [   62/   88]
+per-ex loss: 0.409147  [   64/   88]
+per-ex loss: 0.476807  [   66/   88]
+per-ex loss: 0.378850  [   68/   88]
+per-ex loss: 0.681943  [   70/   88]
+per-ex loss: 0.404653  [   72/   88]
+per-ex loss: 0.499603  [   74/   88]
+per-ex loss: 0.516003  [   76/   88]
+per-ex loss: 0.399884  [   78/   88]
+per-ex loss: 0.572004  [   80/   88]
+per-ex loss: 0.617353  [   82/   88]
+per-ex loss: 0.424772  [   84/   88]
+per-ex loss: 0.504131  [   86/   88]
+per-ex loss: 0.585087  [   88/   88]
+Train Error: Avg loss: 0.49056568
+validation Error: 
+ Avg loss: 0.50913273 
+ F1: 0.510990 
+ Precision: 0.550107 
+ Recall: 0.477066
+ IoU: 0.343174
+
+test Error: 
+ Avg loss: 0.45938135 
+ F1: 0.575671 
+ Precision: 0.627235 
+ Recall: 0.531941
+ IoU: 0.404170
+
+We have finished training iteration 132
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_130_.pth
+per-ex loss: 0.576284  [    2/   88]
+per-ex loss: 0.415420  [    4/   88]
+per-ex loss: 0.642679  [    6/   88]
+per-ex loss: 0.449640  [    8/   88]
+per-ex loss: 0.454877  [   10/   88]
+per-ex loss: 0.498658  [   12/   88]
+per-ex loss: 0.466367  [   14/   88]
+per-ex loss: 0.593744  [   16/   88]
+per-ex loss: 0.491450  [   18/   88]
+per-ex loss: 0.417524  [   20/   88]
+per-ex loss: 0.439893  [   22/   88]
+per-ex loss: 0.452796  [   24/   88]
+per-ex loss: 0.481297  [   26/   88]
+per-ex loss: 0.578808  [   28/   88]
+per-ex loss: 0.535072  [   30/   88]
+per-ex loss: 0.588613  [   32/   88]
+per-ex loss: 0.426900  [   34/   88]
+per-ex loss: 0.498814  [   36/   88]
+per-ex loss: 0.465293  [   38/   88]
+per-ex loss: 0.518695  [   40/   88]
+per-ex loss: 0.413793  [   42/   88]
+per-ex loss: 0.442600  [   44/   88]
+per-ex loss: 0.407357  [   46/   88]
+per-ex loss: 0.420115  [   48/   88]
+per-ex loss: 0.391595  [   50/   88]
+per-ex loss: 0.385129  [   52/   88]
+per-ex loss: 0.586203  [   54/   88]
+per-ex loss: 0.342651  [   56/   88]
+per-ex loss: 0.649598  [   58/   88]
+per-ex loss: 0.503850  [   60/   88]
+per-ex loss: 0.548581  [   62/   88]
+per-ex loss: 0.444110  [   64/   88]
+per-ex loss: 0.404717  [   66/   88]
+per-ex loss: 0.383439  [   68/   88]
+per-ex loss: 0.557402  [   70/   88]
+per-ex loss: 0.426759  [   72/   88]
+per-ex loss: 0.519870  [   74/   88]
+per-ex loss: 0.501055  [   76/   88]
+per-ex loss: 0.529910  [   78/   88]
+per-ex loss: 0.619216  [   80/   88]
+per-ex loss: 0.459804  [   82/   88]
+per-ex loss: 0.622094  [   84/   88]
+per-ex loss: 0.436348  [   86/   88]
+per-ex loss: 0.449023  [   88/   88]
+Train Error: Avg loss: 0.48722823
+validation Error: 
+ Avg loss: 0.52912503 
+ F1: 0.502076 
+ Precision: 0.476947 
+ Recall: 0.530000
+ IoU: 0.335181
+
+test Error: 
+ Avg loss: 0.45705510 
+ F1: 0.577522 
+ Precision: 0.554401 
+ Recall: 0.602654
+ IoU: 0.405997
+
+We have finished training iteration 133
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_131_.pth
+per-ex loss: 0.382851  [    2/   88]
+per-ex loss: 0.610169  [    4/   88]
+per-ex loss: 0.416118  [    6/   88]
+per-ex loss: 0.372217  [    8/   88]
+per-ex loss: 0.419838  [   10/   88]
+per-ex loss: 0.384381  [   12/   88]
+per-ex loss: 0.447645  [   14/   88]
+per-ex loss: 0.404377  [   16/   88]
+per-ex loss: 0.673237  [   18/   88]
+per-ex loss: 0.354531  [   20/   88]
+per-ex loss: 0.448329  [   22/   88]
+per-ex loss: 0.492950  [   24/   88]
+per-ex loss: 0.492865  [   26/   88]
+per-ex loss: 0.514811  [   28/   88]
+per-ex loss: 0.493463  [   30/   88]
+per-ex loss: 0.586686  [   32/   88]
+per-ex loss: 0.642962  [   34/   88]
+per-ex loss: 0.484362  [   36/   88]
+per-ex loss: 0.554926  [   38/   88]
+per-ex loss: 0.446373  [   40/   88]
+per-ex loss: 0.586977  [   42/   88]
+per-ex loss: 0.481107  [   44/   88]
+per-ex loss: 0.435885  [   46/   88]
+per-ex loss: 0.516395  [   48/   88]
+per-ex loss: 0.540553  [   50/   88]
+per-ex loss: 0.427782  [   52/   88]
+per-ex loss: 0.455512  [   54/   88]
+per-ex loss: 0.487705  [   56/   88]
+per-ex loss: 0.420768  [   58/   88]
+per-ex loss: 0.463754  [   60/   88]
+per-ex loss: 0.432328  [   62/   88]
+per-ex loss: 0.415903  [   64/   88]
+per-ex loss: 0.663639  [   66/   88]
+per-ex loss: 0.475892  [   68/   88]
+per-ex loss: 0.586070  [   70/   88]
+per-ex loss: 0.485156  [   72/   88]
+per-ex loss: 0.500239  [   74/   88]
+per-ex loss: 0.612607  [   76/   88]
+per-ex loss: 0.384211  [   78/   88]
+per-ex loss: 0.557466  [   80/   88]
+per-ex loss: 0.494375  [   82/   88]
+per-ex loss: 0.446373  [   84/   88]
+per-ex loss: 0.574183  [   86/   88]
+per-ex loss: 0.403777  [   88/   88]
+Train Error: Avg loss: 0.48799425
+validation Error: 
+ Avg loss: 0.52035981 
+ F1: 0.505458 
+ Precision: 0.545871 
+ Recall: 0.470617
+ IoU: 0.338203
+
+test Error: 
+ Avg loss: 0.47337453 
+ F1: 0.561980 
+ Precision: 0.617882 
+ Recall: 0.515354
+ IoU: 0.390801
+
+We have finished training iteration 134
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_117_.pth
+per-ex loss: 0.401052  [    2/   88]
+per-ex loss: 0.454814  [    4/   88]
+per-ex loss: 0.455534  [    6/   88]
+per-ex loss: 0.423291  [    8/   88]
+per-ex loss: 0.473972  [   10/   88]
+per-ex loss: 0.549896  [   12/   88]
+per-ex loss: 0.467954  [   14/   88]
+per-ex loss: 0.394305  [   16/   88]
+per-ex loss: 0.486077  [   18/   88]
+per-ex loss: 0.404935  [   20/   88]
+per-ex loss: 0.598639  [   22/   88]
+per-ex loss: 0.464101  [   24/   88]
+per-ex loss: 0.596657  [   26/   88]
+per-ex loss: 0.389192  [   28/   88]
+per-ex loss: 0.480563  [   30/   88]
+per-ex loss: 0.482875  [   32/   88]
+per-ex loss: 0.559633  [   34/   88]
+per-ex loss: 0.590140  [   36/   88]
+per-ex loss: 0.464813  [   38/   88]
+per-ex loss: 0.389369  [   40/   88]
+per-ex loss: 0.517538  [   42/   88]
+per-ex loss: 0.409344  [   44/   88]
+per-ex loss: 0.439224  [   46/   88]
+per-ex loss: 0.414461  [   48/   88]
+per-ex loss: 0.468658  [   50/   88]
+per-ex loss: 0.510136  [   52/   88]
+per-ex loss: 0.674285  [   54/   88]
+per-ex loss: 0.468690  [   56/   88]
+per-ex loss: 0.547165  [   58/   88]
+per-ex loss: 0.390610  [   60/   88]
+per-ex loss: 0.522465  [   62/   88]
+per-ex loss: 0.394822  [   64/   88]
+per-ex loss: 0.598508  [   66/   88]
+per-ex loss: 0.503611  [   68/   88]
+per-ex loss: 0.603112  [   70/   88]
+per-ex loss: 0.522039  [   72/   88]
+per-ex loss: 0.488837  [   74/   88]
+per-ex loss: 0.383825  [   76/   88]
+per-ex loss: 0.408576  [   78/   88]
+per-ex loss: 0.435258  [   80/   88]
+per-ex loss: 0.479906  [   82/   88]
+per-ex loss: 0.394257  [   84/   88]
+per-ex loss: 0.486857  [   86/   88]
+per-ex loss: 0.419869  [   88/   88]
+Train Error: Avg loss: 0.47749692
+validation Error: 
+ Avg loss: 0.51123040 
+ F1: 0.503301 
+ Precision: 0.551465 
+ Recall: 0.462874
+ IoU: 0.336274
+
+test Error: 
+ Avg loss: 0.46571516 
+ F1: 0.571914 
+ Precision: 0.646111 
+ Recall: 0.513002
+ IoU: 0.400476
+
+We have finished training iteration 135
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_133_.pth
+per-ex loss: 0.569760  [    2/   88]
+per-ex loss: 0.432168  [    4/   88]
+per-ex loss: 0.527000  [    6/   88]
+per-ex loss: 0.369595  [    8/   88]
+per-ex loss: 0.573807  [   10/   88]
+per-ex loss: 0.425227  [   12/   88]
+per-ex loss: 0.583595  [   14/   88]
+per-ex loss: 0.419067  [   16/   88]
+per-ex loss: 0.417980  [   18/   88]
+per-ex loss: 0.594564  [   20/   88]
+per-ex loss: 0.416013  [   22/   88]
+per-ex loss: 0.386254  [   24/   88]
+per-ex loss: 0.506364  [   26/   88]
+per-ex loss: 0.443410  [   28/   88]
+per-ex loss: 0.444468  [   30/   88]
+per-ex loss: 0.678771  [   32/   88]
+per-ex loss: 0.507676  [   34/   88]
+per-ex loss: 0.372416  [   36/   88]
+per-ex loss: 0.456752  [   38/   88]
+per-ex loss: 0.408836  [   40/   88]
+per-ex loss: 0.517207  [   42/   88]
+per-ex loss: 0.542978  [   44/   88]
+per-ex loss: 0.673435  [   46/   88]
+per-ex loss: 0.594165  [   48/   88]
+per-ex loss: 0.397386  [   50/   88]
+per-ex loss: 0.595486  [   52/   88]
+per-ex loss: 0.378910  [   54/   88]
+per-ex loss: 0.441901  [   56/   88]
+per-ex loss: 0.450434  [   58/   88]
+per-ex loss: 0.381738  [   60/   88]
+per-ex loss: 0.485907  [   62/   88]
+per-ex loss: 0.482180  [   64/   88]
+per-ex loss: 0.403738  [   66/   88]
+per-ex loss: 0.562794  [   68/   88]
+per-ex loss: 0.509924  [   70/   88]
+per-ex loss: 0.627480  [   72/   88]
+per-ex loss: 0.430081  [   74/   88]
+per-ex loss: 0.427179  [   76/   88]
+per-ex loss: 0.496056  [   78/   88]
+per-ex loss: 0.471259  [   80/   88]
+per-ex loss: 0.363262  [   82/   88]
+per-ex loss: 0.373371  [   84/   88]
+per-ex loss: 0.509614  [   86/   88]
+per-ex loss: 0.457189  [   88/   88]
+Train Error: Avg loss: 0.47971357
+validation Error: 
+ Avg loss: 0.51422777 
+ F1: 0.498461 
+ Precision: 0.497023 
+ Recall: 0.499907
+ IoU: 0.331967
+
+test Error: 
+ Avg loss: 0.46095775 
+ F1: 0.574516 
+ Precision: 0.615074 
+ Recall: 0.538976
+ IoU: 0.403032
+
+We have finished training iteration 136
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_134_.pth
+per-ex loss: 0.460514  [    2/   88]
+per-ex loss: 0.448600  [    4/   88]
+per-ex loss: 0.466557  [    6/   88]
+per-ex loss: 0.599664  [    8/   88]
+per-ex loss: 0.622079  [   10/   88]
+per-ex loss: 0.355259  [   12/   88]
+per-ex loss: 0.485862  [   14/   88]
+per-ex loss: 0.543003  [   16/   88]
+per-ex loss: 0.453975  [   18/   88]
+per-ex loss: 0.411341  [   20/   88]
+per-ex loss: 0.424379  [   22/   88]
+per-ex loss: 0.489314  [   24/   88]
+per-ex loss: 0.553254  [   26/   88]
+per-ex loss: 0.541907  [   28/   88]
+per-ex loss: 0.474660  [   30/   88]
+per-ex loss: 0.654568  [   32/   88]
+per-ex loss: 0.472309  [   34/   88]
+per-ex loss: 0.492069  [   36/   88]
+per-ex loss: 0.464225  [   38/   88]
+per-ex loss: 0.504238  [   40/   88]
+per-ex loss: 0.428539  [   42/   88]
+per-ex loss: 0.436956  [   44/   88]
+per-ex loss: 0.565091  [   46/   88]
+per-ex loss: 0.448908  [   48/   88]
+per-ex loss: 0.551393  [   50/   88]
+per-ex loss: 0.373628  [   52/   88]
+per-ex loss: 0.675627  [   54/   88]
+per-ex loss: 0.543919  [   56/   88]
+per-ex loss: 0.430308  [   58/   88]
+per-ex loss: 0.470514  [   60/   88]
+per-ex loss: 0.387920  [   62/   88]
+per-ex loss: 0.386566  [   64/   88]
+per-ex loss: 0.347239  [   66/   88]
+per-ex loss: 0.410004  [   68/   88]
+per-ex loss: 0.450294  [   70/   88]
+per-ex loss: 0.534139  [   72/   88]
+per-ex loss: 0.584715  [   74/   88]
+per-ex loss: 0.376031  [   76/   88]
+per-ex loss: 0.451616  [   78/   88]
+per-ex loss: 0.606117  [   80/   88]
+per-ex loss: 0.373625  [   82/   88]
+per-ex loss: 0.388011  [   84/   88]
+per-ex loss: 0.528480  [   86/   88]
+per-ex loss: 0.666813  [   88/   88]
+Train Error: Avg loss: 0.48486885
+validation Error: 
+ Avg loss: 0.52290879 
+ F1: 0.502016 
+ Precision: 0.516093 
+ Recall: 0.488686
+ IoU: 0.335127
+
+test Error: 
+ Avg loss: 0.47423293 
+ F1: 0.568284 
+ Precision: 0.590211 
+ Recall: 0.547927
+ IoU: 0.396925
+
+We have finished training iteration 137
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_135_.pth
+per-ex loss: 0.449671  [    2/   88]
+per-ex loss: 0.405023  [    4/   88]
+per-ex loss: 0.470668  [    6/   88]
+per-ex loss: 0.399815  [    8/   88]
+per-ex loss: 0.560490  [   10/   88]
+per-ex loss: 0.605588  [   12/   88]
+per-ex loss: 0.420344  [   14/   88]
+per-ex loss: 0.410547  [   16/   88]
+per-ex loss: 0.447521  [   18/   88]
+per-ex loss: 0.441402  [   20/   88]
+per-ex loss: 0.427999  [   22/   88]
+per-ex loss: 0.538960  [   24/   88]
+per-ex loss: 0.497922  [   26/   88]
+per-ex loss: 0.340918  [   28/   88]
+per-ex loss: 0.379029  [   30/   88]
+per-ex loss: 0.378350  [   32/   88]
+per-ex loss: 0.430955  [   34/   88]
+per-ex loss: 0.577377  [   36/   88]
+per-ex loss: 0.638487  [   38/   88]
+per-ex loss: 0.438507  [   40/   88]
+per-ex loss: 0.385070  [   42/   88]
+per-ex loss: 0.417166  [   44/   88]
+per-ex loss: 0.398947  [   46/   88]
+per-ex loss: 0.470945  [   48/   88]
+per-ex loss: 0.427031  [   50/   88]
+per-ex loss: 0.585157  [   52/   88]
+per-ex loss: 0.485163  [   54/   88]
+per-ex loss: 0.483789  [   56/   88]
+per-ex loss: 0.355663  [   58/   88]
+per-ex loss: 0.347755  [   60/   88]
+per-ex loss: 0.502836  [   62/   88]
+per-ex loss: 0.588505  [   64/   88]
+per-ex loss: 0.650598  [   66/   88]
+per-ex loss: 0.403473  [   68/   88]
+per-ex loss: 0.586344  [   70/   88]
+per-ex loss: 0.487173  [   72/   88]
+per-ex loss: 0.620580  [   74/   88]
+per-ex loss: 0.656401  [   76/   88]
+per-ex loss: 0.425814  [   78/   88]
+per-ex loss: 0.396665  [   80/   88]
+per-ex loss: 0.623141  [   82/   88]
+per-ex loss: 0.580932  [   84/   88]
+per-ex loss: 0.467199  [   86/   88]
+per-ex loss: 0.631016  [   88/   88]
+Train Error: Avg loss: 0.48265766
+validation Error: 
+ Avg loss: 0.52213213 
+ F1: 0.510738 
+ Precision: 0.536048 
+ Recall: 0.487711
+ IoU: 0.342947
+
+test Error: 
+ Avg loss: 0.45613425 
+ F1: 0.579589 
+ Precision: 0.625938 
+ Recall: 0.539631
+ IoU: 0.408043
+
+We have finished training iteration 138
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_136_.pth
+per-ex loss: 0.400391  [    2/   88]
+per-ex loss: 0.392189  [    4/   88]
+per-ex loss: 0.424899  [    6/   88]
+per-ex loss: 0.594808  [    8/   88]
+per-ex loss: 0.505211  [   10/   88]
+per-ex loss: 0.494142  [   12/   88]
+per-ex loss: 0.379668  [   14/   88]
+per-ex loss: 0.406523  [   16/   88]
+per-ex loss: 0.593117  [   18/   88]
+per-ex loss: 0.604348  [   20/   88]
+per-ex loss: 0.457708  [   22/   88]
+per-ex loss: 0.417618  [   24/   88]
+per-ex loss: 0.498930  [   26/   88]
+per-ex loss: 0.506898  [   28/   88]
+per-ex loss: 0.459976  [   30/   88]
+per-ex loss: 0.397391  [   32/   88]
+per-ex loss: 0.386843  [   34/   88]
+per-ex loss: 0.518837  [   36/   88]
+per-ex loss: 0.444269  [   38/   88]
+per-ex loss: 0.399137  [   40/   88]
+per-ex loss: 0.638018  [   42/   88]
+per-ex loss: 0.362999  [   44/   88]
+per-ex loss: 0.528030  [   46/   88]
+per-ex loss: 0.409710  [   48/   88]
+per-ex loss: 0.362839  [   50/   88]
+per-ex loss: 0.358822  [   52/   88]
+per-ex loss: 0.360243  [   54/   88]
+per-ex loss: 0.504956  [   56/   88]
+per-ex loss: 0.495543  [   58/   88]
+per-ex loss: 0.455371  [   60/   88]
+per-ex loss: 0.482090  [   62/   88]
+per-ex loss: 0.667221  [   64/   88]
+per-ex loss: 0.580908  [   66/   88]
+per-ex loss: 0.427029  [   68/   88]
+per-ex loss: 0.532829  [   70/   88]
+per-ex loss: 0.455708  [   72/   88]
+per-ex loss: 0.430942  [   74/   88]
+per-ex loss: 0.607745  [   76/   88]
+per-ex loss: 0.599391  [   78/   88]
+per-ex loss: 0.566370  [   80/   88]
+per-ex loss: 0.437199  [   82/   88]
+per-ex loss: 0.554282  [   84/   88]
+per-ex loss: 0.565149  [   86/   88]
+per-ex loss: 0.472979  [   88/   88]
+Train Error: Avg loss: 0.48043808
+validation Error: 
+ Avg loss: 0.50955190 
+ F1: 0.515072 
+ Precision: 0.568834 
+ Recall: 0.470595
+ IoU: 0.346867
+
+test Error: 
+ Avg loss: 0.46590039 
+ F1: 0.568567 
+ Precision: 0.628417 
+ Recall: 0.519126
+ IoU: 0.397202
+
+We have finished training iteration 139
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_137_.pth
+per-ex loss: 0.383955  [    2/   88]
+per-ex loss: 0.559616  [    4/   88]
+per-ex loss: 0.524581  [    6/   88]
+per-ex loss: 0.530523  [    8/   88]
+per-ex loss: 0.614214  [   10/   88]
+per-ex loss: 0.471533  [   12/   88]
+per-ex loss: 0.462154  [   14/   88]
+per-ex loss: 0.373356  [   16/   88]
+per-ex loss: 0.446853  [   18/   88]
+per-ex loss: 0.568199  [   20/   88]
+per-ex loss: 0.414391  [   22/   88]
+per-ex loss: 0.466082  [   24/   88]
+per-ex loss: 0.462613  [   26/   88]
+per-ex loss: 0.456275  [   28/   88]
+per-ex loss: 0.603942  [   30/   88]
+per-ex loss: 0.617298  [   32/   88]
+per-ex loss: 0.383615  [   34/   88]
+per-ex loss: 0.492280  [   36/   88]
+per-ex loss: 0.411040  [   38/   88]
+per-ex loss: 0.518266  [   40/   88]
+per-ex loss: 0.678446  [   42/   88]
+per-ex loss: 0.429703  [   44/   88]
+per-ex loss: 0.440990  [   46/   88]
+per-ex loss: 0.430011  [   48/   88]
+per-ex loss: 0.480856  [   50/   88]
+per-ex loss: 0.461563  [   52/   88]
+per-ex loss: 0.478288  [   54/   88]
+per-ex loss: 0.440952  [   56/   88]
+per-ex loss: 0.375174  [   58/   88]
+per-ex loss: 0.531865  [   60/   88]
+per-ex loss: 0.539106  [   62/   88]
+per-ex loss: 0.416270  [   64/   88]
+per-ex loss: 0.436770  [   66/   88]
+per-ex loss: 0.427780  [   68/   88]
+per-ex loss: 0.545000  [   70/   88]
+per-ex loss: 0.651723  [   72/   88]
+per-ex loss: 0.360379  [   74/   88]
+per-ex loss: 0.557172  [   76/   88]
+per-ex loss: 0.457090  [   78/   88]
+per-ex loss: 0.435860  [   80/   88]
+per-ex loss: 0.558123  [   82/   88]
+per-ex loss: 0.424619  [   84/   88]
+per-ex loss: 0.580252  [   86/   88]
+per-ex loss: 0.516804  [   88/   88]
+Train Error: Avg loss: 0.48671783
+validation Error: 
+ Avg loss: 0.51876072 
+ F1: 0.513406 
+ Precision: 0.530624 
+ Recall: 0.497269
+ IoU: 0.345357
+
+test Error: 
+ Avg loss: 0.45189493 
+ F1: 0.584494 
+ Precision: 0.608631 
+ Recall: 0.562199
+ IoU: 0.412922
+
+We have finished training iteration 140
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_138_.pth
+per-ex loss: 0.611954  [    2/   88]
+per-ex loss: 0.460100  [    4/   88]
+per-ex loss: 0.455628  [    6/   88]
+per-ex loss: 0.413609  [    8/   88]
+per-ex loss: 0.552309  [   10/   88]
+per-ex loss: 0.426992  [   12/   88]
+per-ex loss: 0.677436  [   14/   88]
+per-ex loss: 0.421341  [   16/   88]
+per-ex loss: 0.457286  [   18/   88]
+per-ex loss: 0.401005  [   20/   88]
+per-ex loss: 0.455860  [   22/   88]
+per-ex loss: 0.460788  [   24/   88]
+per-ex loss: 0.510757  [   26/   88]
+per-ex loss: 0.403069  [   28/   88]
+per-ex loss: 0.578290  [   30/   88]
+per-ex loss: 0.454394  [   32/   88]
+per-ex loss: 0.449240  [   34/   88]
+per-ex loss: 0.449771  [   36/   88]
+per-ex loss: 0.482125  [   38/   88]
+per-ex loss: 0.609627  [   40/   88]
+per-ex loss: 0.398596  [   42/   88]
+per-ex loss: 0.447304  [   44/   88]
+per-ex loss: 0.449544  [   46/   88]
+per-ex loss: 0.424033  [   48/   88]
+per-ex loss: 0.532002  [   50/   88]
+per-ex loss: 0.512255  [   52/   88]
+per-ex loss: 0.555938  [   54/   88]
+per-ex loss: 0.607559  [   56/   88]
+per-ex loss: 0.563471  [   58/   88]
+per-ex loss: 0.377733  [   60/   88]
+per-ex loss: 0.395550  [   62/   88]
+per-ex loss: 0.438287  [   64/   88]
+per-ex loss: 0.597020  [   66/   88]
+per-ex loss: 0.469265  [   68/   88]
+per-ex loss: 0.431971  [   70/   88]
+per-ex loss: 0.489537  [   72/   88]
+per-ex loss: 0.566001  [   74/   88]
+per-ex loss: 0.377131  [   76/   88]
+per-ex loss: 0.562569  [   78/   88]
+per-ex loss: 0.508980  [   80/   88]
+per-ex loss: 0.361936  [   82/   88]
+per-ex loss: 0.464216  [   84/   88]
+per-ex loss: 0.451566  [   86/   88]
+per-ex loss: 0.401203  [   88/   88]
+Train Error: Avg loss: 0.47989204
+validation Error: 
+ Avg loss: 0.51338272 
+ F1: 0.515777 
+ Precision: 0.572048 
+ Recall: 0.469585
+ IoU: 0.347506
+
+test Error: 
+ Avg loss: 0.45783946 
+ F1: 0.576429 
+ Precision: 0.647228 
+ Recall: 0.519593
+ IoU: 0.404918
+
+We have finished training iteration 141
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_139_.pth
+per-ex loss: 0.617544  [    2/   88]
+per-ex loss: 0.457889  [    4/   88]
+per-ex loss: 0.568606  [    6/   88]
+per-ex loss: 0.567976  [    8/   88]
+per-ex loss: 0.420570  [   10/   88]
+per-ex loss: 0.409616  [   12/   88]
+per-ex loss: 0.379323  [   14/   88]
+per-ex loss: 0.643258  [   16/   88]
+per-ex loss: 0.378343  [   18/   88]
+per-ex loss: 0.364324  [   20/   88]
+per-ex loss: 0.482309  [   22/   88]
+per-ex loss: 0.374215  [   24/   88]
+per-ex loss: 0.400565  [   26/   88]
+per-ex loss: 0.457122  [   28/   88]
+per-ex loss: 0.528483  [   30/   88]
+per-ex loss: 0.598081  [   32/   88]
+per-ex loss: 0.364964  [   34/   88]
+per-ex loss: 0.450241  [   36/   88]
+per-ex loss: 0.359659  [   38/   88]
+per-ex loss: 0.417920  [   40/   88]
+per-ex loss: 0.456413  [   42/   88]
+per-ex loss: 0.523913  [   44/   88]
+per-ex loss: 0.471606  [   46/   88]
+per-ex loss: 0.532884  [   48/   88]
+per-ex loss: 0.396651  [   50/   88]
+per-ex loss: 0.650938  [   52/   88]
+per-ex loss: 0.505876  [   54/   88]
+per-ex loss: 0.600111  [   56/   88]
+per-ex loss: 0.626181  [   58/   88]
+per-ex loss: 0.500973  [   60/   88]
+per-ex loss: 0.481131  [   62/   88]
+per-ex loss: 0.515665  [   64/   88]
+per-ex loss: 0.474707  [   66/   88]
+per-ex loss: 0.582610  [   68/   88]
+per-ex loss: 0.425521  [   70/   88]
+per-ex loss: 0.447503  [   72/   88]
+per-ex loss: 0.397513  [   74/   88]
+per-ex loss: 0.446764  [   76/   88]
+per-ex loss: 0.420720  [   78/   88]
+per-ex loss: 0.409863  [   80/   88]
+per-ex loss: 0.400043  [   82/   88]
+per-ex loss: 0.435018  [   84/   88]
+per-ex loss: 0.409055  [   86/   88]
+per-ex loss: 0.504906  [   88/   88]
+Train Error: Avg loss: 0.47403574
+validation Error: 
+ Avg loss: 0.50948196 
+ F1: 0.501609 
+ Precision: 0.682146 
+ Recall: 0.396636
+ IoU: 0.334765
+
+test Error: 
+ Avg loss: 0.49323217 
+ F1: 0.542122 
+ Precision: 0.756280 
+ Recall: 0.422486
+ IoU: 0.371857
+
+We have finished training iteration 142
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_140_.pth
+per-ex loss: 0.385521  [    2/   88]
+per-ex loss: 0.359383  [    4/   88]
+per-ex loss: 0.338029  [    6/   88]
+per-ex loss: 0.423655  [    8/   88]
+per-ex loss: 0.575753  [   10/   88]
+per-ex loss: 0.604120  [   12/   88]
+per-ex loss: 0.456221  [   14/   88]
+per-ex loss: 0.448993  [   16/   88]
+per-ex loss: 0.434819  [   18/   88]
+per-ex loss: 0.597101  [   20/   88]
+per-ex loss: 0.386315  [   22/   88]
+per-ex loss: 0.380651  [   24/   88]
+per-ex loss: 0.385620  [   26/   88]
+per-ex loss: 0.566579  [   28/   88]
+per-ex loss: 0.512414  [   30/   88]
+per-ex loss: 0.547650  [   32/   88]
+per-ex loss: 0.501836  [   34/   88]
+per-ex loss: 0.603691  [   36/   88]
+per-ex loss: 0.416994  [   38/   88]
+per-ex loss: 0.500798  [   40/   88]
+per-ex loss: 0.448744  [   42/   88]
+per-ex loss: 0.515768  [   44/   88]
+per-ex loss: 0.580966  [   46/   88]
+per-ex loss: 0.401683  [   48/   88]
+per-ex loss: 0.367797  [   50/   88]
+per-ex loss: 0.544043  [   52/   88]
+per-ex loss: 0.469470  [   54/   88]
+per-ex loss: 0.417827  [   56/   88]
+per-ex loss: 0.409179  [   58/   88]
+per-ex loss: 0.453600  [   60/   88]
+per-ex loss: 0.450029  [   62/   88]
+per-ex loss: 0.422322  [   64/   88]
+per-ex loss: 0.441896  [   66/   88]
+per-ex loss: 0.512852  [   68/   88]
+per-ex loss: 0.636419  [   70/   88]
+per-ex loss: 0.591476  [   72/   88]
+per-ex loss: 0.652888  [   74/   88]
+per-ex loss: 0.584287  [   76/   88]
+per-ex loss: 0.415685  [   78/   88]
+per-ex loss: 0.423111  [   80/   88]
+per-ex loss: 0.546876  [   82/   88]
+per-ex loss: 0.462338  [   84/   88]
+per-ex loss: 0.431078  [   86/   88]
+per-ex loss: 0.514477  [   88/   88]
+Train Error: Avg loss: 0.48002166
+validation Error: 
+ Avg loss: 0.54232430 
+ F1: 0.490011 
+ Precision: 0.442941 
+ Recall: 0.548274
+ IoU: 0.324513
+
+test Error: 
+ Avg loss: 0.46819059 
+ F1: 0.567796 
+ Precision: 0.523540 
+ Recall: 0.620227
+ IoU: 0.396450
+
+We have finished training iteration 143
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_141_.pth
+per-ex loss: 0.614165  [    2/   88]
+per-ex loss: 0.427813  [    4/   88]
+per-ex loss: 0.391906  [    6/   88]
+per-ex loss: 0.576168  [    8/   88]
+per-ex loss: 0.588093  [   10/   88]
+per-ex loss: 0.404583  [   12/   88]
+per-ex loss: 0.487066  [   14/   88]
+per-ex loss: 0.423708  [   16/   88]
+per-ex loss: 0.460907  [   18/   88]
+per-ex loss: 0.393266  [   20/   88]
+per-ex loss: 0.391752  [   22/   88]
+per-ex loss: 0.490471  [   24/   88]
+per-ex loss: 0.429993  [   26/   88]
+per-ex loss: 0.424367  [   28/   88]
+per-ex loss: 0.409806  [   30/   88]
+per-ex loss: 0.476772  [   32/   88]
+per-ex loss: 0.479093  [   34/   88]
+per-ex loss: 0.559965  [   36/   88]
+per-ex loss: 0.471833  [   38/   88]
+per-ex loss: 0.610589  [   40/   88]
+per-ex loss: 0.417891  [   42/   88]
+per-ex loss: 0.365514  [   44/   88]
+per-ex loss: 0.560922  [   46/   88]
+per-ex loss: 0.602830  [   48/   88]
+per-ex loss: 0.389227  [   50/   88]
+per-ex loss: 0.623595  [   52/   88]
+per-ex loss: 0.500478  [   54/   88]
+per-ex loss: 0.454353  [   56/   88]
+per-ex loss: 0.398904  [   58/   88]
+per-ex loss: 0.557263  [   60/   88]
+per-ex loss: 0.550941  [   62/   88]
+per-ex loss: 0.430580  [   64/   88]
+per-ex loss: 0.460506  [   66/   88]
+per-ex loss: 0.371373  [   68/   88]
+per-ex loss: 0.499517  [   70/   88]
+per-ex loss: 0.449610  [   72/   88]
+per-ex loss: 0.394189  [   74/   88]
+per-ex loss: 0.467677  [   76/   88]
+per-ex loss: 0.539750  [   78/   88]
+per-ex loss: 0.590910  [   80/   88]
+per-ex loss: 0.388981  [   82/   88]
+per-ex loss: 0.431741  [   84/   88]
+per-ex loss: 0.448819  [   86/   88]
+per-ex loss: 0.455492  [   88/   88]
+Train Error: Avg loss: 0.47416779
+validation Error: 
+ Avg loss: 0.50865481 
+ F1: 0.508098 
+ Precision: 0.515322 
+ Recall: 0.501073
+ IoU: 0.340570
+
+test Error: 
+ Avg loss: 0.45227011 
+ F1: 0.584170 
+ Precision: 0.608490 
+ Recall: 0.561720
+ IoU: 0.412599
+
+We have finished training iteration 144
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_142_.pth
+per-ex loss: 0.426329  [    2/   88]
+per-ex loss: 0.380867  [    4/   88]
+per-ex loss: 0.450946  [    6/   88]
+per-ex loss: 0.595214  [    8/   88]
+per-ex loss: 0.366894  [   10/   88]
+per-ex loss: 0.500361  [   12/   88]
+per-ex loss: 0.416884  [   14/   88]
+per-ex loss: 0.505923  [   16/   88]
+per-ex loss: 0.594754  [   18/   88]
+per-ex loss: 0.400144  [   20/   88]
+per-ex loss: 0.393063  [   22/   88]
+per-ex loss: 0.433110  [   24/   88]
+per-ex loss: 0.441368  [   26/   88]
+per-ex loss: 0.457248  [   28/   88]
+per-ex loss: 0.379611  [   30/   88]
+per-ex loss: 0.386431  [   32/   88]
+per-ex loss: 0.412152  [   34/   88]
+per-ex loss: 0.653763  [   36/   88]
+per-ex loss: 0.450923  [   38/   88]
+per-ex loss: 0.567176  [   40/   88]
+per-ex loss: 0.564719  [   42/   88]
+per-ex loss: 0.334728  [   44/   88]
+per-ex loss: 0.490135  [   46/   88]
+per-ex loss: 0.410811  [   48/   88]
+per-ex loss: 0.435859  [   50/   88]
+per-ex loss: 0.446455  [   52/   88]
+per-ex loss: 0.477921  [   54/   88]
+per-ex loss: 0.562074  [   56/   88]
+per-ex loss: 0.444999  [   58/   88]
+per-ex loss: 0.374046  [   60/   88]
+per-ex loss: 0.447835  [   62/   88]
+per-ex loss: 0.440987  [   64/   88]
+per-ex loss: 0.400058  [   66/   88]
+per-ex loss: 0.540964  [   68/   88]
+per-ex loss: 0.417428  [   70/   88]
+per-ex loss: 0.611756  [   72/   88]
+per-ex loss: 0.410618  [   74/   88]
+per-ex loss: 0.454112  [   76/   88]
+per-ex loss: 0.398154  [   78/   88]
+per-ex loss: 0.643541  [   80/   88]
+per-ex loss: 0.512090  [   82/   88]
+per-ex loss: 0.625356  [   84/   88]
+per-ex loss: 0.501752  [   86/   88]
+per-ex loss: 0.492104  [   88/   88]
+Train Error: Avg loss: 0.46935599
+validation Error: 
+ Avg loss: 0.51015537 
+ F1: 0.523594 
+ Precision: 0.609263 
+ Recall: 0.459048
+ IoU: 0.354641
+
+test Error: 
+ Avg loss: 0.46499575 
+ F1: 0.569394 
+ Precision: 0.689573 
+ Recall: 0.484888
+ IoU: 0.398009
+
+We have finished training iteration 145
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_143_.pth
+per-ex loss: 0.539557  [    2/   88]
+per-ex loss: 0.596147  [    4/   88]
+per-ex loss: 0.440291  [    6/   88]
+per-ex loss: 0.591028  [    8/   88]
+per-ex loss: 0.469660  [   10/   88]
+per-ex loss: 0.537144  [   12/   88]
+per-ex loss: 0.511120  [   14/   88]
+per-ex loss: 0.390208  [   16/   88]
+per-ex loss: 0.467644  [   18/   88]
+per-ex loss: 0.419759  [   20/   88]
+per-ex loss: 0.418473  [   22/   88]
+per-ex loss: 0.497396  [   24/   88]
+per-ex loss: 0.380789  [   26/   88]
+per-ex loss: 0.473060  [   28/   88]
+per-ex loss: 0.487191  [   30/   88]
+per-ex loss: 0.388422  [   32/   88]
+per-ex loss: 0.697008  [   34/   88]
+per-ex loss: 0.342584  [   36/   88]
+per-ex loss: 0.403973  [   38/   88]
+per-ex loss: 0.504450  [   40/   88]
+per-ex loss: 0.433792  [   42/   88]
+per-ex loss: 0.526585  [   44/   88]
+per-ex loss: 0.389274  [   46/   88]
+per-ex loss: 0.512259  [   48/   88]
+per-ex loss: 0.403694  [   50/   88]
+per-ex loss: 0.442541  [   52/   88]
+per-ex loss: 0.550117  [   54/   88]
+per-ex loss: 0.596290  [   56/   88]
+per-ex loss: 0.454179  [   58/   88]
+per-ex loss: 0.436503  [   60/   88]
+per-ex loss: 0.479703  [   62/   88]
+per-ex loss: 0.463948  [   64/   88]
+per-ex loss: 0.416808  [   66/   88]
+per-ex loss: 0.532322  [   68/   88]
+per-ex loss: 0.369414  [   70/   88]
+per-ex loss: 0.394921  [   72/   88]
+per-ex loss: 0.622905  [   74/   88]
+per-ex loss: 0.495261  [   76/   88]
+per-ex loss: 0.513230  [   78/   88]
+per-ex loss: 0.595328  [   80/   88]
+per-ex loss: 0.522322  [   82/   88]
+per-ex loss: 0.455927  [   84/   88]
+per-ex loss: 0.481822  [   86/   88]
+per-ex loss: 0.389376  [   88/   88]
+Train Error: Avg loss: 0.47805512
+validation Error: 
+ Avg loss: 0.53461518 
+ F1: 0.480197 
+ Precision: 0.432512 
+ Recall: 0.539701
+ IoU: 0.315960
+
+test Error: 
+ Avg loss: 0.45758805 
+ F1: 0.576628 
+ Precision: 0.553799 
+ Recall: 0.601419
+ IoU: 0.405114
+
+We have finished training iteration 146
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_132_.pth
+per-ex loss: 0.454620  [    2/   88]
+per-ex loss: 0.553294  [    4/   88]
+per-ex loss: 0.413635  [    6/   88]
+per-ex loss: 0.448576  [    8/   88]
+per-ex loss: 0.456509  [   10/   88]
+per-ex loss: 0.502440  [   12/   88]
+per-ex loss: 0.501133  [   14/   88]
+per-ex loss: 0.384599  [   16/   88]
+per-ex loss: 0.379912  [   18/   88]
+per-ex loss: 0.588148  [   20/   88]
+per-ex loss: 0.462420  [   22/   88]
+per-ex loss: 0.479067  [   24/   88]
+per-ex loss: 0.554902  [   26/   88]
+per-ex loss: 0.353044  [   28/   88]
+per-ex loss: 0.397276  [   30/   88]
+per-ex loss: 0.588072  [   32/   88]
+per-ex loss: 0.410852  [   34/   88]
+per-ex loss: 0.462093  [   36/   88]
+per-ex loss: 0.439998  [   38/   88]
+per-ex loss: 0.416371  [   40/   88]
+per-ex loss: 0.434145  [   42/   88]
+per-ex loss: 0.452654  [   44/   88]
+per-ex loss: 0.412131  [   46/   88]
+per-ex loss: 0.491813  [   48/   88]
+per-ex loss: 0.398661  [   50/   88]
+per-ex loss: 0.410206  [   52/   88]
+per-ex loss: 0.578445  [   54/   88]
+per-ex loss: 0.472252  [   56/   88]
+per-ex loss: 0.388609  [   58/   88]
+per-ex loss: 0.344780  [   60/   88]
+per-ex loss: 0.478964  [   62/   88]
+per-ex loss: 0.708062  [   64/   88]
+per-ex loss: 0.497136  [   66/   88]
+per-ex loss: 0.418360  [   68/   88]
+per-ex loss: 0.483796  [   70/   88]
+per-ex loss: 0.570200  [   72/   88]
+per-ex loss: 0.426457  [   74/   88]
+per-ex loss: 0.474205  [   76/   88]
+per-ex loss: 0.536341  [   78/   88]
+per-ex loss: 0.570799  [   80/   88]
+per-ex loss: 0.392504  [   82/   88]
+per-ex loss: 0.618198  [   84/   88]
+per-ex loss: 0.553676  [   86/   88]
+per-ex loss: 0.605540  [   88/   88]
+Train Error: Avg loss: 0.47647481
+validation Error: 
+ Avg loss: 0.51210501 
+ F1: 0.514366 
+ Precision: 0.556569 
+ Recall: 0.478112
+ IoU: 0.346227
+
+test Error: 
+ Avg loss: 0.46606832 
+ F1: 0.565738 
+ Precision: 0.638323 
+ Recall: 0.507974
+ IoU: 0.394445
+
+We have finished training iteration 147
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_145_.pth
+per-ex loss: 0.410732  [    2/   88]
+per-ex loss: 0.368414  [    4/   88]
+per-ex loss: 0.395692  [    6/   88]
+per-ex loss: 0.483458  [    8/   88]
+per-ex loss: 0.646716  [   10/   88]
+per-ex loss: 0.397505  [   12/   88]
+per-ex loss: 0.492243  [   14/   88]
+per-ex loss: 0.376401  [   16/   88]
+per-ex loss: 0.367952  [   18/   88]
+per-ex loss: 0.392842  [   20/   88]
+per-ex loss: 0.388912  [   22/   88]
+per-ex loss: 0.361593  [   24/   88]
+per-ex loss: 0.597549  [   26/   88]
+per-ex loss: 0.479214  [   28/   88]
+per-ex loss: 0.633915  [   30/   88]
+per-ex loss: 0.387878  [   32/   88]
+per-ex loss: 0.380476  [   34/   88]
+per-ex loss: 0.600697  [   36/   88]
+per-ex loss: 0.413792  [   38/   88]
+per-ex loss: 0.567205  [   40/   88]
+per-ex loss: 0.544815  [   42/   88]
+per-ex loss: 0.388757  [   44/   88]
+per-ex loss: 0.477856  [   46/   88]
+per-ex loss: 0.498659  [   48/   88]
+per-ex loss: 0.608434  [   50/   88]
+per-ex loss: 0.593960  [   52/   88]
+per-ex loss: 0.545143  [   54/   88]
+per-ex loss: 0.457105  [   56/   88]
+per-ex loss: 0.453155  [   58/   88]
+per-ex loss: 0.556368  [   60/   88]
+per-ex loss: 0.495994  [   62/   88]
+per-ex loss: 0.605864  [   64/   88]
+per-ex loss: 0.401314  [   66/   88]
+per-ex loss: 0.479536  [   68/   88]
+per-ex loss: 0.378596  [   70/   88]
+per-ex loss: 0.517667  [   72/   88]
+per-ex loss: 0.457433  [   74/   88]
+per-ex loss: 0.429725  [   76/   88]
+per-ex loss: 0.553923  [   78/   88]
+per-ex loss: 0.538661  [   80/   88]
+per-ex loss: 0.608760  [   82/   88]
+per-ex loss: 0.463572  [   84/   88]
+per-ex loss: 0.508092  [   86/   88]
+per-ex loss: 0.437644  [   88/   88]
+Train Error: Avg loss: 0.48055045
+validation Error: 
+ Avg loss: 0.52851638 
+ F1: 0.497627 
+ Precision: 0.619073 
+ Recall: 0.416015
+ IoU: 0.331227
+
+test Error: 
+ Avg loss: 0.47874735 
+ F1: 0.558485 
+ Precision: 0.715403 
+ Recall: 0.458022
+ IoU: 0.387430
+
+We have finished training iteration 148
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_146_.pth
+per-ex loss: 0.447868  [    2/   88]
+per-ex loss: 0.442358  [    4/   88]
+per-ex loss: 0.392029  [    6/   88]
+per-ex loss: 0.445353  [    8/   88]
+per-ex loss: 0.391677  [   10/   88]
+per-ex loss: 0.467667  [   12/   88]
+per-ex loss: 0.405869  [   14/   88]
+per-ex loss: 0.401289  [   16/   88]
+per-ex loss: 0.419928  [   18/   88]
+per-ex loss: 0.582906  [   20/   88]
+per-ex loss: 0.514086  [   22/   88]
+per-ex loss: 0.415379  [   24/   88]
+per-ex loss: 0.409961  [   26/   88]
+per-ex loss: 0.591263  [   28/   88]
+per-ex loss: 0.512740  [   30/   88]
+per-ex loss: 0.459935  [   32/   88]
+per-ex loss: 0.420106  [   34/   88]
+per-ex loss: 0.433173  [   36/   88]
+per-ex loss: 0.549785  [   38/   88]
+per-ex loss: 0.531271  [   40/   88]
+per-ex loss: 0.461076  [   42/   88]
+per-ex loss: 0.504102  [   44/   88]
+per-ex loss: 0.392547  [   46/   88]
+per-ex loss: 0.636880  [   48/   88]
+per-ex loss: 0.567917  [   50/   88]
+per-ex loss: 0.470424  [   52/   88]
+per-ex loss: 0.382470  [   54/   88]
+per-ex loss: 0.465422  [   56/   88]
+per-ex loss: 0.519937  [   58/   88]
+per-ex loss: 0.396749  [   60/   88]
+per-ex loss: 0.499117  [   62/   88]
+per-ex loss: 0.389302  [   64/   88]
+per-ex loss: 0.373298  [   66/   88]
+per-ex loss: 0.359201  [   68/   88]
+per-ex loss: 0.512635  [   70/   88]
+per-ex loss: 0.416832  [   72/   88]
+per-ex loss: 0.435466  [   74/   88]
+per-ex loss: 0.510711  [   76/   88]
+per-ex loss: 0.588744  [   78/   88]
+per-ex loss: 0.576201  [   80/   88]
+per-ex loss: 0.425310  [   82/   88]
+per-ex loss: 0.629837  [   84/   88]
+per-ex loss: 0.487924  [   86/   88]
+per-ex loss: 0.674189  [   88/   88]
+Train Error: Avg loss: 0.47524848
+validation Error: 
+ Avg loss: 0.51646558 
+ F1: 0.513136 
+ Precision: 0.521589 
+ Recall: 0.504954
+ IoU: 0.345113
+
+test Error: 
+ Avg loss: 0.46009959 
+ F1: 0.578112 
+ Precision: 0.569740 
+ Recall: 0.586733
+ IoU: 0.406580
+
+We have finished training iteration 149
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_147_.pth
+per-ex loss: 0.426561  [    2/   88]
+per-ex loss: 0.493435  [    4/   88]
+per-ex loss: 0.514053  [    6/   88]
+per-ex loss: 0.514486  [    8/   88]
+per-ex loss: 0.422804  [   10/   88]
+per-ex loss: 0.553951  [   12/   88]
+per-ex loss: 0.492676  [   14/   88]
+per-ex loss: 0.448616  [   16/   88]
+per-ex loss: 0.485621  [   18/   88]
+per-ex loss: 0.437833  [   20/   88]
+per-ex loss: 0.474117  [   22/   88]
+per-ex loss: 0.568739  [   24/   88]
+per-ex loss: 0.416939  [   26/   88]
+per-ex loss: 0.566593  [   28/   88]
+per-ex loss: 0.444112  [   30/   88]
+per-ex loss: 0.410031  [   32/   88]
+per-ex loss: 0.609457  [   34/   88]
+per-ex loss: 0.396419  [   36/   88]
+per-ex loss: 0.475714  [   38/   88]
+per-ex loss: 0.393274  [   40/   88]
+per-ex loss: 0.575695  [   42/   88]
+per-ex loss: 0.362901  [   44/   88]
+per-ex loss: 0.446698  [   46/   88]
+per-ex loss: 0.575346  [   48/   88]
+per-ex loss: 0.451816  [   50/   88]
+per-ex loss: 0.602538  [   52/   88]
+per-ex loss: 0.380184  [   54/   88]
+per-ex loss: 0.428177  [   56/   88]
+per-ex loss: 0.518694  [   58/   88]
+per-ex loss: 0.467010  [   60/   88]
+per-ex loss: 0.374878  [   62/   88]
+per-ex loss: 0.498697  [   64/   88]
+per-ex loss: 0.447712  [   66/   88]
+per-ex loss: 0.558949  [   68/   88]
+per-ex loss: 0.582159  [   70/   88]
+per-ex loss: 0.370789  [   72/   88]
+per-ex loss: 0.379097  [   74/   88]
+per-ex loss: 0.479636  [   76/   88]
+per-ex loss: 0.440126  [   78/   88]
+per-ex loss: 0.466495  [   80/   88]
+per-ex loss: 0.592754  [   82/   88]
+per-ex loss: 0.419223  [   84/   88]
+per-ex loss: 0.369989  [   86/   88]
+per-ex loss: 0.612006  [   88/   88]
+Train Error: Avg loss: 0.47606819
+validation Error: 
+ Avg loss: 0.50792401 
+ F1: 0.507788 
+ Precision: 0.537695 
+ Recall: 0.481032
+ IoU: 0.340292
+
+test Error: 
+ Avg loss: 0.46288843 
+ F1: 0.574844 
+ Precision: 0.607875 
+ Recall: 0.545218
+ IoU: 0.403355
+
+We have finished training iteration 150
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_148_.pth
+per-ex loss: 0.385103  [    2/   88]
+per-ex loss: 0.493084  [    4/   88]
+per-ex loss: 0.570208  [    6/   88]
+per-ex loss: 0.397738  [    8/   88]
+per-ex loss: 0.636035  [   10/   88]
+per-ex loss: 0.372251  [   12/   88]
+per-ex loss: 0.430826  [   14/   88]
+per-ex loss: 0.377510  [   16/   88]
+per-ex loss: 0.564331  [   18/   88]
+per-ex loss: 0.399974  [   20/   88]
+per-ex loss: 0.426320  [   22/   88]
+per-ex loss: 0.390374  [   24/   88]
+per-ex loss: 0.435034  [   26/   88]
+per-ex loss: 0.560060  [   28/   88]
+per-ex loss: 0.436493  [   30/   88]
+per-ex loss: 0.436572  [   32/   88]
+per-ex loss: 0.555899  [   34/   88]
+per-ex loss: 0.441135  [   36/   88]
+per-ex loss: 0.435486  [   38/   88]
+per-ex loss: 0.467430  [   40/   88]
+per-ex loss: 0.682135  [   42/   88]
+per-ex loss: 0.579843  [   44/   88]
+per-ex loss: 0.572028  [   46/   88]
+per-ex loss: 0.465124  [   48/   88]
+per-ex loss: 0.467926  [   50/   88]
+per-ex loss: 0.529499  [   52/   88]
+per-ex loss: 0.591225  [   54/   88]
+per-ex loss: 0.430397  [   56/   88]
+per-ex loss: 0.481510  [   58/   88]
+per-ex loss: 0.466369  [   60/   88]
+per-ex loss: 0.553732  [   62/   88]
+per-ex loss: 0.472580  [   64/   88]
+per-ex loss: 0.406549  [   66/   88]
+per-ex loss: 0.482875  [   68/   88]
+per-ex loss: 0.369115  [   70/   88]
+per-ex loss: 0.422498  [   72/   88]
+per-ex loss: 0.491500  [   74/   88]
+per-ex loss: 0.419480  [   76/   88]
+per-ex loss: 0.382864  [   78/   88]
+per-ex loss: 0.536560  [   80/   88]
+per-ex loss: 0.541850  [   82/   88]
+per-ex loss: 0.531821  [   84/   88]
+per-ex loss: 0.401735  [   86/   88]
+per-ex loss: 0.608022  [   88/   88]
+Train Error: Avg loss: 0.47952503
+validation Error: 
+ Avg loss: 0.50399222 
+ F1: 0.520809 
+ Precision: 0.643933 
+ Recall: 0.437211
+ IoU: 0.352090
+
+test Error: 
+ Avg loss: 0.46234855 
+ F1: 0.575243 
+ Precision: 0.694140 
+ Recall: 0.491121
+ IoU: 0.403748
+
+We have finished training iteration 151
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_149_.pth
+per-ex loss: 0.386261  [    2/   88]
+per-ex loss: 0.570693  [    4/   88]
+per-ex loss: 0.450120  [    6/   88]
+per-ex loss: 0.470685  [    8/   88]
+per-ex loss: 0.451342  [   10/   88]
+per-ex loss: 0.579770  [   12/   88]
+per-ex loss: 0.440387  [   14/   88]
+per-ex loss: 0.391351  [   16/   88]
+per-ex loss: 0.569680  [   18/   88]
+per-ex loss: 0.537187  [   20/   88]
+per-ex loss: 0.436355  [   22/   88]
+per-ex loss: 0.574043  [   24/   88]
+per-ex loss: 0.431743  [   26/   88]
+per-ex loss: 0.415427  [   28/   88]
+per-ex loss: 0.551435  [   30/   88]
+per-ex loss: 0.426349  [   32/   88]
+per-ex loss: 0.406812  [   34/   88]
+per-ex loss: 0.451786  [   36/   88]
+per-ex loss: 0.460561  [   38/   88]
+per-ex loss: 0.367023  [   40/   88]
+per-ex loss: 0.381444  [   42/   88]
+per-ex loss: 0.501114  [   44/   88]
+per-ex loss: 0.601465  [   46/   88]
+per-ex loss: 0.373459  [   48/   88]
+per-ex loss: 0.586531  [   50/   88]
+per-ex loss: 0.415542  [   52/   88]
+per-ex loss: 0.355521  [   54/   88]
+per-ex loss: 0.435573  [   56/   88]
+per-ex loss: 0.558642  [   58/   88]
+per-ex loss: 0.429572  [   60/   88]
+per-ex loss: 0.651107  [   62/   88]
+per-ex loss: 0.488012  [   64/   88]
+per-ex loss: 0.465462  [   66/   88]
+per-ex loss: 0.398261  [   68/   88]
+per-ex loss: 0.371257  [   70/   88]
+per-ex loss: 0.500082  [   72/   88]
+per-ex loss: 0.435384  [   74/   88]
+per-ex loss: 0.596360  [   76/   88]
+per-ex loss: 0.501975  [   78/   88]
+per-ex loss: 0.481550  [   80/   88]
+per-ex loss: 0.561083  [   82/   88]
+per-ex loss: 0.474006  [   84/   88]
+per-ex loss: 0.491307  [   86/   88]
+per-ex loss: 0.387222  [   88/   88]
+Train Error: Avg loss: 0.47297586
+validation Error: 
+ Avg loss: 0.50064796 
+ F1: 0.516373 
+ Precision: 0.561954 
+ Recall: 0.477632
+ IoU: 0.348048
+
+test Error: 
+ Avg loss: 0.45482008 
+ F1: 0.579680 
+ Precision: 0.620871 
+ Recall: 0.543614
+ IoU: 0.408133
+
+We have finished training iteration 152
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_144_.pth
+per-ex loss: 0.470214  [    2/   88]
+per-ex loss: 0.482769  [    4/   88]
+per-ex loss: 0.383061  [    6/   88]
+per-ex loss: 0.436459  [    8/   88]
+per-ex loss: 0.479621  [   10/   88]
+per-ex loss: 0.515712  [   12/   88]
+per-ex loss: 0.558093  [   14/   88]
+per-ex loss: 0.414250  [   16/   88]
+per-ex loss: 0.400392  [   18/   88]
+per-ex loss: 0.501830  [   20/   88]
+per-ex loss: 0.426960  [   22/   88]
+per-ex loss: 0.387955  [   24/   88]
+per-ex loss: 0.467664  [   26/   88]
+per-ex loss: 0.492816  [   28/   88]
+per-ex loss: 0.430443  [   30/   88]
+per-ex loss: 0.405079  [   32/   88]
+per-ex loss: 0.416135  [   34/   88]
+per-ex loss: 0.367048  [   36/   88]
+per-ex loss: 0.377528  [   38/   88]
+per-ex loss: 0.543485  [   40/   88]
+per-ex loss: 0.435252  [   42/   88]
+per-ex loss: 0.504671  [   44/   88]
+per-ex loss: 0.561493  [   46/   88]
+per-ex loss: 0.588483  [   48/   88]
+per-ex loss: 0.600040  [   50/   88]
+per-ex loss: 0.480873  [   52/   88]
+per-ex loss: 0.602061  [   54/   88]
+per-ex loss: 0.474691  [   56/   88]
+per-ex loss: 0.369441  [   58/   88]
+per-ex loss: 0.400932  [   60/   88]
+per-ex loss: 0.564843  [   62/   88]
+per-ex loss: 0.455841  [   64/   88]
+per-ex loss: 0.474446  [   66/   88]
+per-ex loss: 0.445057  [   68/   88]
+per-ex loss: 0.420806  [   70/   88]
+per-ex loss: 0.489536  [   72/   88]
+per-ex loss: 0.375456  [   74/   88]
+per-ex loss: 0.442161  [   76/   88]
+per-ex loss: 0.398808  [   78/   88]
+per-ex loss: 0.484530  [   80/   88]
+per-ex loss: 0.459877  [   82/   88]
+per-ex loss: 0.627301  [   84/   88]
+per-ex loss: 0.523782  [   86/   88]
+per-ex loss: 0.503345  [   88/   88]
+Train Error: Avg loss: 0.46911918
+validation Error: 
+ Avg loss: 0.50063848 
+ F1: 0.514327 
+ Precision: 0.607901 
+ Recall: 0.445717
+ IoU: 0.346191
+
+test Error: 
+ Avg loss: 0.46940515 
+ F1: 0.563432 
+ Precision: 0.671242 
+ Recall: 0.485461
+ IoU: 0.392207
+
+We have finished training iteration 153
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_150_.pth
+per-ex loss: 0.489417  [    2/   88]
+per-ex loss: 0.539731  [    4/   88]
+per-ex loss: 0.361868  [    6/   88]
+per-ex loss: 0.497044  [    8/   88]
+per-ex loss: 0.389265  [   10/   88]
+per-ex loss: 0.383319  [   12/   88]
+per-ex loss: 0.422233  [   14/   88]
+per-ex loss: 0.448138  [   16/   88]
+per-ex loss: 0.507381  [   18/   88]
+per-ex loss: 0.425915  [   20/   88]
+per-ex loss: 0.439280  [   22/   88]
+per-ex loss: 0.581013  [   24/   88]
+per-ex loss: 0.473339  [   26/   88]
+per-ex loss: 0.577943  [   28/   88]
+per-ex loss: 0.522528  [   30/   88]
+per-ex loss: 0.428263  [   32/   88]
+per-ex loss: 0.416879  [   34/   88]
+per-ex loss: 0.428735  [   36/   88]
+per-ex loss: 0.434480  [   38/   88]
+per-ex loss: 0.440902  [   40/   88]
+per-ex loss: 0.419387  [   42/   88]
+per-ex loss: 0.356970  [   44/   88]
+per-ex loss: 0.475617  [   46/   88]
+per-ex loss: 0.560194  [   48/   88]
+per-ex loss: 0.435724  [   50/   88]
+per-ex loss: 0.555267  [   52/   88]
+per-ex loss: 0.405868  [   54/   88]
+per-ex loss: 0.483891  [   56/   88]
+per-ex loss: 0.566653  [   58/   88]
+per-ex loss: 0.441385  [   60/   88]
+per-ex loss: 0.500770  [   62/   88]
+per-ex loss: 0.599097  [   64/   88]
+per-ex loss: 0.384246  [   66/   88]
+per-ex loss: 0.394451  [   68/   88]
+per-ex loss: 0.624746  [   70/   88]
+per-ex loss: 0.414114  [   72/   88]
+per-ex loss: 0.553085  [   74/   88]
+per-ex loss: 0.490364  [   76/   88]
+per-ex loss: 0.351035  [   78/   88]
+per-ex loss: 0.379526  [   80/   88]
+per-ex loss: 0.431282  [   82/   88]
+per-ex loss: 0.501117  [   84/   88]
+per-ex loss: 0.695842  [   86/   88]
+per-ex loss: 0.663043  [   88/   88]
+Train Error: Avg loss: 0.47480346
+validation Error: 
+ Avg loss: 0.51648472 
+ F1: 0.510548 
+ Precision: 0.529247 
+ Recall: 0.493126
+ IoU: 0.342776
+
+test Error: 
+ Avg loss: 0.45567313 
+ F1: 0.579942 
+ Precision: 0.600263 
+ Recall: 0.560952
+ IoU: 0.408393
+
+We have finished training iteration 154
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_123_.pth
+per-ex loss: 0.455664  [    2/   88]
+per-ex loss: 0.489834  [    4/   88]
+per-ex loss: 0.477581  [    6/   88]
+per-ex loss: 0.606797  [    8/   88]
+per-ex loss: 0.443278  [   10/   88]
+per-ex loss: 0.476371  [   12/   88]
+per-ex loss: 0.435915  [   14/   88]
+per-ex loss: 0.454275  [   16/   88]
+per-ex loss: 0.431856  [   18/   88]
+per-ex loss: 0.596958  [   20/   88]
+per-ex loss: 0.408821  [   22/   88]
+per-ex loss: 0.576355  [   24/   88]
+per-ex loss: 0.373210  [   26/   88]
+per-ex loss: 0.449899  [   28/   88]
+per-ex loss: 0.488704  [   30/   88]
+per-ex loss: 0.466715  [   32/   88]
+per-ex loss: 0.557171  [   34/   88]
+per-ex loss: 0.455999  [   36/   88]
+per-ex loss: 0.368544  [   38/   88]
+per-ex loss: 0.449323  [   40/   88]
+per-ex loss: 0.391064  [   42/   88]
+per-ex loss: 0.399051  [   44/   88]
+per-ex loss: 0.394310  [   46/   88]
+per-ex loss: 0.425145  [   48/   88]
+per-ex loss: 0.546968  [   50/   88]
+per-ex loss: 0.366122  [   52/   88]
+per-ex loss: 0.409886  [   54/   88]
+per-ex loss: 0.377061  [   56/   88]
+per-ex loss: 0.486267  [   58/   88]
+per-ex loss: 0.537413  [   60/   88]
+per-ex loss: 0.471301  [   62/   88]
+per-ex loss: 0.610953  [   64/   88]
+per-ex loss: 0.380132  [   66/   88]
+per-ex loss: 0.476094  [   68/   88]
+per-ex loss: 0.334136  [   70/   88]
+per-ex loss: 0.436138  [   72/   88]
+per-ex loss: 0.436995  [   74/   88]
+per-ex loss: 0.574201  [   76/   88]
+per-ex loss: 0.495244  [   78/   88]
+per-ex loss: 0.391548  [   80/   88]
+per-ex loss: 0.565092  [   82/   88]
+per-ex loss: 0.442912  [   84/   88]
+per-ex loss: 0.548491  [   86/   88]
+per-ex loss: 0.566576  [   88/   88]
+Train Error: Avg loss: 0.46650837
+validation Error: 
+ Avg loss: 0.51334707 
+ F1: 0.518081 
+ Precision: 0.562190 
+ Recall: 0.480390
+ IoU: 0.349602
+
+test Error: 
+ Avg loss: 0.45809716 
+ F1: 0.577680 
+ Precision: 0.633115 
+ Recall: 0.531171
+ IoU: 0.406153
+
+We have finished training iteration 155
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_151_.pth
+per-ex loss: 0.408324  [    2/   88]
+per-ex loss: 0.502439  [    4/   88]
+per-ex loss: 0.359995  [    6/   88]
+per-ex loss: 0.529537  [    8/   88]
+per-ex loss: 0.437866  [   10/   88]
+per-ex loss: 0.475683  [   12/   88]
+per-ex loss: 0.443820  [   14/   88]
+per-ex loss: 0.404183  [   16/   88]
+per-ex loss: 0.578517  [   18/   88]
+per-ex loss: 0.488161  [   20/   88]
+per-ex loss: 0.697416  [   22/   88]
+per-ex loss: 0.564883  [   24/   88]
+per-ex loss: 0.622738  [   26/   88]
+per-ex loss: 0.441645  [   28/   88]
+per-ex loss: 0.373843  [   30/   88]
+per-ex loss: 0.382474  [   32/   88]
+per-ex loss: 0.385668  [   34/   88]
+per-ex loss: 0.660537  [   36/   88]
+per-ex loss: 0.430539  [   38/   88]
+per-ex loss: 0.522043  [   40/   88]
+per-ex loss: 0.550018  [   42/   88]
+per-ex loss: 0.489880  [   44/   88]
+per-ex loss: 0.501103  [   46/   88]
+per-ex loss: 0.368757  [   48/   88]
+per-ex loss: 0.404788  [   50/   88]
+per-ex loss: 0.381540  [   52/   88]
+per-ex loss: 0.558829  [   54/   88]
+per-ex loss: 0.453124  [   56/   88]
+per-ex loss: 0.416886  [   58/   88]
+per-ex loss: 0.419778  [   60/   88]
+per-ex loss: 0.480715  [   62/   88]
+per-ex loss: 0.526880  [   64/   88]
+per-ex loss: 0.397709  [   66/   88]
+per-ex loss: 0.499129  [   68/   88]
+per-ex loss: 0.565411  [   70/   88]
+per-ex loss: 0.420413  [   72/   88]
+per-ex loss: 0.411649  [   74/   88]
+per-ex loss: 0.504063  [   76/   88]
+per-ex loss: 0.545591  [   78/   88]
+per-ex loss: 0.655657  [   80/   88]
+per-ex loss: 0.433408  [   82/   88]
+per-ex loss: 0.426983  [   84/   88]
+per-ex loss: 0.468185  [   86/   88]
+per-ex loss: 0.443184  [   88/   88]
+Train Error: Avg loss: 0.47804518
+validation Error: 
+ Avg loss: 0.51475240 
+ F1: 0.516622 
+ Precision: 0.579432 
+ Recall: 0.466098
+ IoU: 0.348274
+
+test Error: 
+ Avg loss: 0.45832070 
+ F1: 0.577596 
+ Precision: 0.628567 
+ Recall: 0.534271
+ IoU: 0.406070
+
+We have finished training iteration 156
+Deleting model ./unet_allnzo_train/saved_model_wrapper/models/UNet_154_.pth
+slurmstepd: error: *** STEP 16730.0 ON aga1 CANCELLED AT 2025-01-09T20:43:00 ***
